@@ -1,0 +1,101 @@
+
+/* ---------------------------------------------------------------------
+Modal Styles
+------------------------------------------------------------------------ */
+
+.openModal {
+	cursor: pointer;
+	text-decoration: underline;
+	font-weight: 500;
+	transition: color 0.4s ease-in-out;
+	display: inline-block;
+}
+
+.modal {
+	overflow: hidden;
+	display: block;
+	background: $brand-alt;
+	color: $white;
+	position: fixed;
+	margin: 0 auto;
+	padding: 60px 48px 48px;
+	z-index: 2000;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	border-radius: 200%;
+	transform: translateY(-50%) translateX(-50%) scale(0);
+	transition: all 0.4s ease-in-out;
+}
+
+.modal--fromLeft {
+	transform: translateY(-20%) translateX(-120%) scale(0);
+}
+
+.modal--fromRight {
+	transform: translateY(-20%) translateX(20%) scale(0);
+}
+
+.modal.isActive {
+	opacity: 1;
+	border-radius: 0;
+	transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+.modalIsActive:after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.9);
+	z-index: 1999;
+	animation: fadeIn 0.4s ease-in-out 1;
+}
+
+.modal__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 20px;
+	cursor: pointer;
+
+	svg {
+		display: block;
+		width: 18px;
+		height: 18px;
+		fill: $brand;
+		transition: all $transition;
+	}
+
+	&:hover svg {
+		fill: $white;
+	}
+}
+
+.modal__hd {
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid $brand;
+}
+
+@media (max-height: 500px) {
+	.modal {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		padding: 48px 36px 36px;
+	}
+}
+
+@include STOP_AT ($small) {
+	.modal {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		padding: 48px 24px 24px;
+	}
+}

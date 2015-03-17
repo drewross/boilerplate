@@ -1,0 +1,20 @@
+
+/* ---------------------------------------------------------------------
+ Definition List Styles.
+------------------------------------------------------------------------ */
+
+.dList {
+    overflow: hidden;
+}
+.dList > * {
+    display: block;
+}
+.dList dt {
+     margin-bottom: 4px;
+     font-weight: 700;
+}
+.dList dd {
+    margin-bottom: 12px;
+    font-style: italic;
+}
+

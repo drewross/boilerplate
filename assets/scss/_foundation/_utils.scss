@@ -1,0 +1,62 @@
+
+/* ---------------------------------------------------------------------
+ Utility Styles
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------
+ Layouts
+--------------------------------------- */
+
+.isCentered {
+    text-align: center;
+}
+
+.isHidden {
+    display: none;
+}
+
+.visuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* ---------------------------------------
+ Vertically Align Content
+--------------------------------------- */
+
+.vCenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vCenter_abs {
+    position: absolute;
+}
+
+.isIE8 .vCenter {
+    top: 0;
+    transform: none;
+}
+
+/* ---------------------------------------
+ Equal Height Content
+--------------------------------------- */
+
+.equalHeightCols {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.equalHeightCols > * {
+    position: relative;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}

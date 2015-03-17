@@ -1,0 +1,66 @@
+// ----------------------------------------
+// Fonts
+// ----------------------------------------
+$SANS_SERIF: 'Libre Baskerville', serif;
+$BOLD: 700;
+$ITALIC: italic;
+
+
+// ----------------------------------------
+// Font Size/ Line Height
+// ----------------------------------------
+$BASE_FONT_SIZE: 1.4rem;
+$BASE_LINE_HEIGHT: 2;
+
+
+// ----------------------------------------
+// Colors
+// ----------------------------------------
+$brand: #b69968;
+$brand-alt: #231f20;
+
+$white: #ffffff;
+$black: #282828;
+$gray-light: #eaeaea;
+$gray: #ccc;
+$gray-dark: #bbb;
+
+
+// ----------------------------------------
+// Breakpoints
+// ----------------------------------------
+$xlarge: 1450px;
+$large: 1025px;
+$medium: 800px;
+$small: 600px;
+
+@mixin START_AT($device-width) {
+  @media (min-width: $device-width) {
+    @content
+  }
+}
+
+@mixin STOP_AT($device-width) {
+  @media (max-width: $device-width - 1) {
+    @content 
+  }
+}
+
+
+// ----------------------------------------
+// Global Variables
+// ----------------------------------------
+
+$transition-speed: 0.4s;
+$transition: 0.4s ease-in-out;
+$wrapper-width: 1024px;
+
+// ----------------------------------------
+// Susy
+// ----------------------------------------
+@import "susy/susy";
+
+$susy: (
+  columns: 12,
+  gutters: .5
+);

@@ -1,0 +1,203 @@
+/* --------------------------------------------------------------------- 
+  Revolver Styles
+------------------------------------------------------------------------ */
+
+.revolver {
+    overflow: hidden;
+    width: 100%;
+    //opacity: 0;
+    position: relative;
+}
+
+.revolver.isReady {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.no-js .revolver {
+    opacity: 1;
+}
+
+.revolver__slides {
+    overflow: hidden;
+    width: 100%;
+    // height: $revolverHeight;
+    position: relative;
+    overflow: hidden;
+}
+
+.revolver__slides > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // Transitions
+    opacity: 0;
+    transition-delay: 1s;
+    transition: opacity 1s ease-in-out;
+}
+
+.revolver__slides .isActive {
+    opacity: 1;
+    z-index: 1;
+    position: static;
+}
+
+.revolver__media {
+    position: relative;
+    width: 100%;
+    transform: scale(1);
+    animation: fadeDown 1s ease-in-out 1;
+}
+
+.revolver__slides .isActive .revolver__media {
+    animation: fadeUp 1s ease-in-out 1;
+    transform: scale(1.05);
+}
+
+.revolver__slides img {
+    //@include centerImg;
+    width: 100%;
+}
+
+/* ---------------------------------------
+ Carousel with Set Height
+--------------------------------------- */
+$revolverHeight: 480px;
+.revolver_setHeight {
+    .revolver__slides {
+        height: $revolverHeight;
+    }
+
+    .revolver__media {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .revolver__slides img {
+        @include centerImg;
+    }
+
+    .revolver__slides .isActive {
+        position: absolute;
+    }
+}
+
+/* ---------------------------------------
+ Controls
+--------------------------------------- */
+.revolver-controls {
+    width: 100%;
+}
+
+.revolver-pagination {
+    width: 200px;
+    display: table;
+    margin: 0 auto;
+    padding: 12px 0;
+    position: relative;
+    // height: 44px;
+    // bottom: 0;
+
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    span {
+        display: block;
+        margin: 0 auto;
+        background: $gray;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .isActive span,
+    span:hover {
+        background: $brand;
+    }
+}
+
+.revolver-controls__simple {
+    display: table;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -29px;
+
+    > * {
+        cursor: pointer;
+        text-indent: -9999px;
+        font-size: 0;
+        position: absolute;
+        padding: 20px;
+        background: rgba(0,0,0,0.4);
+        transition: background $transition;
+
+        &:hover {
+            background: rgba(0,0,0,0.9);
+        }
+        
+    }
+
+    svg {
+        display: block;
+        fill: $brand;
+        width: 18px;
+        height: 24px;
+    }
+}
+
+.revolver_hasPagination .revolver-controls__simple {
+    //half pagination height + half the height of the buttons
+    margin-top: -47px;
+}
+
+.js-revolve-prev {
+    left: 0;
+}
+
+.js-revolve-next {
+    right: 0;
+}
+
+/* ---------------------------------------
+ Animations
+--------------------------------------- */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeDown {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeUp {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+@keyframes fadeDown {
+    0% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes transformUpOut {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+}
+
+@keyframes transformUpIn {
+    0% { transform: translateY(100px); }
+    100% { transform: translateY(0); }
+}

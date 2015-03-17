@@ -1,0 +1,39 @@
+
+/* ---------------------------------------------------------------------
+ Wrapper Styles (Horizontal Spacing)
+------------------------------------------------------------------------ */
+
+
+
+/* ---------------------------------------
+ Wrapper Full
+--------------------------------------- */
+.wrapperFull {
+    max-width: 100%;
+}
+
+.wrapperFull_dark {
+    background-color: $black;
+    color: $white;
+}
+
+/* ---------------------------------------
+ Wrappers
+--------------------------------------- */
+.wrapper {
+    @include clearfix;
+    @include wrapper;
+}
+
+.wrapper_thin {
+    max-width: 720px;
+}
+
+@include STOP_AT($medium) {
+	.wrapper_fullMobile {
+	    width: 100%;
+	}
+}
+
+
+

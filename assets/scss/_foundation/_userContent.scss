@@ -1,0 +1,315 @@
+
+/* ---------------------------------------------------------------------
+ User Content Styles. WYSIWYG
+------------------------------------------------------------------------ */
+
+.userContent {
+    font-weight: normal;
+    font-style: normal;
+    font-family: $SANS_SERIF;
+}
+
+/* ----------------------------------------
+ Paragraphs
+---------------------------------------- */
+.userContent p {
+    @include para;
+}
+
+/* ----------------------------------------
+ Headings
+---------------------------------------- */
+.userContent h1,
+.userContent h2,
+.userContent h3,
+.userContent h4,
+.userContent h5,
+.userContent h6 {
+    @include hdg;
+    margin-bottom: 8px;
+}
+
+.userContent h1 {
+    @include hdg--1;
+}
+
+.userContent h2 {
+    @include hdg--2;
+}
+
+.userContent h3 {
+    @include hdg--3;
+}
+
+.userContent h4 {
+    @include hdg--4;
+}
+
+.userContent h5 {
+    @include hdg--5;
+}
+
+.userContent h6 {
+    @include hdg--6;
+}
+
+.userContent {
+    * + h1,
+    * + h2,
+    * + h3,
+    * + h4,
+    * + h5,
+    * + h6 {
+        margin-top: 24px;
+    }
+}
+
+/* ----------------------------------------
+ Links
+---------------------------------------- */
+.userContent a:link {
+    color: $brand;
+    text-decoration: underline;
+    transition: color $transition;
+}
+
+.userContent a:visited,
+.userContent a:active {
+   // color: $brand-alt;
+}
+
+.userContent a:focus,
+.userContent a:hover {
+    color: $brand-alt;
+}
+
+
+/* ----------------------------------------
+ Sections
+---------------------------------------- */
+.userContent blockquote {
+    padding: 12px;
+    font-style: italic;
+    border-left: 2px solid $brand;
+    margin-bottom: 24px;
+}
+
+.userContent address {
+    margin: 0 0 12px 0;
+    font-style: italic;
+}
+
+/* ----------------------------------------
+ Text Formats
+---------------------------------------- */
+.userContent strong,
+.userContent b {
+    font-weight: 700;
+}
+
+.userContent em,
+.userContent i {
+    font-style: italic;
+}
+
+.userContent del,
+.userContent strike,
+.userContent s {
+    text-decoration: line-through;
+}
+
+.userContent u,
+.userContent ins {
+    text-decoration: underline;
+}
+
+.userContent sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.userContent sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.userContent big {
+    font-size: larger;
+}
+
+.userContent small {
+    font-size: smaller;
+}
+
+.userContent abbr,
+.userContent acronym {
+    border-bottom: dotted 1px;
+}
+
+.userContent cite,
+.userContent dfn {
+    font-style: italic;
+}
+
+.userContent q {
+    font-style: italic;
+}
+
+.userContent q::before {
+    content: open-quote;
+}
+
+.userContent q::after  {
+    content: close-quote;
+}
+
+.userContent q:lang(en) {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.userContent bdo {
+    direction: rtl;
+}
+
+/* ----------------------------------------
+ Computer Output
+---------------------------------------- */
+.userContent pre {
+    margin: 0 0 12px 0;
+    font-family: "Lucida Console", Monaco, monospace;
+    white-space: normal;
+}
+
+.userContent code,
+.userContent samp,
+.userContent tt,
+.userContent kbd {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.userContent var {
+    font-style: italic;
+}
+
+/* ----------------------------------------
+ Lists
+---------------------------------------- */
+.userContent ul,
+.userContent ol,
+.userContent dl {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.userContent ul {
+    list-style-type: disc;
+    margin: 0 0 12px 24px;
+}
+
+.userContent ol {
+    list-style-type: decimal;
+    margin: 0 0 12px 24px;
+}
+
+.userContent dt {
+    font-weight: bold;
+}
+
+.userContent li,
+.userContent dd {
+    margin: 0 0 0 24px;
+}
+
+.userContent ul ul,
+.userContent ul ol,
+.userContent ul dl,
+.userContent ol ul,
+.userContent ol ol,
+.userContent ol dl,
+.userContent dl ul,
+.userContent dl ol,
+.userContent dl dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.userContent ol ul,
+.userContent ul ul {
+    list-style-type: circle;
+}
+
+.userContent ol ol ul,
+.userContent ol ul ul,
+.userContent ul ol ul,
+.userContent ul ul ul {
+    list-style-type: square;
+}
+
+/* ----------------------------------------
+ Tables
+---------------------------------------- */
+.userContent table {
+    margin: 0 0 20px 0;
+    width: 100% !important;
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+.userContent caption {
+    font-size: smaller;
+}
+
+.userContent tr {
+    vertical-align: middle;
+}
+
+.userContent tbody {
+    vertical-align: middle;
+}
+
+.userContent thead {
+    vertical-align: middle;
+}
+
+.userContent tfoot {
+    vertical-align: middle;
+}
+
+.userContent td {
+    vertical-align: inherit;
+    text-align: inherit;
+    padding: 2px 4px;
+}
+
+.userContent th {
+    vertical-align: inherit;
+    text-align: inherit;
+    font-weight: bold;
+    padding: 2px 4px;
+    background-color: #666666;
+    color: #ffffff;
+}
+
+.userContent tr:nth-child(even) td {
+    background-color: #cccccc;
+}
+
+/* ----------------------------------------
+ Horizontal Rule
+---------------------------------------- */
+.userContent hr {
+    margin: 24px 0;
+    background: $brand;
+    height: 1px;
+    border: none;
+    line-height: 1px;
+}
+
+/* ----------------------------------------
+ Media
+---------------------------------------- */
+.userContent img,
+.userContent video,
+.userContent audio {
+    max-width: 100% !important;
+}

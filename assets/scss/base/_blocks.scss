@@ -1,0 +1,57 @@
+
+/* ---------------------------------------------------------------------
+ Block Styles
+------------------------------------------------------------------------ */
+
+.blocks {
+    overflow: hidden;
+}
+
+.blocks_2-1 > *,
+.blocks_3-1 > *,
+.blocks_4-1 > *,
+.blocks_3-2-1 > *,
+.blocks_4-2-1 > *,
+.blocks_4-1 > * {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.blocks_3-2 > *,
+.blocks_4-2 > * {
+    @include gallery(6);
+    margin-bottom: 8px;
+}
+
+.blocks_2 > * { @include gallery(6); }
+.blocks_3 > * { @include gallery(4); }
+.blocks_4 > * { @include gallery(3); }
+
+@include START_AT ($small) {
+    .blocks_2-1 > *,
+    .blocks_3-2-1 > *,
+    .blocks_4-2-1 > * {
+        @include gallery(6);
+    }
+
+    .blocks_3-2 > *,
+    .blocks_3-1 > * {
+        @include gallery(4);
+    }
+
+    .blocks_4-2 > *,
+    .blocks_4-1 > * {
+        @include gallery(3);
+    }
+}
+
+@include START_AT ($medium) {
+    .blocks_3-2-1 > * {
+        @include gallery(4);
+    }
+
+    .blocks_4-2-1 > * {
+        @include gallery(3);
+    }
+
+}

@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------------
+ lTable Styles
+------------------------------------------------------------------------ */
+
+.lTable {
+    display: table;
+    width: 100%;
+}
+
+.lTable > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.lTable_2up > * {
+    width: 50%;
+}
+
+@include START_AT($medium) {
+	.lTableAfterMobile {
+		display: table;
+    	width: 100%;
+	}
+
+	.lTableAfterMobile > * {
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+}

@@ -1,0 +1,108 @@
+
+/* ---------------------------------------------------------------------
+ Link and Button Styles
+------------------------------------------------------------------------ */
+
+.link {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 16px 48px;
+    max-width: 100%;
+    min-width: 240px;
+    text-align: center;
+    background-color: $brand;
+    color: $white;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    transition: all $transition-speed ease-in-out;
+}
+
+.btn_alt {
+    border: 2px solid $brand;
+    background-color: transparent;
+    color: $brand;
+}
+
+.noTouch {
+    .btn:hover,
+    .btn:focus {
+        background-color: $brand-alt;
+        color: $white;
+        cursor: pointer;
+        letter-spacing: 0.15em;
+    }
+
+    .btn_alt:hover,
+    .btn_alt:focus {
+        background-color: $brand;
+        color: $white;
+    }
+}
+
+/* ---------------------------------------
+ Pagination
+--------------------------------------- */
+
+.pagination {
+    width: 100%;
+    overflow: hidden;
+    display: table;
+
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.pagination__prev {
+    width: 25%;
+}
+
+.pagination__next {
+    width: 25%;
+    text-align: right;
+}
+
+.pagination__numbers {
+    width: 50%;
+    text-align: center;
+
+    > * {
+        max-width: 288px;
+        margin: 0 auto;
+    }
+
+    li > * {
+        display: block;
+        padding: 8px 4px;
+    }
+}
+
+.pagination svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 24px;
+    fill: $brand;
+    transition: all $transition;
+}
+
+.pagination a:hover svg {
+    fill: $brand-alt;
+}
+
+.pagination__text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 8px;
+}
+
+@include STOP_AT($small) {
+    .pagination__text {
+        @include visuallyHidden;
+    }
+}

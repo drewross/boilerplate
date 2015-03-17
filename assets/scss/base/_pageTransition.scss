@@ -1,0 +1,12 @@
+/* ---------------------------------------------------------------------
+ Page Load Transition Styles
+------------------------------------------------------------------------ */
+
+.js-pageTransition {
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.js-pageTransition.pageLoaded {
+    opacity: 1;
+}

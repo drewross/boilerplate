@@ -1,0 +1,236 @@
+
+/* ---------------------------------------------------------------------
+ Global Header Styles
+------------------------------------------------------------------------ */
+
+.globalHeader {
+	// position: absolute;
+	background-color: $white;
+	z-index: 10;
+	width: 100%;
+}
+
+.globalHeader .wrapper {
+	display: table;
+	// Either set the height or adjust the padding to determine height
+	// height: 80px;
+	padding: 4px 0;
+}
+
+/* ---------------------------------------
+ Logo Styles
+--------------------------------------- */
+$logo-width: 220px;
+$logo-height: 72px;
+
+.logo {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.logo a {
+	display: block;
+	width: $logo-width;
+	font-size: 48px;
+}
+
+.logo-text {
+	display: block;
+	text-indent: -9999px;
+	height: 0;
+}
+
+/* ---------------------------------------
+ Utility Nav Styles
+--------------------------------------- */
+
+.utilityNav-list > * {
+	display: inline-block;
+
+	a {
+		padding: 6px 12px;
+	}
+}
+
+/* ---------------------------------------
+ Mobile Menu Styles
+--------------------------------------- */
+@include STOP_AT($medium) {
+
+	$panel-width: 260px;
+
+	.globalHeader-panel {
+		position: fixed;
+		height: 100%;
+		width: $panel-width;
+		padding: 0 24px;
+		left: 0;
+		margin-left: -$panel-width;
+		background: $brand;
+		z-index: 10;
+		bottom: 0;
+		top: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+		transition: margin-left 0.4s ease-in-out;
+	}
+
+	.globalHeader-panel:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+
+	.globalNav {
+		overflow: visible;
+	}
+
+
+	/* ---------------------------------------
+	 Main Nav Styles
+	--------------------------------------- */
+	.globalNav {
+		overflow: hidden;
+		width: 100%;
+		margin: 24px auto 48px;
+		display: block;
+	}
+
+	.globalNav-list > * {
+		display: block;
+	}
+
+	.globalNav-list > * a {
+		display: block;
+		color: $white;
+		padding: 12px 0;
+		transition: letter-spacing $transition-speed ease-in-out;
+	}
+
+	.globalNav-list > * a:hover {
+		letter-spacing: 0.05em;
+	}
+
+
+	/* ---------------------------------------
+	 Utiliy Nav Styles
+	--------------------------------------- */
+	.utilityNav-list > * a {
+		color: $gray-light;
+		padding: 12px 12px 12px 0;
+	}
+
+	.mobileMenuIsOpen .globalHeader-panel {
+		margin-left: 0;
+	}
+
+
+	/* ---------------------------------------
+	 Menu Mask Styles
+	--------------------------------------- */
+	.mobileMenuIsOpen {
+		overflow: hidden;
+	}
+
+	.mobileMenuIsOpen .menu-mask {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: rgba(0,0,0,0.4);
+	}
+}
+
+
+@include START_AT($medium) {
+	/* ---------------------------------------
+	 Desktop Menu Styles
+	--------------------------------------- */
+	.globalHeader-panel {
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+	}
+
+	.globalNav-list {
+		width: 100%;
+		display: table;
+		float: right;
+		max-width: 536px;
+	}
+
+	.globalNav-list:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.globalNav-list > * {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.globalNav-list > * a {
+		display: block;
+		color: $black;
+		padding: 12px 0;
+		font-size: 14px;
+	}
+
+	.globalNav-list > * a:hover {
+		color: $brand;
+	}
+
+	.utilityNav {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.globalHeader.isSticky {
+		position: fixed;
+		z-index: 10;
+		width: 100%;
+		background: $white;
+	}
+
+}
+
+/* ---------------------------------------
+ TABLET NAV Styles
+--------------------------------------- */
+@include START_AT($small) {
+@include STOP_AT($medium) {
+
+	.globalHeader_adjustTab .burger {
+		display: none;
+	}
+
+	.globalHeader_adjustTab .wrapper {
+		overflow: hidden;
+		display: block;
+		padding: 12px 0 24px;
+	}
+
+	.globalHeader_adjustTab .logo {
+		display: block;
+		margin: 0 auto 24px;
+		text-align: center;
+	}
+
+	.globalHeader_adjustTab .globalHeader-panel {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: none;
+	}
+
+	.globalHeader_adjustTab .globalNav-list {
+		max-width: none;
+	}
+
+}
+}

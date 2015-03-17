@@ -1,0 +1,77 @@
+
+/* ---------------------------------------------------------------------
+ Horizontal Tabs and tabs_hThenV Styles
+------------------------------------------------------------------------ */
+
+.tabs {
+    overflow: hidden;
+}
+
+.tabs > * {
+    display: inline;
+    font-size: 0;
+}
+
+.tabs_2up > * > .tab-tab{
+    width: 50%;
+}
+
+.tabs_3up > * > .tab-tab{
+    width: 33.33333%;
+}
+
+.tabs_4up > * > .tab-tab{
+    width: 25%;
+}
+
+.tab-tab {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: $brand;
+    box-sizing: border-box;
+    color: $white;
+    transition: all $transition;
+}
+
+.tab-tab:hover {
+    cursor: pointer;
+    background-color: $brand-alt;
+    color: $brand;
+}
+
+.tab-bd {
+    height: 0;
+    width: 0;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+
+.tabs .isOpen .tab-tab {
+    background-color: $brand-alt;
+    color: $brand;
+}
+
+.tabs .isOpen .tab-bd { 
+    font-size: $BASE_FONT_SIZE;
+    padding: 16px 24px;
+    width: 100%;
+    height: inherit;
+    background-color: $brand-alt;
+    color: $white;
+}
+
+@include START_AT($small) {
+    .tabs_hThenV > * {
+        display: inline;
+        font-size: 0;
+    }
+}
+
+@include STOP_AT($small) {
+    .tabs_hThenV > * > .tab-tab {
+        width: 100%;
+    }
+}

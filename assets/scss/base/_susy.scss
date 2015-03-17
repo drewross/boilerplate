@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------------
+ Susy Styles
+------------------------------------------------------------------------ */
+
+.grid {
+    @include clearfix;
+}
+
+.col_1   { @include span(1); }
+.col_2   { @include span(2); }
+.col_3   { @include span(3); }
+.col_4   { @include span(4); }
+.col_5   { @include span(5); }
+.col_6   { @include span(6); }
+.col_7   { @include span(7); }
+.col_8   { @include span(8); }
+.col_9   { @include span(9); }
+.col_10  { @include span(10); }
+.col_11  { @include span(11); }
+.col_12  { @include span(12); }
+
+.push_1   { @include push(1); }
+.push_2   { @include push(2); }
+.push_3   { @include push(3); }
+.push_4   { @include push(4); }
+.push_5   { @include push(5); }
+.push_6   { @include push(6); }
+
+
+@include STOP_AT ($small) {
+
+    .col { @include span(12); }
+
+    .grid_stack-sm {
+        @include padStack;
+
+        .col {
+            @include span(12);
+        }
+    }
+
+    .grid_fullMobile > * {
+        @include span(12);
+        @include push(0);
+    }
+
+    .grid_fullMobilePad > * {
+        @include padStack;
+    }
+
+    .push {
+       @include push(0); 
+    }
+}
+
+@include STOP_AT ($medium) {
+    .grid_stack-md {
+        @include padStack;
+
+        .col {
+            @include span(12);
+        }
+    }
+
+    .grid_stack-2 {
+        @include padStack;
+
+        .col {
+            @include gallery(6);
+        }
+    }
+}
+
+
+.col_last {
+    margin-right: 0;
+}

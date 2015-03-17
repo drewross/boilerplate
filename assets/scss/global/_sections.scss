@@ -1,0 +1,36 @@
+
+/* ---------------------------------------------------------------------
+ Section Styles (Vertical Spacing)
+------------------------------------------------------------------------ */
+
+.section {
+    display: block;
+    padding: 48px 0;
+    @include clearfix;
+}
+
+.section--short {
+    padding: 24px 0;
+}
+
+.section--tall {
+    padding: 72px 0;
+}
+
+.section--flushBottom {
+    padding-bottom: 0;
+}
+
+.section--flushTop {
+    padding-top: 0;
+}
+
+/* ---------------------------------------
+ Section Headings
+--------------------------------------- */
+
+.section__hd {
+	margin-bottom: 16px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid $brand;
+}

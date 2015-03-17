@@ -1,0 +1,175 @@
+
+/* ---------------------------------------------------------------------
+ Typography Styles
+------------------------------------------------------------------------ */
+
+/* ---------------------------------------
+ Heading Mixins
+--------------------------------------- */
+
+@mixin hdg {
+    display: block;
+    font-family: $SANS_SERIF;
+}
+
+@mixin hdg--1 {
+    font-size: 3.8rem;
+    line-height: 1.1;
+}
+
+@mixin hdg--2 {
+    font-size: 3.2rem;
+    line-height: 1.2;
+}
+
+@mixin hdg--3 {
+    font-size: 2.6rem;
+    line-height: 1.3;
+}
+
+@mixin hdg--4 {
+    font-size: 2.1rem;
+    line-height: 1.4;
+}
+
+@mixin hdg--5 {
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+
+@mixin hdg--6 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ---------------------------------------
+ Headings
+--------------------------------------- */
+.hdg {
+    @include hdg;
+}
+
+.hdg--1 {
+    @include hdg--1;
+}
+
+.hdg--2 {
+    @include hdg--2;
+}
+
+.hdg--3 {
+    @include hdg--3;
+}
+
+.hdg--4 {
+    @include hdg--4;
+}
+
+.hdg--5 {
+    @include hdg--5;
+}
+
+.hdg--6 {
+    @include hdg--6;
+}
+
+/* ---------------------------------------
+ Body Copy Mixins
+--------------------------------------- */
+@mixin para {
+    display: block;
+    font-family: $SANS_SERIF;
+    font-size: $BASE_FONT_SIZE;
+    line-height: $BASE_LINE_HEIGHT;
+}
+
+@mixin para--lg {
+    font-size: 1.8rem;
+    line-height: 1.7;
+}
+
+@mixin para--sm {
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+/* ---------------------------------------
+ Body Copy Styles
+--------------------------------------- */
+.para {
+    @include para;
+}
+
+.para--lg {
+    @include para--lg;
+}
+
+.para--sm {
+  @include para--sm;
+}
+
+/* ---------------------------------------
+ Relationships
+--------------------------------------- */
+.hdg + .hdg,
+.hdg + .para,
+.para + .hdg,
+.para + .para,
+p + p, {
+    margin-top: 16px;
+}
+
+.hdg + .para,
+.para + .para,
+p + p, {
+    margin-top: 16px;
+}
+
+.hdg + .hdg,
+.para + .hdg {
+    margin-top: 24px;
+}
+
+@mixin lineHeight {
+    line-height: 1;
+}
+
+.hdg + .mix-noTopMarg,
+.para + .mix-noTopMarg,
+.mix-noTopMarg .hdg + .hdg,
+.mix-noTopMarg .para + .para,
+.mix-noTopMarg .hdg + .para,
+.mix-noTopMarg .para + .hdg,
+.mix-noTopMarg p + p  {
+    margin-top: 0;
+}
+
+/* ---------------------------------------
+ Mix-ins
+--------------------------------------- */
+
+.leadLetter::first-letter {
+  color: $brand;
+  font-style: italic;
+  float: left;
+  font-size: 48px;
+  display: inline-block;
+  line-height: 0.9;
+  margin: 4px 12px 0 8px;
+}
+
+.mix-bold {
+    font-weight: 700;
+}
+
+.mix-italic {
+    font-style: itlalic;
+}
+// .mix-txt_strong     { font: $SANS_SERIF_BOLD; }
+// .mix-txt_reg        { font: $SANS_SERIF; }
+// .mix-txt_noCaps     { text-transform: none; }
+// .mix-txt_caps       { text-transform: uppercase; }
+
+// .mix-txt_brand      { color: $brand; }
+// .mix-txt_brandAlt   { color: $brand-alt; }
+

@@ -1,0 +1,22 @@
+
+/* ---------------------------------------------------------------------
+ Vertical List Styles.
+------------------------------------------------------------------------ */
+
+.vList {
+    overflow: hidden;
+    display: block;
+}
+
+.vList > * + * {
+    margin-top: 4px;
+}
+
+.vList--spread > * + * {
+    margin-top: 16px;
+}
+
+.vList--bullets > * {
+	list-style-type: disc;
+	margin-left: 16px;
+}

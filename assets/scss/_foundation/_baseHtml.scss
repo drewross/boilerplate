@@ -1,0 +1,75 @@
+
+/* ---------------------------------------------------------------------
+ Base Global Styles
+------------------------------------------------------------------------ */
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+// @include STOP_AT($medium) {
+//     html,
+//     body {
+//         font-size: 52.5%;
+//     }
+// }
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+ 
+body,
+input,
+button,
+select,
+textarea {
+    font-family: $SANS_SERIF;
+    font-size: $BASE_FONT_SIZE;
+    line-height: $BASE_LINE_HEIGHT;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
+a {
+    color: $brand;
+    text-decoration: none;
+    transition: color $transition-speed ease-in-out;
+}
+
+a:hover {
+    color: $brand-alt;
+    cursor: pointer;
+}
+
+p {
+    font-family: $SANS_SERIF;
+    font-size: $BASE_FONT_SIZE;
+    line-height: $BASE_LINE_HEIGHT;
+}
+
+audio {
+    width: 100%;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+hr {
+    //border: 1px inset rgba(20,20,20,0.8);
+}
+
+picture > * { width: 100%; height: auto; }
+
+::selection { color: $brand; background: $black; }
+::-moz-selection { color: $brand; background: $black; }
