@@ -1,5 +1,5 @@
 {
-  "name": "phdl-boilerplate",
+  "name": "roztocki-boilerplate",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.1",

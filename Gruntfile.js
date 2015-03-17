@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 
     svgstore: {
         options: {
-            prefix : 'shape-', // This will prefix each ID
+            prefix : 'shape-',
             cleanup: ['fill','stroke'],
             svg: { 
                 style: "display: none;",

@@ -3,7 +3,8 @@
 
     <!-- Hero -->
     <div class="hero hero--fixed">
-        <img src="assets/images/hero.jpg" alt="FPO" />
+    <img src="https://placeimg.com/1500/825/nature/grayscale" alt="FPO" />
+        
         <div class="hero__content">
             <div class="hdg hdg--1">Hero</div>
         </div>
@@ -92,7 +93,7 @@
             </div>
             <div class="media-object media-object--equalWidth">
                 <figure class="media-object__media">
-                    <img src="http://placebear.com/288/168" alt="FPO">
+                    <img src="https://placeimg.com/288/168/nature/grayscale" alt="FPO" />
                 </figure>
                 <div class="media-object__bd">
                     <p class="para para--sm">In cum quem corpora molestiae. Mazim vivendo sit ut. Eos natum sententiae intellegam te. Ea aperiri iracundia interesset mea, an his impetus definiebas. Solet populo eum no, pri etiam viris ut, vix ad quas saepe admodum. Sonet timeam ex qui, doctus dolores ex sed. Has ut mutat rationibus.</p>
@@ -105,7 +106,7 @@
             </div>
             <div class="media-object media-object--equalWidth media-object--flip">
                 <figure class="media-object__media">
-                    <img src="http://placebear.com/288/168" alt="FPO">
+                    <img src="https://placeimg.com/288/168/nature/grayscale" alt="FPO" />
                 </figure>
                 <div class="media-object__bd">
                     <p class="para para--sm">In cum quem corpora molestiae. Mazim vivendo sit ut. Eos natum sententiae intellegam te. Ea aperiri iracundia interesset mea, an his impetus definiebas. Solet populo eum no, pri etiam viris ut, vix ad quas saepe admodum. Sonet timeam ex qui, doctus dolores ex sed. Has ut mutat rationibus.</p>
@@ -414,12 +415,12 @@
                         <ul class="revolver__slides">
                             <li>
                                 <figure class="revolver__media">
-                                    <img src="http://www.placebear.com/1024/620" alt="FPO" />
+                                    <img src="https://placeimg.com/1024/620/nature/grayscale" alt="FPO" />
                                 </figure>
                             </li>
                             <li>
                                 <figure class="revolver__media">
-                                    <img src="https://placeimg.com/1024/620/nature/grayscale" alt="FPO">
+                                    <img src="https://placeimg.com/1024/620/arch/grayscale" alt="FPO" />
                                 </figure>
                             </li>
                             <li>
@@ -447,12 +448,12 @@
                         <ul class="revolver__slides">
                             <li>
                                 <figure class="revolver__media">
-                                    <img src="http://www.placebear.com/1024/620" alt="FPO" />
+                                    <img src="https://placeimg.com/1024/620/nature/grayscale" alt="FPO" />
                                 </figure>
                             </li>
                             <li>
                                 <figure class="revolver__media">
-                                    <img src="https://placeimg.com/1024/620/nature/grayscale" alt="FPO">
+                                    <img src="https://placeimg.com/1024/620/arch/grayscale" alt="FPO" />
                                 </figure>
                             </li>
                             <li>
