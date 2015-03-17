@@ -1,5 +1,5 @@
-<h1>This is a front end boilerplate utilizing HTML, Sass, Grunt, jQuery, PHP, susy and more.</h1>
-<p>kajhsdkjflad</p>
+<h1>Front End boilerplate</h1>
+<p>This front end boilerplate utilizes HTML, Sass, Grunt, jQuery, PHP, susy and more.</p>
 
 <h2>Modules included in the boilerplate</h2>
 <ul>
