@@ -7,15 +7,11 @@
  Layouts
 --------------------------------------- */
 
-.isCentered {
-    text-align: center;
-}
-
-.isHidden {
+.is-hidden {
     display: none;
 }
 
-.visuallyHidden {
+.sr-only {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -24,6 +20,67 @@
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+}
+
+.display-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ---------------------------------------
+ Text Utils
+--------------------------------------- */
+.text-center {
+    text-align: center;
+}
+
+.text-caps {
+    text-transform: uppercase;
+}
+
+.text-noCaps {
+    text-transform: none;
+}
+
+.text-brand {
+    color: $brand;
+}
+
+.text-brand-alt {
+    color: $brand-alt;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-black {
+    color: $black;
+}
+
+/* ---------------------------------------
+ Background Utils
+--------------------------------------- */
+
+.bg-brand {
+    background-color: $brand;
+}
+
+.bg-brand-alt {
+    background-color: $brand-alt;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-brand-opacity {
+    //background-color: $brand-opacity;
 }
 
 /* ---------------------------------------

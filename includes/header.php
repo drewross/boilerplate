@@ -4,7 +4,7 @@
     		<a href="index.php">
     			Logo	
     		</a>
-    		<span class="logo-text">Site Title</span>
+    		<span class="sr-only">Site Title</span>
     	</h1>
         <div class="burger js-trigger" data-target="mainNav" data-addClass="mobileMenuIsOpen">
             <div class="burger-inner">

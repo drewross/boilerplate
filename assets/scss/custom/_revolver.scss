@@ -102,8 +102,6 @@ $revolverHeight: 480px;
     margin: 0 auto;
     padding: 12px 0;
     position: relative;
-    // height: 44px;
-    // bottom: 0;
 
     > * {
         display: table-cell;
@@ -118,6 +116,7 @@ $revolverHeight: 480px;
         height: 12px;
         cursor: pointer;
         border-radius: 50%;
+        transition: all $transition;
     }
 
     .isActive span,

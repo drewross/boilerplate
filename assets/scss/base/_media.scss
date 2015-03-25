@@ -13,3 +13,22 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);   
 }
+
+/* ---------------------------------------
+ SVGs
+--------------------------------------- */
+.shape {
+	display: block;
+}
+
+.shape--inline {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.shape svg {
+	fill: $brand;
+	height: 44px;
+	width: auto;
+	display: block;
+}

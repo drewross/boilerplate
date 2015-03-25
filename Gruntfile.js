@@ -12,14 +12,14 @@ module.exports = function(grunt) {
                 'assets/scripts/touchswipe.js',
                 'assets/scripts/revolver.js'
             ],
-            dest: 'assets/build/scripts/production.js',
+            dest: 'build/scripts/production.js',
         }
     },
 
     uglify: {
         build: {
-            src: 'assets/build/scripts/production.js',
-            dest: 'assets/build/scripts/production.min.js'
+            src: 'build/scripts/production.js',
+            dest: 'build/scripts/production.min.js'
         }
     },
 
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'assets/build/styles/production.css': 'assets/scss/screen.scss'
+                'build/styles/production.css': 'assets/scss/screen.scss'
             }
         } 
     },
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     autoprefixer: {
         dist: {
             files: {
-                'assets/build/styles/production.css': 'assets/build/styles/production.css'
+                'build/styles/production.css': 'build/styles/production.css'
             }
         }
     },
@@ -53,8 +53,8 @@ module.exports = function(grunt) {
             files: [{
                 expand: true,
                 cwd: 'assets/images/',
-                src: ['**/*.{png,jpg,gif}'],
-                dest: 'assets/build/images/'
+                src: ['**/*.{png,jpg,gif,ico,svg}'],
+                dest: 'build/images/'
             }]
         }
     },
@@ -65,8 +65,8 @@ module.exports = function(grunt) {
             replace: false
         },
         dist: {
-            src: 'assets/build/styles/production.css',
-            dest: 'assets/build/styles/production.css'
+            src: 'build/styles/production.css',
+            dest: 'build/styles/production.css'
         }
     },
 

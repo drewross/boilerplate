@@ -3,8 +3,7 @@
 
     <!-- Hero -->
     <div class="hero hero--fixed">
-    <img src="https://placeimg.com/1500/825/nature/grayscale" alt="FPO" />
-        
+        <img src="https://placeimg.com/1500/825/nature/grayscale" alt="FPO" />  
         <div class="hero__content">
             <div class="hdg hdg--1">Hero</div>
         </div>
@@ -312,7 +311,7 @@
             <div class="section__hd">
                 <div class="hdg-1">Layout Table Object</div>
             </div>
-            <div class="lTable lTable_2u patternLibrary">
+            <div class="lTable lTable--2u patternLibrary">
                 <div>
                     Left Content <br>
                     Left Content <br>
@@ -329,11 +328,11 @@
                 <div class="hdg-1">Icons</div>
             </div>
             <div class="patternLibrary-svg">
-                <ul class="hList hList_spread">
-                    <li><svg><use xlink:href="#shape-close"></use></svg></li>
-                    <li><svg><use xlink:href="#shape-arrow-down"></use></svg></li>
-                    <li><svg><use xlink:href="#shape-arrow-left"></use></svg></li>
-                    <li><svg><use xlink:href="#shape-arrow-right"></use></svg></li>
+                <ul class="hList hList--spread">
+                    <li><div class="shape"><svg><use xlink:href="#shape-close"></use></svg></div></li>
+                    <li><div class="shape"><svg><use xlink:href="#shape-arrow-down"></use></svg></div></li>
+                    <li><div class="shape"><svg><use xlink:href="#shape-arrow-left"></use></svg></div></li>
+                    <li><div class="shape"><svg><use xlink:href="#shape-arrow-right"></use></svg></div></li>
                 </ul>
             </div>
         </div>
@@ -351,7 +350,7 @@
                     <div class="modal" id="modal1">
                         <div class="modal__close js-trigger" data-target="modal1" data-addClass="modalIsActive">
                             <div>
-                                <p class="visuallyHidden">Close Modal</p>
+                                <p class="sr-only">Close Modal</p>
                                 <svg><use xlink:href="#shape-close"></use></svg>
                             </div>
                         </div>
@@ -369,7 +368,7 @@
                     <div class="modal modal--fromLeft" id="modal2">
                         <div class="modal__close js-trigger" data-target="modal2" data-addClass="modalIsActive">
                             <div>
-                                <p class="visuallyHidden">Close Modal</p>
+                                <p class="sr-only">Close Modal</p>
                                 <svg><use xlink:href="#shape-close"></use></svg>
                             </div>
                         </div>
@@ -387,7 +386,7 @@
                     <div class="modal modal--fromRight" id="modal3">
                         <div class="modal__close js-trigger" data-target="modal3" data-addClass="modalIsActive">
                             <div>
-                                <p class="visuallyHidden">Close Modal</p>
+                                <p class="sr-only">Close Modal</p>
                                 <svg><use xlink:href="#shape-close"></use></svg>
                             </div>
                         </div>
@@ -404,7 +403,7 @@
     </div>
 
     <!-- Revolver Carousel -->
-    <div class="wrapper wrapper_fullMobile">
+    <div class="wrapper wrapper--fullMobile">
         <div class="section">
             <div class="section__hd">
                 <div class="hdg-1">Revolver Carousel | Options: Auto play, Pagination, Speed</div>
@@ -875,7 +874,7 @@
             </div>
         </div>
 
-        <div class="wrapper wrapper_fullMobile">
+        <div class="wrapper wrapper--fullMobile">
             <div class="section">
                 <div class="section__hd">
                     <div class="hdg-1">Wrapper Full Mobile</div>
@@ -891,7 +890,7 @@
             </div>
         </div>
 
-        <div class="wrapper wrapper_thin">
+        <div class="wrapper wrapper--thin">
             <div class="section">
                 <div class="section__hd">
                     <div class="hdg-1">Wrapper Thin</div>

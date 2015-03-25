@@ -9,23 +9,23 @@
 <title>PHDL | Boilerplate</title>
 
 <!-- ICONS -->
-<link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico" />
-<link rel="apple-touch-icon" href="assets/build/images/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/ico" href="build/images/favicon.ico" />
+<link rel="apple-touch-icon" href="build/images/apple-touch-icon.png" />
 
 <!-- FONT -->
 <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
 <!-- CSS -->
-<link rel="stylesheet" media="screen, projection" href="assets/build/styles/production.css" />
+<link rel="stylesheet" media="screen, projection" href="/build/styles/production.css" />
 
 <!-- JQUERY -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <!-- JAVASCRIPT -->
-<script type="text/javascript" src="assets/build/scripts/production.min.js"></script>
+<script type="text/javascript" src="build/scripts/production.min.js"></script>
 
 <!--[if lte IE 9]>
-<script type="text/javascript" src="assets/scripts/timetravel.js"></script>
+<script type="text/javascript" src="build/scripts/timetravel.js"></script>
 <![endif]-->
 
 </head>

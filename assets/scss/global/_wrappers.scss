@@ -12,7 +12,7 @@
     max-width: 100%;
 }
 
-.wrapperFull_dark {
+.wrapperFull--dark {
     background-color: $black;
     color: $white;
 }
@@ -25,12 +25,12 @@
     @include wrapper;
 }
 
-.wrapper_thin {
+.wrapper--thin {
     max-width: 720px;
 }
 
 @include STOP_AT($medium) {
-	.wrapper_fullMobile {
+	.wrapper--fullMobile {
 	    width: 100%;
 	}
 }
