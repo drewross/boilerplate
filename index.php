@@ -27,16 +27,18 @@
             <div class="section__hd">
                 <div class="hdg-1">Typography Styles</div>
             </div>
-            <div class="blocks blocks_3-2-1">
-                <div class="mix-noTopMargS">
-                    <div class="hdg hdg--1">Headline 1</div>
-                    <div class="hdg hdg--2">Headline 2</div>
-                    <div class="hdg hdg--3">Headline 3</div>
-                    <div class="hdg hdg--4">Headline 4</div>
-                    <div class="hdg hdg--5">Headline 5</div>
-                    <div class="hdg hdg--6">Headline 6</div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="mix-noTopMargS">
+                        <div class="hdg hdg--1">Headline 1</div>
+                        <div class="hdg hdg--2">Headline 2</div>
+                        <div class="hdg hdg--3">Headline 3</div>
+                        <div class="hdg hdg--4">Headline 4</div>
+                        <div class="hdg hdg--5">Headline 5</div>
+                        <div class="hdg hdg--6">Headline 6</div>
+                    </div>
                 </div>
-                <div>
+                <div class="col-sm-6 col-md-4">
                     <p class="para para--lg">
                         Paragraph LARGE - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
@@ -47,7 +49,7 @@
                         Paragraph SMALL - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
-                <div>
+                <div class="col-sm-6 col-md-4">
                     <p class="para para--sm leadLetter">Leading Letter - cum quem corpora molestiae. Mazim vivendo sit ut. Eos natum sententiae intellegam te. Ea aperiri iracundia interesset mea, an his impetus definiebas. Solet populo eum no, pri etiam viris ut.</p>
 
                     <div class="section section--short">
@@ -66,7 +68,6 @@
                             </li>
                         </ul>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -120,8 +121,8 @@
             <div class="section__hd">
                 <div class="hdg-1">Horizontal Lists</div>
             </div>
-            <div class="blocks blocks_3-2-1">
-                <div>
+            <div class="row">
+                <div class="col-sm-4">
                     <div class="testHdg2">Standard</div>
                     <ul class="hList">
                         <li>Item</li>
@@ -129,7 +130,7 @@
                         <li>Item</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="testHdg2">Spread</div>
                     <ul class="hList hList--spread">
                         <li>Item</li>
@@ -137,7 +138,7 @@
                         <li>Item</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="testHdg2">Piped</div>
                     <ul class="hList hList--piped">
                         <li>Item</li>
@@ -155,8 +156,8 @@
             <div class="section__hd">
                 <div class="hdg-1">Vertical Lists</div>
             </div>
-            <div class="blocks blocks_3-2-1">
-                <div>
+            <div class="row">
+                <div class="col-sm-4">
                     <div class="testHdg2">Standard</div>
                     <ul class="vList">
                         <li>Item</li>
@@ -164,7 +165,7 @@
                         <li>Item</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="testHdg2">Spread</div>
                     <ul class="vList vList--spread">
                         <li>Item</li>
@@ -172,7 +173,7 @@
                         <li>Item</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="testHdg2">Bullets</div>
                     <ul class="vList vList--bullets">
                         <li>Item</li>
@@ -205,8 +206,8 @@
             <div class="section__hd">
                 <div class="hdg-1">Tabs</div>
             </div>
-            <div class="blocks blocks_3-2-1">
-                <div>
+            <div class="rows">
+                <div class="col-sm-4">
                     <div class="testHdg2">Horizontal then Vertical Tabs</div>
                     <ul class="tabs tabs_4up tabs_hThenV js-tabList">
                         <li class="isOpen">
@@ -227,7 +228,7 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="testHdg2">Horizontal Tabs</div>
                     <ul class="vList">
                         <li>
@@ -280,7 +281,7 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="testHdg2">Vertical Tabs</div>
                     <ul class="tabs js-tabList">
                         <li class="isOpen">
@@ -344,8 +345,8 @@
             <div class="section__hd">
                 <div class="hdg-1">Simple Modal</div>
             </div>
-            <div class="blocks blocks_3">
-                <div>
+            <div class="row">
+                <div class="col-sm-4">
                     <div class="openModal js-trigger" data-target="modal1" data-addClass="modalIsActive">Open Modal</div>
                     <div class="modal" id="modal1">
                         <div class="modal__close js-trigger" data-target="modal1" data-addClass="modalIsActive">
@@ -363,8 +364,8 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                <div class="openModal js-trigger" data-target="modal2" data-addClass="modalIsActive">Pop up from the left</div>
+                <div class="col-sm-4">
+                    <div class="openModal js-trigger" data-target="modal2" data-addClass="modalIsActive">Pop up from the left</div>
                     <div class="modal modal--fromLeft" id="modal2">
                         <div class="modal__close js-trigger" data-target="modal2" data-addClass="modalIsActive">
                             <div>
@@ -381,7 +382,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <div class="openModal js-trigger" data-target="modal3" data-addClass="modalIsActive">Pop up from the Right</div>
                     <div class="modal modal--fromRight" id="modal3">
                         <div class="modal__close js-trigger" data-target="modal3" data-addClass="modalIsActive">
@@ -399,6 +400,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -408,8 +410,8 @@
             <div class="section__hd">
                 <div class="hdg-1">Revolver Carousel | Options: Auto play, Pagination, Speed</div>
             </div>
-            <div class="blocks blocks_2-1">
-                <div>
+            <div class="row">
+                <div class="col-md-6">
                     <div class="revolver js-revolver" id="revolver1">
                         <ul class="revolver__slides">
                             <li>
@@ -442,7 +444,7 @@
                         </footer>
                     </div>
                 </div>
-                <div>
+                <div class="col-md-6">
                     <div class="revolver js-revolver" id="revolver2">
                         <ul class="revolver__slides">
                             <li>
@@ -485,8 +487,8 @@
             <div class="section__hd">
                 <div class="hdg-1">Inline Styles</div>
             </div>
-            <div class="blocks blocks_3-2-1 userContent">
-                <div>
+            <div class="row userContent">
+                <div class="col-sm-4">
                     <h2>Headline</h2>
                     <p>
                         Paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <a href="">eiusmod tempor</a> incididunt ut labore et dolore magna aliqua.
@@ -496,7 +498,7 @@
                         Paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <p>Paragraph - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <p><b>Bold/ Strong Text</b></p>
                     <p><i>Italic/ Emphasis Text</i></p>
@@ -504,7 +506,7 @@
                     <hr>
                     <small>Small - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
                 </div>
-                <div>
+                <div class="col-sm-4">
                     <blockquote>Blockquote - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
                     <ul>
                         <li>Unordered List Item</li>
@@ -516,7 +518,6 @@
                         <li>Ordered List Item</li>
                         <li>Ordered List Item</li>
                     </ol>
-                    
                 </div>
             </div>
         </div>
@@ -670,166 +671,109 @@
         </div>
     </div>
 
-    <!-- Blocks -->
+    <!-- Grid -->
     <div class="wrapper isHidden">
         <div class="section">
             <div class="section__hd">
-                <div class="hdg-1">Blocks</div>
+                <div class="hdg-1">Grid (based on Bootstrap's grid)</div>
             </div>
-            <div class="blocks blocks_2">
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 2 Up</div>
-                    <div class="blocks blocks_2 patternLibrary">
-                        <div>
-                            2 up
-                        </div>
-                        <div>
-                            2 up
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
                 </div>
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 2 then 1</div>
-                    <div class="blocks blocks_2-1 patternLibrary">
-                        <div>
-                            2 up then 1
-                        </div>
-                        <div>
-                            2 up then 1
-                        </div>
-                    </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
                 </div>
-            </div>
-            <div class="blocks blocks_2">
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 3 Up</div>
-                    <div class="blocks blocks_3 patternLibrary">
-                        <div>
-                            3 up
-                        </div>
-                        <div>
-                            3 up
-                        </div>
-                        <div>
-                            3 up
-                        </div>
-                    </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
                 </div>
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 3 then 2</div>
-                    <div class="blocks blocks_3-2 patternLibrary">
-                        <div>
-                            3 up then 2
-                        </div>
-                        <div>
-                            3 up then 2
-                        </div>
-                        <div>
-                            3 up then 2
-                        </div>
-                    </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
+                </div>
+                <div class="col-sm-1 patternLibrary">
+                    <div>1 col</div>
                 </div>
             </div>
-            <div class="blocks blocks_2">
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 3 then 2 then 1 Up</div>
-                    <div class="blocks blocks_3-2-1 patternLibrary">
-                        <div>
-                            3 2 1
-                        </div>
-                        <div>
-                            3 2 1
-                        </div>
-                        <div>
-                            3 2 1
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-2 patternLibrary">
+                    <div>2 col</div>
                 </div>
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 3 then 1 Up</div>
-                    <div class="blocks blocks_3-1 patternLibrary">
-                        <div>
-                            3 up then 1
-                        </div>
-                        <div>
-                            3 up then 1
-                        </div>
-                        <div>
-                            3 up then 1
-                        </div>
-                    </div>
+                <div class="col-sm-2 patternLibrary">
+                    <div>2 col</div>
+                </div>
+                <div class="col-sm-2 patternLibrary">
+                    <div>2 col</div>
+                </div>
+                <div class="col-sm-2 patternLibrary">
+                    <div>2 col</div>
+                </div>
+                <div class="col-sm-2 patternLibrary">
+                    <div>2 col</div>
+                </div>
+                <div class="col-sm-2 patternLibrary">
+                    <div>2 col</div>
                 </div>
             </div>
-            <div class="blocks blocks_2">
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 4 Up</div>
-                    <div class="blocks blocks_4 patternLibrary">
-                        <div>
-                            4 up
-                        </div>
-                        <div>
-                            4 up
-                        </div>
-                        <div>
-                            4 up
-                        </div>
-                        <div>
-                            4 up
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-3 patternLibrary">
+                    <div>3 col</div>
                 </div>
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 4 then 2</div>
-                    <div class="blocks blocks_4-2 patternLibrary">
-                        <div>
-                            4 up then 2
-                        </div>
-                        <div>
-                            4 up then 2
-                        </div>
-                        <div>
-                            4 up then 2
-                        </div>
-                        <div>
-                            4 up then 2
-                        </div>
-                    </div>
+                <div class="col-sm-3 patternLibrary">
+                    <div>3 col</div>
+                </div>
+                <div class="col-sm-3 patternLibrary">
+                    <div>3 col</div>
+                </div>
+                <div class="col-sm-3 patternLibrary">
+                    <div>3 col</div>
                 </div>
             </div>
-            <div class="blocks blocks_2">
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 4 then 2 then 1</div>
-                    <div class="blocks blocks_4-2-1 patternLibrary">
-                        <div>
-                            4 2 1
-                        </div>
-                        <div>
-                            4 2 1
-                        </div>
-                        <div>
-                            4 2 1
-                        </div>
-                        <div>
-                            4 2 1
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-4 patternLibrary">
+                    <div>4 col</div>
                 </div>
-                <div class="section section--short">
-                    <div class="testHdg2">Blocks 4 then 1</div>
-                    <div class="blocks blocks_4-1 patternLibrary">
-                        <div>
-                            4 2 1
-                        </div>
-                        <div>
-                            4 2 1
-                        </div>
-                        <div>
-                            4 2 1
-                        </div>
-                        <div>
-                            4 2 1
-                        </div>
-                    </div>
+                <div class="col-sm-4 patternLibrary">
+                    <div>4 col</div>
+                </div>
+                <div class="col-sm-4 patternLibrary">
+                    <div>4 col</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 patternLibrary">
+                    <div>6 col</div>
+                </div>
+                <div class="col-sm-6 patternLibrary">
+                    <div>6 col</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 patternLibrary">
+                    <div>8 col</div>
+                </div>
+                <div class="col-sm-4 patternLibrary">
+                    <div>4 col</div>
                 </div>
             </div>
         </div>
@@ -841,23 +785,23 @@
             <div class="section__hd">
                 <div class="hdg-1">Sections</div>
             </div>
-            <div class="blocks blocks_4-2 patternLibrary-sections">
-                <div>
+            <div class="row patternLibrary-sections">
+                <div class="col-sm-3">
                     <div class="section js-sectionFull">
                         <div>Section Full</div>
                     </div>
                 </div>
-                <div>
+                <div class="col-sm-3">
                     <div class="section section--tall">
                         <div>Section Tall</div>
                     </div>
                 </div>
-                <div>
+                <div class="col-sm-3">
                     <div class="section">
                         <div>Section</div>
                     </div>
                 </div>
-                <div>
+                <div class="col-sm-3">
                     <div class="section section--short">
                         <div>Section Short</div>
                     </div>
