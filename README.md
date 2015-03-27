@@ -3,6 +3,15 @@
 
 <p>Using <a href="https://en.bem.info/method/definitions/" target="_blank">BEM</a> for a front-end naming methodology. <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">Here's a quick tutorial</a>.
 
+
+<h3>Getting started</h3>
+<ol>
+	<li>Clone the repo using <pre>git clone https://github.com/drewross/boilerplate.git [project directory]</pre></li>
+	<li>Install Grunt in the project directory with <pre>npm install</pre></li>
+	<li>Initiate Grunt with <pre>grunt</pre></li>
+	<li>Start watching files with <pre>grunt watch</pre></li>
+</ol>
+
 <h3>Modules included in the boilerplate</h3>
 <ul>
 	<li>Page Heros</li>
