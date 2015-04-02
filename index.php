@@ -1,11 +1,22 @@
 <?php include("includes/head.php"); ?>
 <?php include("includes/header.php"); ?>
 
+<script>
+$(function() {
+    var pre = $('pre');
+    pre.html(htmlEncode(pre.html()));
+});
+
+function htmlEncode(value){ 
+  return $('<div/>').text(value).html(); 
+}
+</script>
+
     <!-- Hero -->
-    <div class="hero hero--fixed">
-        <img src="https://placeimg.com/1500/825/nature/grayscale" alt="FPO" />  
+    <div class="hero">
+        <img src="build/images/Berliner-Disc-1897.jpg" alt="Gramophone" />
         <div class="hero__content">
-            <div class="hdg hdg--1">Hero</div>
+            <div class="hdg hdg--1">a front end boilerplate</div>
         </div>
     </div>
 

@@ -2,7 +2,7 @@
     <div class="wrapper">
     	<h1 class="logo">
     		<a href="index.php">
-    			Logo	
+    			Gramophone	
     		</a>
     		<span class="sr-only">Site Title</span>
     	</h1>
@@ -16,10 +16,10 @@
     	<div class="globalHeader-panel" id="mainNav">
 	        <nav class="globalNav" id="site-navigation" role="navigation">
 	            <ul class="globalNav-list">
-	            	<li><a href="">Nav Item 1</a></li>
-	            	<li><a href="">Item 2</a></li>
-	            	<li><a href="">Another Item</a></li>
-	            	<li><a href="">A Fourth</a></li>
+                    <li><a href="">Getting Started</a></li>
+	            	<li><a href="">Docs</a></li>
+	            	<li><a href="">Download SCSS</a></li>
+	            	<li><a href="">Github</a></li>
 	            </ul>
 	        </nav>
             <!-- <nav class="utilityNav" role="navigation">

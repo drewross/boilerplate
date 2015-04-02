@@ -96,7 +96,8 @@
 /* ---------------------------------------
  Body Copy Styles
 --------------------------------------- */
-.para {
+.para,
+p {
     @include para;
 }
 
@@ -158,12 +159,20 @@ p + p, {
   margin: 4px 12px 0 8px;
 }
 
-.mix-bold {
+.text-bold {
     font-weight: 700;
 }
 
-.mix-italic {
-    font-style: itlalic;
+.text-italic {
+    font-style: italic;
+}
+
+.text-brand {
+    color: $brand;
+}
+
+.text-white {
+    color: $white;
 }
 // .mix-txt_strong     { font: $SANS_SERIF_BOLD; }
 // .mix-txt_reg        { font: $SANS_SERIF; }

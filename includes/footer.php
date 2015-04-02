@@ -4,8 +4,8 @@
         	<div class="wrapper">
         		<div class="section">
         			<div class="testHdg2">Modules</div>
-		        	<div class="blocks blocks_4-2">
-		        		<div>
+		        	<div class="row">
+		        		<div class="col-xs-6 col-sm-4">
 				        	<ul class="vList">
 				        		<li>Page Heros</li>
 				        		<li>Fonts</li>
@@ -18,7 +18,7 @@
 				        		<li>Tabs</li>
 				        	</ul>
 				        </div>
-				        <div>
+				        <div class="col-xs-6 col-sm-4">
 				        	<ul class="vList">
 				        		<li>Table Layouts</li>
 				        		<li>Icons</li>
@@ -29,7 +29,7 @@
 				        		<li>Pagination</li>
 				        	</ul>
 				        </div>
-				        <div>
+				        <div class="col-xs-6 col-sm-4">
 				        	<ul class="vList">
 				        		<li>Blocks</li>
 				        		<li>Grids</li>
