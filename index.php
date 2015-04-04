@@ -1,27 +1,73 @@
 <?php include("includes/head.php"); ?>
 <?php include("includes/header.php"); ?>
 
-<script>
+<script type="text/javascript">
 $(function() {
-    var pre = $('pre');
-    pre.html(htmlEncode(pre.html()));
+    $('.language-markup').each(function() {
+        var pre = $(this);
+        pre.html(htmlEncode(pre.html()));
+    });
 });
 
 function htmlEncode(value){ 
   return $('<div/>').text(value).html(); 
-}
+} 
+
 </script>
 
-    <!-- Hero -->
     <div class="hero">
         <img src="build/images/Berliner-Disc-1897.jpg" alt="Gramophone" />
         <div class="hero__content">
-            <div class="hdg hdg--1">a front end boilerplate</div>
+            <div class="hdg hdg--1">A front end boilerplate</div>
         </div>
     </div>
 
-    <!-- Fonts -->
+    <!-- Hero -->
+     <div class="wrapper">
+        <div class="section__hd">
+            <h3 class="hdg hdg--2">Page Hero</h3>
+            <p class="text-italic">Usage: large images with optional vertically centered text</p>
+        </div>
+    </div>
+    <div class="hero">
+        <!-- <img src="build/images/Berliner-Disc-1897.jpg" alt="Gramophone" /> -->
+        <img src="https://placeimg.com/1680/864/nature" alt="Placeholder" />
+        <div class="hero__content">
+            <div class="hdg hdg--1">Vertically centered text here</div>
+        </div>
+    </div>
+
     <div class="wrapper">
+        <div class="section">
+            
+
+            <div class="markup-hd">
+                <p class="text-italic">Hero Markup:</p>
+            </div>
+            <pre><code class="language-markup">
+                <!-- Default -->
+                <div class="hero">
+                    <img src="build/images/Berliner-Disc-1897.jpg" alt="Gramophone" />
+                    <div class="hero__content">
+                        <h2 class="hdg hdg--1">Vertically centered text here</h2>
+                    </div>
+                </div>
+
+                <!-- Fixed Height -->
+                <div class="hero hero--fixed">
+                    <img src="build/images/Berliner-Disc-1897.jpg" alt="Gramophone" />
+                    <div class="hero__content">
+                        <div class="hdg hdg--1">Vertically centered text here</div>
+                    </div>
+                </div>
+            </code></pre>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Fonts -->
+    <!-- <div class="wrapper">
         <div class="section">
             <div class="section__hd">
                 <div class="hdg-1">Fonts</div>
@@ -30,10 +76,10 @@ function htmlEncode(value){
             <div class="para para--lg">Libra Baskerville, 400, normal</div>
             <div class="para para--lg mix-italic">Libra Baskerville, 400, Italic</div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Typography Styles -->
-    <div class="wrapper">
+   <!--  <div class="wrapper">
         <div class="section">
             <div class="section__hd">
                 <div class="hdg-1">Typography Styles</div>
@@ -82,10 +128,10 @@ function htmlEncode(value){
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Transitions -->
-    <div class="wrapper">
+    <!-- <div class="wrapper">
         <div class="section">
             <div class="section__hd">
                 <div class="hdg-1">Transitions</div>
@@ -94,13 +140,14 @@ function htmlEncode(value){
                 <div class="hover">transitions: 0.4s ease-in-out</div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- media Object -->
     <div class="wrapper">
         <div class="section">
             <div class="section__hd">
-                <div class="hdg-1">Media Object</div>
+                <h3 class="hdg hdg--2">Media Object</h3>
+                <p class="text-italic">Usage: place text next to media</p>
             </div>
             <div class="media-object media-object--equalWidth">
                 <figure class="media-object__media">
@@ -122,6 +169,31 @@ function htmlEncode(value){
                 <div class="media-object__bd">
                     <p class="para para--sm">In cum quem corpora molestiae. Mazim vivendo sit ut. Eos natum sententiae intellegam te. Ea aperiri iracundia interesset mea, an his impetus definiebas. Solet populo eum no, pri etiam viris ut, vix ad quas saepe admodum. Sonet timeam ex qui, doctus dolores ex sed. Has ut mutat rationibus.</p>
                 </div>
+            </div>
+            <div class="markup-hd">
+                <p class="text-italic">Media Object Markup:</p>
+            </div>
+            <pre><code class="language-markup">
+                <!-- Default -->
+                <div class="media-object media-object--equalWidth">
+                    <figure class="media-object__media">
+                        <img src="https://placeimg.com/288/168/nature/grayscale" alt="FPO" />
+                    </figure>
+                    <div class="media-object__bd">
+                        <p class="para para--sm">In cum quem corpora molestiae. Mazim vivendo sit ut. Eos natum sententiae intellegam te. Ea aperiri iracundia interesset mea, an his impetus definiebas. Solet populo eum no, pri etiam viris ut, vix ad quas saepe admodum. Sonet timeam ex qui, doctus dolores ex sed. Has ut mutat rationibus.</p>
+                    </div>
+                </div>
+
+                <!-- Flipped -->
+                <div class="media-object media-object--equalWidth media-object--flip">
+                    <figure class="media-object__media">
+                        <img src="https://placeimg.com/288/168/nature/grayscale" alt="FPO" />
+                    </figure>
+                    <div class="media-object__bd">
+                        <p class="para para--sm">In cum quem corpora molestiae. Mazim vivendo sit ut. Eos natum sententiae intellegam te. Ea aperiri iracundia interesset mea, an his impetus definiebas. Solet populo eum no, pri etiam viris ut, vix ad quas saepe admodum. Sonet timeam ex qui, doctus dolores ex sed. Has ut mutat rationibus.</p>
+                    </div>
+                </div>
+            </code></pre>
             </div>
         </div>
     </div>

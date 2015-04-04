@@ -35,7 +35,8 @@
 
 .hero__content .hdg {
 	display: inline-block;
-	color: $brand;
+	color: $white;
+	background-color: rgba(20,20,20,0.8);
 	padding: 18px 48px;
 	font-style: italic;
 	max-width: 100%;
