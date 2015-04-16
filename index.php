@@ -14,4 +14,4 @@
         </div>
     </div>
 
-<?php include("includes/footer.php"); ?>git
+<?php include("includes/footer.php"); ?>
