@@ -1,7 +1,9 @@
 // ----------------------------------------
 // Fonts
 // ----------------------------------------
-$SANS_SERIF: 'Libre Baskerville', serif;
+$serif: 'Libre Baskerville', serif;
+$sans-serif: 'proxima_nova_rgregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans-serif-bold: 'proxima_nova_rgbold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $BOLD: 700;
 $ITALIC: italic;
 
@@ -9,21 +11,22 @@ $ITALIC: italic;
 // ----------------------------------------
 // Font Size/ Line Height
 // ----------------------------------------
-$BASE_FONT_SIZE: 1.4rem;
-$BASE_LINE_HEIGHT: 2;
+$BASE_FONT_SIZE: 1.6rem;
+$BASE_LINE_HEIGHT: 1.5;
 
 
 // ----------------------------------------
 // Colors
 // ----------------------------------------
 $brand: #b69968;
+//$brand: gold;
 $brand-alt: #231f20;
 
 $white: #ffffff;
 $black: #282828;
 $gray-light: #eaeaea;
-$gray: #ccc;
-$gray-dark: #bbb;
+$gray: #999;
+$gray-dark: #3a3a3a;
 
 
 // ----------------------------------------
@@ -53,7 +56,7 @@ $small: 600px;
 
 $transition-speed: 0.4s;
 $transition: 0.4s ease-in-out;
-$wrapper-width: 1024px;
+$wrapper-width: 1128px;
 
 // ----------------------------------------
 // Susy

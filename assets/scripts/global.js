@@ -12,6 +12,9 @@ var PHDL = PHDL || {};
         APP.BrowserDeviceDetection.init();
         APP.PageTransitions.init();
         APP.ClickFunciton.init();
+        APP.ClickGroup.init();
+        APP.ScrollTo.init();
+        APP.CatchOnTop.init();
         APP.DetectWindowHeight.init();
         APP.TabToggle.init();
         APP.Revolver.init();
@@ -151,18 +154,21 @@ APP.PageTransitions = {
         $(document).ready(function() {
             setTimeout(function() {
                $('.js-pageTransition').addClass('pageLoaded'); 
-            }, 400);
+            }, 100);
 
             $("a[target!='_blank']").on('click touchstart:not(touchmove)', function(e) {
                 e.preventDefault();
+                if( $(this).hasClass('no-trans') ) return;
+
                 linkLocation = this.href;
+
                 $('.js-pageTransition').removeClass('pageLoaded');
-                
-                window.setTimeout(redirectPage, 800);
+                window.setTimeout(redirectPage, 200);
+
                 $('body').removeClass('mobileMenuIsOpen');
 
-                $("html, body").delay(100).animate({ scrollTop: 0 }, 700);
-                return false;
+                // $("html, body").delay(100).animate({ scrollTop: 0 }, 700);
+                // return false;
             });
             function redirectPage() {
                 window.location = linkLocation;
@@ -182,7 +188,7 @@ APP.ClickFunciton = {
 
     init: function() {
         var $clickFunciton = $('.js-trigger');
-        if ( ! $clickFunciton.length ) {
+        if( ! $clickFunciton.length ) {
             return;
         }
         this.$clickFunciton = $clickFunciton;
@@ -190,23 +196,159 @@ APP.ClickFunciton = {
     },
 
     bind: function() {
-        $('.js-trigger').on('click touchstart:not(touchmove)', function() {
-            var $trigger = $(this).attr('data-target');
-            var $classes = $(this).attr('data-addClass');
-            var $this = $("#" + $trigger);
 
-            if( $this.hasClass('isActive') ) {
-                $this.removeClass('isActive');
+        $('*[data-click-target]').on('click touchstart:not(touchmove)', function() {
+
+            var $trigger = $(this).attr('data-click-target');
+            var $bodyCls = $(this).attr('data-click-bodyClass');
+            var $optCls = $(this).attr('data-click-class');
+            var $target = $("#" + $trigger);
+
+            // Check for custom class
+            if( $(this).attr('data-click-class') ) {
+                if( $target.hasClass($optCls) ) {
+                    $target.removeClass($optCls);
+                } else {
+                   $target.addClass($optCls);
+                }
             } else {
-               $this.addClass('isActive'); 
+                if( $target.hasClass('is-active') ) {
+                    $target.removeClass('is-active');
+                } else {
+                   $target.addClass('is-active');
+                }
             }
 
-            if( $('body').hasClass($classes) ) {
-                $('body').removeClass($classes);
-            } else {
-               $('body').addClass($classes); 
+            // Check for additional body class
+            if( $(this).attr('data-click-bodyClass') ) {
+                if( $('body').hasClass($bodyCls) ) {
+                    $('body').removeClass($bodyCls);
+                } else {
+                   $('body').addClass($bodyCls); 
+                }
             }
         });
+    }
+};
+
+/* --------------------------------------------------------------------
+Click Group
+Used for adding/ removing active classes on linked elements
+-------------------------------------------------------------------- */
+
+APP.ClickGroup = {
+
+    init: function() {
+        var $clickGroup = $('*[data-click-group]');
+        if( ! $clickGroup.length ) {
+            return;
+        }
+        this.$clickGroup = $clickGroup;
+        this.bind();
+    },
+
+    bind: function() {
+
+        $('*[data-click-group]').on('click touchstart:not(touchmove)', function() {
+
+            var $group = $(this).attr('data-click-group');
+
+            $('*[data-click-group=' + $group + ']').each(function() {
+                $(this).removeClass('is-active');
+            });
+            
+            $(this).addClass('is-active');
+            
+        });
+
+
+    }
+};
+
+/* --------------------------------------------------------------------
+Scroll to
+Used for smooth scrolling to elements
+-------------------------------------------------------------------- */
+
+APP.ScrollTo = {
+
+    init: function() {
+        var $scrollTo = $('*[data-scroll-to]');
+        if( ! $scrollTo.length ) {
+            return;
+        }
+        this.$scrollTo = $scrollTo;
+        this.bind();
+    },
+
+    bind: function() {
+
+        $('*[data-scroll-to]').on('click touchstart:not(touchmove)', function() {
+
+            var $trigger = $(this).attr('data-scroll-to');
+            var $target = $("#" + $trigger);
+
+            var $scrollSpeed = 1000;
+            var $offset = 0;
+
+            if( $(this).attr('data-scroll-speed') ) {
+                $scrollSpeed = $(this).attr('data-scroll-speed');
+            }
+
+            if( $(this).attr('data-scroll-offset') ) {
+                $offset = $(this).attr('data-scroll-offset');
+            }
+
+            $('html, body').animate({
+                scrollTop: $target.offset().top - $offset
+            }, $scrollSpeed);
+            
+        });
+
+
+    }
+};
+
+/* --------------------------------------------------------------------
+Stick to top
+When an element hits the top of the screen, stick to the top
+-------------------------------------------------------------------- */
+
+APP.CatchOnTop = {
+
+    init: function() {
+        var $catchOnTop = $('.stickToTop-wrapper');
+        if( ! $catchOnTop.length ) {
+            return;
+        }
+        this.$catchOnTop = $catchOnTop;
+        this.bind();
+    },
+
+    bind: function() {
+
+        $( document ).ready(function() {
+
+            var $currentPos = $('.stickToTop-wrapper').offset().top;
+
+            
+
+            $(window).scroll(function(){
+
+                $currentPos = $('.stickToTop-wrapper').offset().top;
+
+                if ($(this).scrollTop() > $currentPos) { 
+                    $('.stickToTop-wrapper').addClass('is-sticky'); 
+                }
+                else {
+                    $('.stickToTop-wrapper').removeClass('is-sticky');
+                }
+
+            });
+
+        });
+
+
     }
 };
 
@@ -220,7 +362,7 @@ APP.DetectWindowHeight = {
 
     init: function() {
         var $detectWindowHeight = $('.js-sectionFull');
-        if ( ! $detectWindowHeight.length ) {
+        if( ! $detectWindowHeight.length ) {
             return;
         }
         this.$detectWindowHeight = $detectWindowHeight;
@@ -232,7 +374,6 @@ APP.DetectWindowHeight = {
         $( document ).ready(function() {
             var $windowHeight = $(window).height();
             $('.js-sectionFull').css({'height': $windowHeight });
-
         });
 
         $(window).resize(function(){
@@ -255,8 +396,8 @@ APP.TabToggle = {
 
     init: function() {
         var $tabList = $('.js-tabList > *');
-        var $tabTrigger = $('.js-tabList .tab-tab');
-        var $tabTarget = $('.js-tabList .tab-bd');
+        var $tabTrigger = $('.js-tabList .tab__tab');
+        var $tabTarget = $('.js-tabList .tab__bd');
         if( ! $tabList.length ) {
             return;
         }
@@ -284,7 +425,7 @@ APP.Revolver = {
 
     init: function() {
         var $revolver = $('.js-revolver');
-        if ( ! $revolver.length ) {
+        if( ! $revolver.length ) {
             return;
         }
         this.$revolver = $revolver;

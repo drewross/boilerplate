@@ -1,0 +1,99 @@
+
+/* ---------------------------------------------------------------------
+ Dropdown Styles
+------------------------------------------------------------------------ */
+
+
+$dropdown-height: 44px;
+
+.dropdown {
+    position: relative;
+    z-index: 2;
+    max-width: 360px;
+    background: $brand-alt;
+    cursor: pointer;
+    min-height: $dropdown-height;
+}
+
+.dropdown__hd {
+    position: absolute;
+    height: $dropdown-height;
+    width: 100%;
+    display: table;
+    background: $brand-alt;
+    color: $white;
+    padding: 0 16px;
+}
+
+.dropdown__hd-text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dropdown__icon {
+    position: absolute;
+    display: block;
+    height: $dropdown-height;
+    top: 0;
+    right: 0;
+    width: 44px;
+    z-index: 4;
+}
+
+.dropdown__icon svg {
+    display: block;
+    fill: $brand;
+    width: 16px;
+    height: 8px;
+    margin: 0 auto;
+    @include vCenter(relative);
+}
+
+.dropdown__list {
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    max-height: $dropdown-height;
+    background: $brand-alt;
+    color: #eaeaea;
+    transition: max-height $transition;
+}
+
+.dropdown__list > * {
+    max-height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height $transition;
+}
+  
+.dropdown__list .is-active {
+    max-height: 44px;
+}
+  
+.dropdown__list > * > * {
+    display: block;
+    width: 100%;
+    height: 44px;
+    line-height: 1;
+    padding: 16px 18px;
+    transition: all $transition;
+    -webkit-backface-visibility: hidden;
+}
+
+.dropdown__list > * > *:hover {
+    background: $black;
+    color: $brand;
+}
+
+.dropdown.is-active {
+    z-index: 4;
+
+    .dropdown__list {
+        max-height: 2000px;
+
+        > * {
+            max-height: 44px;
+        }
+    }
+}

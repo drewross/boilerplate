@@ -12,19 +12,19 @@
     font-size: 0;
 }
 
-.tabs_2up > * > .tab-tab{
+.tabs--2up > * > .tab__tab {
     width: 50%;
 }
 
-.tabs_3up > * > .tab-tab{
+.tabs--3up > * > .tab__tab {
     width: 33.33333%;
 }
 
-.tabs_4up > * > .tab-tab{
+.tabs--4up > * > .tab__tab {
     width: 25%;
 }
 
-.tab-tab {
+.tab__tab {
     width: 100%;
     display: inline-block;
     font-size: 1.2rem;
@@ -35,13 +35,13 @@
     transition: all $transition;
 }
 
-.tab-tab:hover {
+.tab__tab:hover {
     cursor: pointer;
     background-color: $brand-alt;
     color: $brand;
 }
 
-.tab-bd {
+.tab__bd {
     height: 0;
     width: 0;
     display: block;
@@ -49,12 +49,12 @@
     overflow: hidden;
 }
 
-.tabs .isOpen .tab-tab {
+.tabs .is-open .tab__tab {
     background-color: $brand-alt;
     color: $brand;
 }
 
-.tabs .isOpen .tab-bd { 
+.tabs .is-open .tab__bd { 
     font-size: $BASE_FONT_SIZE;
     padding: 16px 24px;
     width: 100%;
@@ -64,14 +64,14 @@
 }
 
 @include START_AT($small) {
-    .tabs_hThenV > * {
+    .tabs--hThenV > * {
         display: inline;
         font-size: 0;
     }
 }
 
 @include STOP_AT($small) {
-    .tabs_hThenV > * > .tab-tab {
+    .tabs--hThenV > * > .tab__tab {
         width: 100%;
     }
 }

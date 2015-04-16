@@ -3,23 +3,6 @@
  Wrapper Styles (Horizontal Spacing)
 ------------------------------------------------------------------------ */
 
-
-
-/* ---------------------------------------
- Wrapper Full
---------------------------------------- */
-.wrapperFull {
-    max-width: 100%;
-}
-
-.wrapperFull--dark {
-    background-color: $black;
-    color: $white;
-}
-
-/* ---------------------------------------
- Wrappers
---------------------------------------- */
 .wrapper {
     @include clearfix;
     @include wrapper;
@@ -29,11 +12,39 @@
     max-width: 720px;
 }
 
+/* ---------------------------------------
+ Wrapper Full
+--------------------------------------- */
+.wrapperFull {
+    @include clearfix;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.wrapperFull--dark {
+    background-color: $black;
+    color: $white;
+}
+
+@include STOP_AT($small) {
+    .wrapper-xs-full {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
 @include STOP_AT($medium) {
-	.wrapper--fullMobile {
-		overflow: hidden;
-	    width: 100%;
-	}
+    .wrapper-sm-full {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@include STOP_AT($large) {
+    .wrapper-md-full {
+        width: 100%;
+        overflow: hidden;
+    }
 }
 
 

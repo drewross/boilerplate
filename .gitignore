@@ -24,3 +24,8 @@ assets/.DS_Store
 assets/build/styles/*
 assets/build/scripts/production.min.js
 assets/build/scripts/production.js
+
+syntaxHighlighter
+modules
+library.php
+includes/sidebar.php

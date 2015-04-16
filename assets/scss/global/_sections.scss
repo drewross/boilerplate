@@ -30,7 +30,20 @@
 --------------------------------------- */
 
 .section__hd {
-	margin-bottom: 16px;
-	padding-bottom: 12px;
-	border-bottom: 1px solid $brand;
+	//padding-bottom: 12px;
+	margin-bottom: 36px;
 }
+
+.section__hd--short {
+	margin-bottom: 16px;
+}
+
+// .section__hd:after {
+// 	content: "";
+// 	width: 168px;
+// 	height: 1px;
+// 	background-color: $gray;
+// 	display: block;
+// 	margin-top: 12px;
+
+// }

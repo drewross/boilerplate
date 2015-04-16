@@ -31,6 +31,9 @@ $logo-height: 72px;
 .logo a {
 	display: block;
 	width: $logo-width;
+	font-family: $sans-serif-bold;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
 	font-size: 24px;
 	padding: 12px 0;
 }
@@ -42,7 +45,7 @@ $logo-height: 72px;
 .utilityNav-list > * {
 	display: inline-block;
 
-	a {
+	> * {
 		padding: 6px 12px;
 	}
 }
@@ -95,7 +98,7 @@ $logo-height: 72px;
 		display: block;
 	}
 
-	.globalNav-list > * a {
+	.globalNav-list > * > * {
 		display: block;
 		color: $white;
 		padding: 12px 0;
@@ -110,7 +113,7 @@ $logo-height: 72px;
 	/* ---------------------------------------
 	 Utiliy Nav Styles
 	--------------------------------------- */
-	.utilityNav-list > * a {
+	.utilityNav-list > * > * {
 		color: $gray-light;
 		padding: 12px 12px 12px 0;
 	}
@@ -168,14 +171,14 @@ $logo-height: 72px;
 		text-align: center;
 	}
 
-	.globalNav-list > * a {
+	.globalNav-list > * > * {
 		display: block;
 		color: $black;
 		padding: 12px 0;
 		font-size: 14px;
 	}
 
-	.globalNav-list > * a:hover {
+	.globalNav-list > * > *:hover {
 		color: $brand;
 	}
 

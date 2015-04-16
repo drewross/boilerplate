@@ -10,8 +10,9 @@
     display: block;
 }
 .dList dt {
-     margin-bottom: 4px;
-     font-weight: 700;
+    margin-bottom: 4px;
+    font-family: $sans-serif-bold;
+    
 }
 .dList dd {
     margin-bottom: 12px;

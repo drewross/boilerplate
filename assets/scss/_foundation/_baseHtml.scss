@@ -25,7 +25,7 @@ input,
 button,
 select,
 textarea {
-    font-family: $SANS_SERIF;
+    font-family: $sans-serif;
     font-size: $BASE_FONT_SIZE;
     line-height: $BASE_LINE_HEIGHT;
     -webkit-font-smoothing: antialiased;
@@ -45,9 +45,7 @@ a:hover {
 }
 
 p {
-    font-family: $SANS_SERIF;
-    font-size: $BASE_FONT_SIZE;
-    line-height: $BASE_LINE_HEIGHT;
+    @include para;
 }
 
 audio {
@@ -73,3 +71,8 @@ picture > * { width: 100%; height: auto; }
 
 ::selection { color: $brand; background: $black; }
 ::-moz-selection { color: $brand; background: $black; }
+
+[data-scroll-to],
+[data-click-target] {
+    cursor: pointer;
+}

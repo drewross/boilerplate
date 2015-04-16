@@ -3,6 +3,10 @@
  Vertical List Styles.
 ------------------------------------------------------------------------ */
 
+ul {
+
+}
+
 .vList {
     overflow: hidden;
     display: block;
@@ -18,5 +22,9 @@
 
 .vList--bullets > * {
 	list-style-type: disc;
-	margin-left: 16px;
+	margin-left: 36px;
+}
+
+.vList--flush > * {
+	margin-left: 0;
 }

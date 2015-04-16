@@ -9,37 +9,41 @@
 
 @mixin hdg {
     display: block;
-    font-family: $SANS_SERIF;
+    font-family: $sans-serif-bold;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: $gray-dark;
 }
+
 
 @mixin hdg--1 {
-    font-size: 3.8rem;
-    line-height: 1.1;
-}
-
-@mixin hdg--2 {
     font-size: 3.2rem;
     line-height: 1.2;
 }
 
+@mixin hdg--2 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+}
+
 @mixin hdg--3 {
-    font-size: 2.6rem;
-    line-height: 1.3;
+    font-size: 2.4rem;
+    line-height: 0.83333;
 }
 
 @mixin hdg--4 {
-    font-size: 2.1rem;
-    line-height: 1.4;
-}
-
-@mixin hdg--5 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1.5;
 }
 
+@mixin hdg--5 {
+    font-size: 1.4rem;
+    line-height: 1.71;
+}
+
 @mixin hdg--6 {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 2;
 }
 
 /* ---------------------------------------
@@ -55,22 +59,27 @@
 
 .hdg--2 {
     @include hdg--2;
+
 }
 
 .hdg--3 {
     @include hdg--3;
+    //color: $gray;
 }
 
 .hdg--4 {
     @include hdg--4;
+    //color: $gray;
 }
 
 .hdg--5 {
     @include hdg--5;
+    //color: $gray;
 }
 
 .hdg--6 {
     @include hdg--6;
+    //color: $gray;
 }
 
 /* ---------------------------------------
@@ -78,9 +87,11 @@
 --------------------------------------- */
 @mixin para {
     display: block;
-    font-family: $SANS_SERIF;
+    //font-family: $serif;
+    font-family: $sans-serif;
     font-size: $BASE_FONT_SIZE;
     line-height: $BASE_LINE_HEIGHT;
+    color: #555;
 }
 
 @mixin para--lg {
@@ -89,8 +100,8 @@
 }
 
 @mixin para--sm {
-    font-size: 1.2rem;
-    line-height: 2;
+    font-size: 1.4rem;
+    line-height: 1.7124;
 }
 
 /* ---------------------------------------
@@ -112,24 +123,24 @@ p {
 /* ---------------------------------------
  Relationships
 --------------------------------------- */
-.hdg + .hdg,
-.hdg + .para,
-.para + .hdg,
-.para + .para,
-p + p, {
-    margin-top: 16px;
-}
+// .hdg + .hdg,
+// .hdg + .para,
+// .para + .hdg,
+// .para + .para,
+// p + p, {
+//     margin-top: 16px;
+// }
 
-.hdg + .para,
-.para + .para,
-p + p, {
-    margin-top: 16px;
-}
+// .hdg + .para,
+// .para + .para,
+// p + p, {
+//     margin-top: 16px;
+// }
 
-.hdg + .hdg,
-.para + .hdg {
-    margin-top: 24px;
-}
+// .hdg + .hdg,
+// .para + .hdg {
+//     margin-top: 24px;
+// }
 
 @mixin lineHeight {
     line-height: 1;
@@ -143,6 +154,27 @@ p + p, {
 .mix-noTopMarg .para + .hdg,
 .mix-noTopMarg p + p  {
     margin-top: 0;
+}
+
+
+.text-group {
+    max-width: 772px;
+}
+
+.text-group > * {
+    margin-bottom: 12px;
+}
+
+.text-group--tight > * {
+    margin-bottom: 6px;
+}
+
+.text-group__hd {
+    margin-bottom: 18px;
+}
+
+.text-group > *:last-child {
+    margin-bottom: 0;
 }
 
 /* ---------------------------------------

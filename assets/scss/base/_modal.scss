@@ -26,17 +26,13 @@ Modal Styles
 	border-radius: 200%;
 	transform: translateY(-50%) translateX(-50%) scale(0);
 	transition: all 0.4s ease-in-out;
+
+	p, .hdg {
+		color: $white;
+	}
 }
 
-.modal--fromLeft {
-	transform: translateY(-20%) translateX(-120%) scale(0);
-}
-
-.modal--fromRight {
-	transform: translateY(-20%) translateX(20%) scale(0);
-}
-
-.modal.isActive {
+.modal.is-active {
 	opacity: 1;
 	border-radius: 0;
 	transform: translateY(-50%) translateX(-50%) scale(1);
