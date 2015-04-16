@@ -21,11 +21,9 @@ changelog
 .DS_Store
 assets/.DS_Store
 
-assets/build/fonts
-assets/build/styles
-assets/build/scripts
-assets/build/scripts/production.min.js
-assets/build/scripts/production.js
+build/images/
+build/scripts/
+build/styles/
 
 syntaxHighlighter
 modules
