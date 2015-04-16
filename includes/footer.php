@@ -3,7 +3,9 @@
         <footer class="globalFooter" role="contentinfo">
         	<div class="wrapper">
         		<div class="section">
-        			<div class="testHdg2">Modules</div>
+        			<div class="section__hd section__hd--short">
+        				<div class="hdg hdh--5 text-brand">Modules</div>
+        			</div>
 		        	<div class="row">
 		        		<div class="col-xs-6 col-sm-4">
 				        	<ul class="vList">

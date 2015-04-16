@@ -42,7 +42,12 @@
  Text Utils
 --------------------------------------- */
 .text-center {
-    text-align: center;
+    text-align: center;   
+}
+
+.text-center .text-group,
+.text-center.text-group {
+    margin: 0 auto;
 }
 
 .text-caps {

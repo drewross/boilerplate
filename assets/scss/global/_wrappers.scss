@@ -24,6 +24,14 @@
 .wrapperFull--dark {
     background-color: $black;
     color: $white;
+
+    .hdg {
+        color: $brand;
+    }
+
+    p {
+        color: $white;
+    }
 }
 
 @include STOP_AT($small) {
