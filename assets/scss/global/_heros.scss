@@ -22,7 +22,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: rgba(20,20,20,0.8);
+		//background-color: rgba(20,20,20,0.8);
 	}
 }
 
@@ -46,12 +46,13 @@
 	color: $brand-alt;
 	max-width: 100%;
 	font-size: 24px;
+	background-color: $white;
 }
 
 .hero--light .hero__content p,
 .hero--light .hero__content .hdg,
  {
-	color: $white;
+	//color: $white;
 }
 
 @include START_AT($small) {
@@ -70,6 +71,6 @@
 	}
 
 	.hero__content .hdg {
-		font-size: 48px;
+		font-size: 36px;
 	}
 }
