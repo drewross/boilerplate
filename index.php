@@ -1,6 +1,5 @@
 <?php include("includes/header.php"); ?>
 
-
     <div class="hero hero--light">
         <img src="https://placeimg.com/1680/864/nature" alt="Placeholder" />
         <div class="wrapper">
