@@ -1,7 +1,7 @@
 <?php include("includes/header.php"); ?>
 
     <div class="hero hero--light">
-        <img src="build/images/Berliner-Disc-1897.jpg" alt="Placeholder" />
+        <img src="build/images/Berliner-Disc-1897.jpg" alt="Berliner Disc 1897" />
         <div class="wrapper">
             <div class="hero__content">
                 <div class="text-group">
