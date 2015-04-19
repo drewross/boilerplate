@@ -49,12 +49,12 @@
     overflow: hidden;
 }
 
-.tabs .is-open .tab__tab {
+.tabs .is-active .tab__tab {
     background-color: $brand-alt;
     color: $brand;
 }
 
-.tabs .is-open .tab__bd { 
+.tabs .is-active .tab__bd { 
     font-size: $BASE_FONT_SIZE;
     padding: 16px 24px;
     width: 100%;

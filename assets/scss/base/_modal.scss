@@ -7,25 +7,27 @@ Modal Styles
 	cursor: pointer;
 	text-decoration: underline;
 	font-weight: 500;
-	transition: color 0.4s ease-in-out;
+	transition: color $transition;
 	display: inline-block;
 }
 
 .modal {
-	overflow: hidden;
+	position: fixed;
+	overflow: scroll;
 	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
 	background: $brand-alt;
 	color: $white;
-	position: fixed;
-	margin: 0 auto;
-	padding: 60px 48px 48px;
+	padding: 48px 24px 24px;
 	z-index: 2000;
-	top: 50%;
-	left: 50%;
+	top: 0;
+	left: 0;
 	opacity: 0;
 	border-radius: 200%;
-	transform: translateY(-50%) translateX(-50%) scale(0);
-	transition: all 0.4s ease-in-out;
+	transform: scale(0);
+	transition: all $transition;
 
 	p, .hdg {
 		color: $white;
@@ -35,7 +37,7 @@ Modal Styles
 .modal.is-active {
 	opacity: 1;
 	border-radius: 0;
-	transform: translateY(-50%) translateX(-50%) scale(1);
+	transform: scale(1);
 }
 
 .modalIsActive:after {
@@ -49,7 +51,7 @@ Modal Styles
 	height: 100%;
 	background: rgba(255,255,255,0.9);
 	z-index: 1999;
-	animation: fadeIn 0.4s ease-in-out 1;
+	animation: fadeIn $transition 1;
 }
 
 .modal__close {
@@ -87,11 +89,20 @@ Modal Styles
 	}
 }
 
-@include STOP_AT ($small) {
+
+@include START_AT ($medium) {
 	.modal {
-		width: 100%;
-		height: 100%;
-		max-width: 100%;
-		padding: 48px 24px 24px;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		//max-width: 576px;
+		padding: 60px 48px 48px;
+		top: 50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%) scale(0);
+	}
+
+	.modal.is-active {
+		transform: translateY(-50%) translateX(-50%) scale(1);
 	}
 }

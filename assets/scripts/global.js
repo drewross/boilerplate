@@ -16,7 +16,6 @@ var PHDL = PHDL || {};
         APP.ScrollTo.init();
         APP.CatchOnTop.init();
         APP.DetectWindowHeight.init();
-        APP.TabToggle.init();
         APP.Revolver.init();
     });
 
@@ -187,7 +186,7 @@ a class to the body
 APP.ClickFunciton = {
 
     init: function() {
-        var $clickFunciton = $('.js-trigger');
+        var $clickFunciton = $('*[data-click-target]');
         if( ! $clickFunciton.length ) {
             return;
         }
@@ -379,38 +378,6 @@ APP.DetectWindowHeight = {
         $(window).resize(function(){
             var $newWindowHeight = $(window).height();
             $('.js-sectionFull').css({'height': $newWindowHeight });
-        });
-    }
-};
-
-
-/* -------------------------------------------------------------------- 
-Tabs
-Toggles the Tab triggers and target visibility.
--------------------------------------------------------------------- */
-
-APP.TabToggle = {
-    $tabList: undefined,
-    $tabTrigger: undefined,
-    $tabTarget: undefined,
-
-    init: function() {
-        var $tabList = $('.js-tabList > *');
-        var $tabTrigger = $('.js-tabList .tab__tab');
-        var $tabTarget = $('.js-tabList .tab__bd');
-        if( ! $tabList.length ) {
-            return;
-        }
-        this.$tabList = $tabList;
-        this.$tabTrigger = $tabTrigger;
-        this.$tabTarget = $tabTarget;
-        this.bind();
-    },
-
-    bind: function() {
-        this.$tabTrigger.on('click touchstart:not(touchmove)', function() {
-            $(this).parent().siblings().removeClass('isOpen');
-            $(this).parent().addClass('isOpen');
         });
     }
 };

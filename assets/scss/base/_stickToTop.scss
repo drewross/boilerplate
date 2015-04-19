@@ -15,3 +15,15 @@ Stick to top Styles
 .stickToTop {
 	padding: 20px 0;
 }
+
+@include STOP_AT($medium) {
+	.is-sticky .stickToTop--after-sm {
+		position: static;
+	}
+}
+
+@include STOP_AT($large) {
+	.is-sticky .stickToTop--after-md {
+		position: static;
+	}
+}

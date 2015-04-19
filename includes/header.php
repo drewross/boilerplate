@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="build/images/apple-touch-icon.png" />
 
 <!-- FONTS -->
-<!-- <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
 <link rel="stylesheet" media="screen, projection" href="build/styles/production.css" />
@@ -31,7 +31,7 @@
 <![endif]-->
 
 </head>
-<body class="no-js">
+<body class="no-js" id="top">
 <?php include("build/images/svg-defs.svg"); ?>
 
 <header class="globalHeader" role="banner">
@@ -42,7 +42,7 @@
     		</a>
     		<span class="sr-only">Gramophone | A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
     	</h1>
-        <div class="burger js-trigger" data-click-target="mainNav" data-click-bodyClass="mobileMenuIsOpen">
+        <div class="burger" data-click-target="mainNav" data-click-bodyClass="mobileMenuIsOpen">
             <div class="burger-inner">
                 <span class="burger-top"></span>
                 <span class="burger-middle"></span>
@@ -55,6 +55,7 @@
                     <!-- <li><a href="">Getting Started</a></li>
 	            	<li><a href="">Docs</a></li>
 	            	<li><a href="">Download</a></li> -->
+                    <li data-click-target="ipsum-modal" data-click-bodyClass="modalIsActive"><span>I need Ipsum</span></li>
 	            	<li><a href="https://github.com/drewross/boilerplate" target="_blank">Github</a></li>
 	            </ul>
 	        </nav>

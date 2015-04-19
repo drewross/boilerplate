@@ -353,23 +353,54 @@ pre.line-numbers > code {
 }
 
 
+.btn.is-active {
+    background: $brand-alt;
+}
+
 .module-navigation {
 
-    > * {
-
+    ul > * {
+        display: inline-block;
+        width: 49%;
     }
 
     > * > * {
         font-size: 15px;
         color: $brand;
+        padding: 4px 0;
         transition: color $transition;
 
         &:hover {
             color: $brand-alt;
         }
     }
+
+    .last {
+        display: none;
+        color: $gray;
+        padding: 8px 0;
+        text-decoration: underline;
+    }
 }
 
+@include START_AT($small) {
+    .module-navigation ul > * {
+        display: inline-block;
+        width: 32%;
+    }
+}
+
+@include START_AT($medium) {
+     .module-navigation ul > * {
+        display: block;
+        width: 100%;
+        padding: 1px 0;
+    }
+
+    .module-navigation .last {
+        display: block;
+    }
+}
 
 
 

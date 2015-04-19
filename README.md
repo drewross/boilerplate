@@ -1,5 +1,5 @@
 <h1>Front-end boilerplate</h1>
-<p>This front-end boilerplate utilizes HTML, Sass, Grunt, jQuery, PHP, susy and more.</p>
+<p>This is a front-end boilerplate that utilizes Grunt, Sass, jQuery, PHP, susy and more. Below you'll find examples &amp; HTML markup for the components in this boilerplate. <i>Coming soon: Javascript functions will be available to grab from here rather than having an all inclusive js file. More modules will be added to go along with these building blocks. Utility classes and mixin markup will be documented.</i></p>
 
 <p>See the documentation <a href="http://www.gramophone.roztocki.com/" target="_blank">here</a>.
 

@@ -32,6 +32,7 @@ $logo-height: 72px;
 	display: block;
 	width: $logo-width;
 	font-family: $sans-serif-bold;
+	font-family: $serif;
 	text-transform: uppercase;
 	letter-spacing: 0.15em;
 	font-size: 24px;
@@ -102,11 +103,14 @@ $logo-height: 72px;
 		display: block;
 		color: $white;
 		padding: 12px 0;
-		transition: letter-spacing $transition-speed ease-in-out;
+		font-family: $sans-serif-bold;
+		letter-spacing: 0.025em;
+		text-transform: uppercase;
+		transition: all $transition;
 	}
 
-	.globalNav-list > * a:hover {
-		letter-spacing: 0.05em;
+	.globalNav-list > * > *:hover {
+		color: $brand-alt;
 	}
 
 
@@ -153,7 +157,7 @@ $logo-height: 72px;
 	}
 
 	.globalNav-list {
-		width: 100%;
+		//width: 100%;
 		display: table;
 		float: right;
 		max-width: 536px;
@@ -169,13 +173,17 @@ $logo-height: 72px;
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
+		min-width: 120px;
 	}
 
 	.globalNav-list > * > * {
 		display: block;
-		color: $black;
+		color: $gray;
 		padding: 12px 0;
-		font-size: 14px;
+		font-size: 16px;
+		font-family: $serif;
+		letter-spacing: 0.025em;
+		transition: all $transition;
 	}
 
 	.globalNav-list > * > *:hover {
