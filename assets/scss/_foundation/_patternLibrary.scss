@@ -335,7 +335,6 @@ pre.line-numbers > code {
     background-color: #f7f7f7;
     padding: 4px 10px;
     color: #690;
-    //color: rgb(51, 51, 51);
     line-height: 2.4;
 }
 
@@ -359,46 +358,85 @@ pre.line-numbers > code {
 
 .module-navigation {
 
-    ul > * {
-        display: inline-block;
-        width: 49%;
-    }
-
     > * > * {
         font-size: 15px;
         color: $brand;
-        padding: 4px 0;
         transition: color $transition;
-
-        &:hover {
-            color: $brand-alt;
-        }
     }
 
     .last {
-        display: none;
         color: $gray;
-        padding: 8px 0;
-        text-decoration: underline;
     }
 }
 
-@include START_AT($small) {
-    .module-navigation ul > * {
-        display: inline-block;
-        width: 32%;
-    }
+.module-navigation {
+    width: 100%;
+    max-width: none;
 }
 
 @include START_AT($medium) {
+
+
      .module-navigation ul > * {
         display: block;
         width: 100%;
-        padding: 1px 0;
+        // padding: 1px 0;
     }
 
     .module-navigation .last {
         display: block;
+        padding: 8px 0;
+    }
+}
+
+@include STOP_AT($medium) {
+
+    .moduleNavDropDown .section__hd {
+        display: none;
+    }
+
+    .is-sticky .stickToTop.moduleNavDropDown {
+        width: 90%;
+        left: 5%;
+        z-index: 8;
+    }
+
+    .module-navigation .dropdown__list > * {
+        width: 50%;
+        float: left;
+    }
+
+    .module-navigation .dropdown__list > *:first-child {
+        width: 100%;
+
+    }
+
+    .module-navigation .dropdown__list > * > * {
+        height: auto;
+        padding: 12px 18px;
+    }
+
+    .module-navigation .dropdown__list > *:first-child > * {
+        height: 44px;
+        padding: 16px 18px;
+        color: $white;
+    }
+    .module-navigation .dropdown__list > *:last-child {
+        width: 100%;
+        float: none;
+    }
+
+    .module-navigation .dropdown__list .is-active > * {
+        padding: 16px 18px;
+        color: $white;
+    }
+
+    .module-navigation.is-active .dropdown__list .is-active > * {
+        padding: 12px 18px;
+    }
+
+    .module-navigation.is-active .dropdown__list > *:first-child.is-active > * {
+        padding: 16px 18px;
     }
 }
 

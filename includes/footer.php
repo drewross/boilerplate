@@ -7,7 +7,7 @@
         				<div class="hdg hdh--5 text-brand">Modules</div>
         			</div>
 		        	<div class="row">
-		        		<div class="col-xs-6 col-sm-4">
+		        		<div class="col--xs--6 col--sm--4">
 				        	<ul class="vList">
 				        		<li>Page Heros</li>
 				        		<li>Fonts</li>
@@ -20,7 +20,7 @@
 				        		<li>Tabs</li>
 				        	</ul>
 				        </div>
-				        <div class="col-xs-6 col-sm-4">
+				        <div class="col--xs--6 col--sm--4">
 				        	<ul class="vList">
 				        		<li>Table Layouts</li>
 				        		<li>Icons</li>
@@ -31,7 +31,7 @@
 				        		<li>Pagination</li>
 				        	</ul>
 				        </div>
-				        <div class="col-xs-6 col-sm-4">
+				        <div class="col--xs--6 col--sm--4">
 				        	<ul class="vList">
 				        		<li>Blocks</li>
 				        		<li>Grids</li>

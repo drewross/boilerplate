@@ -35,21 +35,21 @@
 }
 
 @include STOP_AT($small) {
-    .wrapper-xs-full {
+    .wrapper--xs--full {
         width: 100%;
         overflow: hidden;
     }
 }
 
 @include STOP_AT($medium) {
-    .wrapper-sm-full {
+    .wrapper--sm--full {
         width: 100%;
         overflow: hidden;
     }
 }
 
 @include STOP_AT($large) {
-    .wrapper-md-full {
+    .wrapper--md--full {
         width: 100%;
         overflow: hidden;
     }
