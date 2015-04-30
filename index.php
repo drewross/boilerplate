@@ -1,6 +1,6 @@
 <?php include("includes/header.php"); ?>
 
-    <div class="hero hero--light">
+    <div class="hero">
         <img src="build/images/Berliner-Disc-1897.jpg" alt="Berliner Disc 1897" />
         <div class="wrapper">
             <div class="hero__content">

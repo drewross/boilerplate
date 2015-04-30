@@ -22,7 +22,6 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		//background-color: rgba(20,20,20,0.8);
 	}
 }
 
@@ -43,34 +42,17 @@
 
 .hero__content .hdg {
 	display: inline-block;
-	color: $brand-alt;
 	max-width: 100%;
-	font-size: 24px;
-	//background-color: $white;
-}
-
-.hero--light .hero__content p,
-.hero--light .hero__content .hdg,
- {
-	//color: $white;
 }
 
 @include START_AT($small) {
 	.hero--fixed {
 		height: 432px;
 	}
-
-	.hero__content .hdg {
-		font-size: 36px;
-	}
 }
 
 @include START_AT($large) {
 	.hero--fixed {
 		height: 672px;
-	}
-
-	.hero__content .hdg {
-		font-size: 36px;
 	}
 }
