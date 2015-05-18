@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
 
-<title>PHDL | Boilerplate</title>
+<title>Gramophone | Front end Boilerplate</title>
 
 <!-- ICONS -->
 <link rel="shortcut icon" type="image/ico" href="build/images/favicon.ico" />
 <link rel="apple-touch-icon" href="build/images/apple-touch-icon.png" />
 
 <!-- FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900,400italic,900italic%7CKarla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
 <link rel="stylesheet" media="screen, projection" href="build/styles/production.css" />
@@ -24,7 +24,6 @@
 
 <!-- JAVASCRIPT -->
 <script type="text/javascript" src="build/scripts/production.min.js"></script>
-
 
 <!--[if lte IE 9]>
 <script type="text/javascript" src="build/scripts/timetravel.js"></script>
@@ -38,7 +37,7 @@
     <div class="wrapper">
     	<h1 class="logo">
     		<a href="index.php">
-    			Gramophone	
+    			<span class="h3">gramophone</span>
     		</a>
     		<span class="sr-only">Gramophone | A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
     	</h1>
@@ -69,4 +68,3 @@
     </div>
 </header>
 <div class="hdg-1 breakpointTester"></div>
-<main id="content" class="main js-pageTransition" role="main">

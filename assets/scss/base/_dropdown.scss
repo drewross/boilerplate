@@ -10,7 +10,7 @@ $dropdown-height: 44px;
     position: relative;
     z-index: 2;
     max-width: 360px;
-    background: $brand-alt;
+    //background: red;
     cursor: pointer;
     min-height: $dropdown-height;
 }
@@ -20,7 +20,7 @@ $dropdown-height: 44px;
     height: $dropdown-height;
     width: 100%;
     display: table;
-    background: $brand-alt;
+    //background: $gray-light;
     color: $white;
     padding: 0 16px;
 }
@@ -55,8 +55,8 @@ $dropdown-height: 44px;
     z-index: 3;
     width: 100%;
     max-height: $dropdown-height;
-    background: $brand-alt;
-    color: #eaeaea;
+    background: $gray-light;
+    color: $gray;
     transition: max-height $transition;
 }
 
@@ -77,13 +77,13 @@ $dropdown-height: 44px;
     height: 44px;
     line-height: 1;
     padding: 16px 18px;
-    transition: color $transition background $transition;
+    transition: color $transition, background $transition;
     -webkit-backface-visibility: hidden;
 }
 
 .dropdown__list > * > *:hover {
-    background: $black;
-    color: $brand;
+    background: $gray;
+    color: $gray-dark;
 }
 
 .dropdown.is-active {
@@ -99,7 +99,7 @@ $dropdown-height: 44px;
 }
 
 @include START_AT($medium) {
-    .dropdown.dropdown--before--md {
+    .dropdown--before--md {
         max-width: 100%;
         background: transparent;
 

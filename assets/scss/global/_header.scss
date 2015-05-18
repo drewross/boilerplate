@@ -1,11 +1,11 @@
 
-/* ---------------------------------------------------------------------
- Global Header Styles
------------------------------------------------------------------------- */
+// ---------------------------------------------------------------------
+//  Global Header Styles
+// ---------------------------------------------------------------------
 
 .globalHeader {
 	position: absolute;
-	background-color: $black;
+	//background-color: $gray-light;
 	z-index: 10;
 	width: 100%;
 }
@@ -15,11 +15,14 @@
 	// Either set the height or adjust the padding to determine height
 	// height: 80px;
 	padding: 4px 0;
+	//border-bottom: 1px solid $gray-light;
 }
 
-/* ---------------------------------------
- Logo Styles
---------------------------------------- */
+
+// ----------------------------------------
+// Logo Styles
+// ----------------------------------------
+
 $logo-width: 220px;
 $logo-height: 72px;
 
@@ -30,18 +33,24 @@ $logo-height: 72px;
 
 .logo a {
 	display: block;
+	color: $gray-dark;
 	width: $logo-width;
-	font-family: $sans-serif-bold;
-	font-family: $serif;
-	text-transform: uppercase;
-	letter-spacing: 0.15em;
-	font-size: 24px;
-	padding: 12px 0;
+	font-family: $sans-serif;
+	font-size: 48px;
+	line-height: 1;
+	padding: 8px 0;
+	transition: opacity $transition;
+
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
-/* ---------------------------------------
- Utility Nav Styles
---------------------------------------- */
+
+// ----------------------------------------
+// Utility Nav Styles
+// ----------------------------------------
+
 
 .utilityNav-list > * {
 	display: inline-block;
@@ -51,9 +60,11 @@ $logo-height: 72px;
 	}
 }
 
-/* ---------------------------------------
- Mobile Menu Styles
---------------------------------------- */
+
+// ----------------------------------------
+// Mobile Menu Styles
+// ----------------------------------------
+
 @include STOP_AT($medium) {
 
 	$panel-width: 260px;
@@ -85,9 +96,9 @@ $logo-height: 72px;
 	}
 
 
-	/* ---------------------------------------
-	 Main Nav Styles
-	--------------------------------------- */
+	// ----------------------------------------
+	// Main Nav Styles
+	// ----------------------------------------
 	.globalNav {
 		overflow: hidden;
 		width: 100%;
@@ -103,9 +114,7 @@ $logo-height: 72px;
 		display: block;
 		color: $white;
 		padding: 12px 0;
-		font-family: $sans-serif-bold;
 		letter-spacing: 0.025em;
-		text-transform: uppercase;
 		transition: all $transition;
 	}
 
@@ -114,9 +123,9 @@ $logo-height: 72px;
 	}
 
 
-	/* ---------------------------------------
-	 Utiliy Nav Styles
-	--------------------------------------- */
+	// ----------------------------------------
+	// Utility Nav Styles
+	// ----------------------------------------
 	.utilityNav-list > * > * {
 		color: $gray-light;
 		padding: 12px 12px 12px 0;
@@ -127,9 +136,9 @@ $logo-height: 72px;
 	}
 
 
-	/* ---------------------------------------
-	 Menu Mask Styles
-	--------------------------------------- */
+	// ----------------------------------------
+	// Menu Mask Styles
+	// ----------------------------------------
 	.mobileMenuIsOpen {
 		overflow: hidden;
 	}
@@ -146,10 +155,16 @@ $logo-height: 72px;
 }
 
 
+// ----------------------------------------
+// Desktop Menu Styles
+// ----------------------------------------
+
 @include START_AT($medium) {
-	/* ---------------------------------------
-	 Desktop Menu Styles
-	--------------------------------------- */
+	.globalHeader {
+		//background-color: $white;
+		//position: fixed;
+	}
+
 	.globalHeader-panel {
 		display: table-cell;
 		vertical-align: middle;
@@ -178,16 +193,15 @@ $logo-height: 72px;
 
 	.globalNav-list > * > * {
 		display: block;
-		color: $gray;
+		color: $gray-dark;
 		padding: 12px 0;
 		font-size: 16px;
-		font-family: $serif;
 		letter-spacing: 0.025em;
 		transition: all $transition;
 	}
 
 	.globalNav-list > * > *:hover {
-		color: $brand;
+		color: $black;
 	}
 
 	.utilityNav {
@@ -205,9 +219,11 @@ $logo-height: 72px;
 
 }
 
-/* ---------------------------------------
- TABLET NAV Styles
---------------------------------------- */
+
+// ----------------------------------------
+// Tablet Nav Styles
+// ----------------------------------------
+
 @include START_AT($small) {
 @include STOP_AT($medium) {
 
@@ -237,6 +253,5 @@ $logo-height: 72px;
 	.globalHeader_adjustTab .globalNav-list {
 		max-width: none;
 	}
-
 }
 }

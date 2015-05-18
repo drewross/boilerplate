@@ -330,8 +330,6 @@ APP.CatchOnTop = {
 
             var $currentPos = $('.stickToTop-wrapper').offset().top;
 
-            
-
             $(window).scroll(function(){
 
                 $currentPos = $('.stickToTop-wrapper').offset().top;

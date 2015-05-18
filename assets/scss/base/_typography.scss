@@ -9,7 +9,7 @@
 
 @mixin hdg {
     display: block;
-    font-family: $sans-serif-bold;
+    font-family: $sans-serif;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
     color: $gray-dark;
@@ -93,13 +93,13 @@
     color: #555;
 }
 
-@mixin para--lg {
+@mixin p-lg {
     //font-family: $sans-serif;
     font-size: 1.8rem;
     line-height: 1.7;
 }
 
-@mixin para--sm {
+@mixin p-sm {
     //font-family: $sans-serif;
     font-size: 1.4rem;
     line-height: 1.7124;
@@ -113,15 +113,15 @@ p {
     @include para;
 }
 
-.para--lg {
-    @include para--lg;
+.p-lg {
+    @include p-lg;
 }
 
-.para--sm {
-  @include para--sm;
+.p-sm {
+  @include p-sm;
 }
 
-.para--alt {
+.p-alt {
     font-family: $serif;
 }
 

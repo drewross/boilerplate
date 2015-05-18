@@ -1,37 +1,30 @@
 
-/* ---------------------------------------------------------------------
- Wrapper Styles (Horizontal Spacing)
------------------------------------------------------------------------- */
+// ---------------------------------------------------------------------
+//  Wrapper Styles (Horizontal Spacing)
+// ---------------------------------------------------------------------
 
 .wrapper {
-    @include clearfix;
     @include wrapper;
+    @include clearfix;
 }
 
 .wrapper--thin {
     max-width: 720px;
 }
 
-/* ---------------------------------------
- Wrapper Full
---------------------------------------- */
+
+// ----------------------------------------
+// Wrapper Full (for full color blocks)
+// ----------------------------------------
+
 .wrapperFull {
-    @include clearfix;
     max-width: 100%;
-    overflow: hidden;
+    @include clearfix;
 }
 
 .wrapperFull--dark {
     background-color: $black;
     color: $white;
-
-    .hdg {
-        color: $brand;
-    }
-
-    p {
-        color: $white;
-    }
 }
 
 @include STOP_AT($small) {
@@ -54,6 +47,3 @@
         overflow: hidden;
     }
 }
-
-
-

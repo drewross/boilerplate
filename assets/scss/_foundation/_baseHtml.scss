@@ -1,20 +1,13 @@
 
-/* ---------------------------------------------------------------------
- Base Global Styles
------------------------------------------------------------------------- */
+// ---------------------------------------------------------------------
+//  Base Global Styles
+// ---------------------------------------------------------------------
 
 html,
 body {
     height: 100%;
     font-size: 62.5%;
 }
-
-// @include STOP_AT($medium) {
-//     html,
-//     body {
-//         font-size: 52.5%;
-//     }
-// }
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -69,8 +62,8 @@ hr {
 
 picture > * { width: 100%; height: auto; }
 
-::selection { color: $brand; background: $black; }
-::-moz-selection { color: $brand; background: $black; }
+::selection { color: $white; background: $black; }
+::-moz-selection { color: $white; background: $black; }
 
 [data-scroll-to],
 [data-click-target] {

@@ -1,13 +1,12 @@
 
-/* ---------------------------------------------------------------------
- Hero Styles
------------------------------------------------------------------------- */
+// ---------------------------------------------------------------------
+//  Hero Styles Settings
+// ---------------------------------------------------------------------
 
 .hero {
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	transition: height 0.4s ease-in-out;
 	// Absolute Positioned Header Height
 	//padding-top: 60px;
 
@@ -25,12 +24,10 @@
 	}
 }
 
-.hero--fixed {
-	height: 288px;
-
-	img {
-		@include centerImg;
-	}
+.hero--pattern {
+	background: url('../images/bg-pattern.svg') no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .hero__content {
@@ -40,9 +37,24 @@
     transform: translateY(-50%);
 }
 
-.hero__content .hdg {
-	display: inline-block;
-	max-width: 100%;
+.hero__title {
+	font-family: $serif;
+	font-size: 6.25em;
+	letter-spacing: 0.1em;
+	color: $gray;
+}
+
+
+// ----------------------------------------
+// Hero Fixed
+// ----------------------------------------
+
+.hero--fixed {
+	height: 288px;
+
+	img {
+		@include centerImg;
+	}
 }
 
 @include START_AT($small) {

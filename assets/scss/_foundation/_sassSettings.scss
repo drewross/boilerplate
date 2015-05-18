@@ -1,31 +1,43 @@
+
+// ---------------------------------------------------------------------
+//  SCSS Settings
+// ---------------------------------------------------------------------
+
+
 // ----------------------------------------
 // Fonts
 // ----------------------------------------
-$serif: 'Crimson Text', serif;
-$sans-serif: 'proxima_nova_rgregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$sans-serif-bold: 'proxima_nova_rgbold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$BOLD: 700;
-$ITALIC: italic;
+
+// Font weights: 400 | 900
+$serif: 'Playfair Display', serif;
+
+// Font weights: 400 | 700
+$sans-serif: 'Karla', sans-serif;
 
 
 // ----------------------------------------
 // Font Size/ Line Height
 // ----------------------------------------
-$BASE_FONT_SIZE: 1.6rem;
-$BASE_LINE_HEIGHT: 1.5;
+$BASE_FONT_SIZE: 1.5rem;
+$BASE_LINE_HEIGHT: 1.4;
 
 
 // ----------------------------------------
 // Colors
 // ----------------------------------------
-$brand: #b69968;
-//$brand: gold;
-$brand-alt: #231f20;
+
+// Blue-Green
+//$brand: #84cecb;
+
+// Black
+$brand: #282828;
+
+$brand-alt: #84cecb;
 
 $white: #ffffff;
 $black: #282828;
-$gray-light: #eaeaea;
-$gray: #999;
+$gray-light: #e7e7e7;
+$gray: #dddddd;
 $gray-dark: #3a3a3a;
 
 
@@ -57,13 +69,3 @@ $small: 600px;
 $transition-speed: 0.4s;
 $transition: 0.4s ease-in-out;
 $wrapper-width: 1128px;
-
-// ----------------------------------------
-// Susy
-// ----------------------------------------
-@import "susy/susy";
-
-$susy: (
-  columns: 12,
-  gutters: .5
-);

@@ -30,27 +30,27 @@
 }
 
 .userContent h1 {
-    @include hdg--1;
+    @include h1;
 }
 
 .userContent h2 {
-    @include hdg--2;
+    @include h2;
 }
 
 .userContent h3 {
-    @include hdg--3;
+    @include h3;
 }
 
 .userContent h4 {
-    @include hdg--4;
+    @include h4;
 }
 
 .userContent h5 {
-    @include hdg--5;
+    @include h5;
 }
 
 .userContent h6 {
-    @include hdg--6;
+    @include h6;
 }
 
 .userContent {

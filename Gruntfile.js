@@ -31,7 +31,6 @@ module.exports = function(grunt) {
         options: {
             outputStyle: 'compressed',
             sourceMap: true
-            //require: 'susy'
         },
         dist: {
             files: {

@@ -1,14 +1,12 @@
 <?php include("includes/header.php"); ?>
 
-    <div class="hero">
-        <img src="build/images/Berliner-Disc-1897.jpg" alt="Berliner Disc 1897" />
-        <div class="wrapper">
-            <div class="hero__content">
-                <div class="text-group">
-                    <!-- <h1 class="hdg hdg--1">boilerplate</h1>
-                    <div>
-                        <a class="link" href="http://www.gramophone.roztocki.com/" target="_blank">Get Started</a>
-                    </div> -->
+    <div class="hero hero--fixed hero--pattern js-sectionFull">
+        <div class="hero__content">
+            <div class="wrapper">
+                <div class="text-group text-center">
+                    <div class="hero__title text-group__hd">gramophone</div>
+                    <p class="p-lg p-alt"><span class="text-italic text-brand">Gramophone</span> is a front-end boilerplate that utilizes Grunt, Sass, jQuery, PHP, susy and more. Below you'll find examples &amp; HTML markup for the components in this boilerplate. <span class="text-italic"><span class="">Coming soon:</span> Javascript functions will be available to grab from here rather than having an all inclusive js file. More modules will be added to go along with these building blocks. Utility classes and mixin markup will be documented.</span></p>
+                    <div class="p-alt link text-italic" data-scroll-to="modules">Get started</div>
                 </div>
             </div>
         </div>

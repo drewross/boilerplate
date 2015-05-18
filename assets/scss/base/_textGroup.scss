@@ -1,0 +1,25 @@
+
+// ---------------------------------------------------------------------
+//  Text Group Styles
+// ---------------------------------------------------------------------
+
+
+.text-group {
+    max-width: 772px;
+}
+
+.text-group > * {
+    margin-bottom: 12px;
+}
+
+.text-group--tight > * {
+    margin-bottom: 6px;
+}
+
+.text-group__hd {
+    margin-bottom: 18px;
+}
+
+.text-group > *:last-child {
+    margin-bottom: 0;
+}

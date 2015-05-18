@@ -2,12 +2,12 @@
 // BASIC FOUNDATIONAL ELEMENTS
 //////////////////////////////
 @import "_foundation/_sassSettings";
-@import "_foundation/_mixins";
 @import "_foundation/_reset";
-@import "base/_typography";
+@import "_foundation/_mixins";
+@import "_foundation/_type";
 @import "_foundation/_baseHtml";
-@import "_foundation/_fonts";
 @import "_foundation/_userContent";
+//@import "_foundation/_fonts";
 
 
 //////////////////////////////
@@ -25,7 +25,7 @@
 //////////////////////////////
 @import "base/_pageTransition";
 @import "base/_grid";
-@import "base/_susy";
+@import "base/_textGroup";
 @import "base/_lTable";
 @import "base/_vList";
 @import "base/_hList";
