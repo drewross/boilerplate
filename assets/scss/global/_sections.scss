@@ -32,8 +32,11 @@
 
 .section__hd {
     margin-bottom: 24px;
-    // padding-bottom: 12px;
-    // border-bottom: 1px solid $gray-light;
+}
+
+.section__hd--border {
+    padding-bottom: 12px;
+    border-bottom: 1px solid $gray-light;
 }
 
 .section__hd--short {

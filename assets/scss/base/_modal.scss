@@ -18,8 +18,7 @@ Modal Styles
 	width: 100%;
 	height: 100%;
 	max-width: 100%;
-	background: $brand-alt;
-	color: $white;
+	background: $white;
 	padding: 48px 24px 24px;
 	z-index: 2000;
 	top: 0;
@@ -28,10 +27,6 @@ Modal Styles
 	border-radius: 200%;
 	transform: scale(0);
 	transition: all $transition;
-
-	p, .hdg {
-		color: $white;
-	}
 }
 
 .modal.is-active {
@@ -49,7 +44,7 @@ Modal Styles
 	bottom: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(255,255,255,0.9);
+	background: rgba(25,25,25,0.3);
 	z-index: 1999;
 	animation: fadeIn $transition 1;
 }
@@ -70,7 +65,7 @@ Modal Styles
 	}
 
 	&:hover svg {
-		fill: $white;
+		fill: $gray-light;
 	}
 }
 

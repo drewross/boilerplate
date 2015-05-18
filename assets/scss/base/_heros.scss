@@ -39,9 +39,11 @@
 
 .hero__title {
 	font-family: $serif;
-	font-size: 6.25em;
+	font-size: 2.8em;
+	line-height: 1;
 	letter-spacing: 0.1em;
 	color: $gray;
+	margin-bottom: 36px;
 }
 
 
@@ -61,10 +63,18 @@
 	.hero--fixed {
 		height: 432px;
 	}
+
+	.hero__title {
+		font-size: 4.8em;
+	}
 }
 
 @include START_AT($large) {
 	.hero--fixed {
 		height: 672px;
+	}
+
+	.hero__title {
+		font-size: 6.25em;
 	}
 }

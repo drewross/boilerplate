@@ -4,25 +4,26 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="1322px" height="864px" viewBox="0 0 1322 864" enable-background="new 0 0 1322 864" xml:space="preserve">
 <rect display="none" width="1322" height="866"/>
-<g opacity="0.3">
-	<rect fill="#F9F9FA" width="1322" height="864"/>
-	<rect x="377.7" opacity="5.000000e-02" width="188.9" height="864"/>
-	<rect x="755.4" opacity="5.000000e-02" width="188.9" height="864"/>
-	<rect x="944.3" opacity="0.1" width="188.9" height="864"/>
-	<rect x="188.9" opacity="0.1" width="188.9" height="864"/>
-	<rect opacity="0.15" width="188.9" height="864"/>
-	<rect x="1133.1" opacity="0.15" width="188.9" height="864"/>
-	<polygon opacity="0.1" points="661,215.9 0,61.9 0,171.8 661,325.9 1322,171.8 1322,61.9 	"/>
-	<polygon opacity="0.15" points="661,325.9 0,171.9 0,281.8 661,435.9 1322,281.8 1322,171.9 	"/>
-	<polygon opacity="0.2" points="661,436 0,282 0,391.9 661,546 1322,391.9 1322,282 	"/>
-	<polygon opacity="0.25" points="661,545.9 0,391.9 0,501.8 661,655.9 1322,501.8 1322,391.9 	"/>
-	<polygon opacity="0.3" points="661,655.9 0,501.9 0,611.8 661,765.9 1322,611.8 1322,501.9 	"/>
-	<polygon fill="none" points="1115.9,0 206.1,0 661,106 	"/>
-	<polygon opacity="5.000000e-02" points="661,106 206.1,0 0,0 0,61.9 661,216 1322,61.9 1322,0 1115.9,0 	"/>
-	<polygon opacity="0.4" points="609.9,864 0,721.9 0,831.8 138,864 	"/>
-	<polygon opacity="0.4" points="1322,831.8 1322,721.9 712.1,864 1184,864 	"/>
-	<polygon opacity="0.45" points="1322,864 1322,831.8 1184,864 	"/>
-	<polygon opacity="0.45" points="0,831.8 0,864 138,864 	"/>
-	<polygon opacity="0.35" points="1322,721.8 1322,611.9 661,765.9 0,611.9 0,721.8 609.9,864 712.1,864 	"/>
+<g opacity="0.2">
+	<rect fill="#FFFFFF" width="1322" height="864"/>
+	<rect x="377.7" opacity="5.000000e-02" enable-background="new    " width="188.9" height="864"/>
+	<rect x="755.4" opacity="5.000000e-02" enable-background="new    " width="188.9" height="864"/>
+	<rect x="944.3" opacity="0.1" enable-background="new    " width="188.9" height="864"/>
+	<rect x="188.9" opacity="0.1" enable-background="new    " width="188.9" height="864"/>
+	<rect x="0" opacity="0.15" enable-background="new    " width="188.9" height="864"/>
+	<rect x="1133.1" opacity="0.15" enable-background="new    " width="188.9" height="864"/>
+	<polygon opacity="0.1" enable-background="new    " points="661,215.9 0,61.9 0,171.8 661,325.9 1322,171.8 1322,61.9 	"/>
+	<polygon opacity="0.15" enable-background="new    " points="661,325.9 0,171.9 0,281.8 661,435.9 1322,281.8 1322,171.9 	"/>
+	<polygon opacity="0.2" enable-background="new    " points="661,436 0,282 0,391.9 661,546 1322,391.9 1322,282 	"/>
+	<polygon opacity="0.25" enable-background="new    " points="661,545.9 0,391.9 0,501.8 661,655.9 1322,501.8 1322,391.9 	"/>
+	<polygon opacity="0.3" enable-background="new    " points="661,655.9 0,501.9 0,611.8 661,765.9 1322,611.8 1322,501.9 	"/>
+	<polygon opacity="5.000000e-02" enable-background="new    " points="661,106 206.1,0 0,0 0,61.9 661,216 1322,61.9 1322,0 
+		1115.9,0 	"/>
+	<polygon opacity="0.4" enable-background="new    " points="609.9,864 0,721.9 0,831.8 138,864 	"/>
+	<polygon opacity="0.4" enable-background="new    " points="1322,831.8 1322,721.9 712.1,864 1184,864 	"/>
+	<polygon opacity="0.45" enable-background="new    " points="1322,864 1322,831.8 1184,864 	"/>
+	<polygon opacity="0.45" enable-background="new    " points="0,831.8 0,864 138,864 	"/>
+	<polygon opacity="0.35" enable-background="new    " points="1322,721.8 1322,611.9 661,765.9 0,611.9 0,721.8 609.9,864 
+		712.1,864 	"/>
 </g>
 </svg>
