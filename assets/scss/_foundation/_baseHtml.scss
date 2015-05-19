@@ -56,13 +56,9 @@ sup {
     font-size: smaller;
 }
 
-hr {
-    //border: 1px inset rgba(20,20,20,0.8);
-}
-
 picture > * { width: 100%; height: auto; }
 
-::selection { color: $white; background: $black; }
+::selection { color: $white; background: $gray-light; }
 ::-moz-selection { color: $white; background: $black; }
 
 [data-scroll-to],
