@@ -37,7 +37,7 @@
     <div class="wrapper">
     	<h1 class="logo">
     		<a href="index.php">
-    			<span class="h2">g</span>
+    			<span>gramophone</span>
     		</a>
     		<span class="sr-only">Gramophone | A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
     	</h1>

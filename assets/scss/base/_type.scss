@@ -1,8 +1,6 @@
-
 // ---------------------------------------------------------------------
 //  Typography Styles
 // ---------------------------------------------------------------------
-
 
 // ----------------------------------------
 // Heading Mixins
@@ -11,6 +9,7 @@
 @mixin hdg {
     display: block;
     font-family: $serif;
+    font-weight: 400;
     letter-spacing: 0.25rem;
 }
 
@@ -135,6 +134,7 @@
 .p,
 p {
     @include para;
+    max-width: 720px;
 }
 
 .p-lg {
@@ -145,39 +145,13 @@ p {
   @include p-sm;
 }
 
-.p-alt {
-    font-family: $serif;
-}
-
 
 // ----------------------------------------
 // Type Utilities
 // ----------------------------------------
 
-.lead-letter::first-letter {
-    font-family: $serif;
-    color: $brand;
-    font-style: italic;
-    float: left;
-    font-size: 48px;
-    display: inline-block;
-    line-height: 0.9;
-    margin: 4px 12px 0 8px;
-}
-
-.text-bold {
-    font-weight: 700;
-}
-
-.text-italic {
-    font-style: italic;
-}
-
-.text-brand {
-    color: $brand;
-}
-
-.text-white {
-    color: $white;
-}
-
+.text-italic { font-style: italic; }
+//.text-brand { color: $brand; }
+.text-white { color: $white; }
+.text-caps { text-transform: uppercase; }
+.text-noCaps { text-transform: none; }

@@ -8,23 +8,17 @@
     @include clearfix;
 }
 
+// ----------------------------------------
+// Extensions
+// ----------------------------------------
+
 .wrapper--thin {
     max-width: 720px;
 }
 
-
-// ----------------------------------------
-// Wrapper Full (for full color blocks)
-// ----------------------------------------
-
 .wrapperFull {
     max-width: 100%;
     @include clearfix;
-}
-
-.wrapperFull--dark {
-    background-color: $black;
-    color: $white;
 }
 
 @include STOP_AT($small) {

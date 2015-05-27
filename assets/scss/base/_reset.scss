@@ -1,12 +1,8 @@
 /* --------------------------------
-    Original Author: PHDL
-    Target Browsers: All Modern & IE9 +
-    Media Type: Screen, Projection
-   --------------------------------- */
-
-/* ---------------------------------------------------------------------
- CSS Reset - Eric Meyer
- ------------------------------------------------------------------------ */
+Original Author: PHDL
+Target Browsers: All Modern & IE9 +
+Media Type: Screen, Projection
+--------------------------------- */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,11 +20,6 @@ time, mark, audio, video, main {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font-weight: inherit;
-    font-style: inherit;
-    font-family: inherit;
-    vertical-align: baseline;
 }
 
 body {
@@ -39,45 +30,19 @@ ol, ul {
     list-style: none;
 }
 
-blockquote, q {
-    quotes: none;
-}
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-html {
-    overflow-y: scroll;
-}
-
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
-
-/* ----------------------------------------
- HTML5 Block / Inline Block declarations
----------------------------------------- */
+// ----------------------------------------
+// HTML5 Block / Inline Block declarations
+// ----------------------------------------
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, main,
+audio, canvas, video {
     display: block;
 }
 
-audio, canvas, video {
-    display: inline-block;
-}
-
-/* ----------------------------------------
- Form Reset Styles
----------------------------------------- */
+// ----------------------------------------
+// Form Resets
+// ----------------------------------------
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-results-button,

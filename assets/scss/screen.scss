@@ -1,56 +1,49 @@
-//////////////////////////////
-// BASIC FOUNDATIONAL ELEMENTS
-//////////////////////////////
-@import "_foundation/_sassSettings";
-@import "_foundation/_reset";
-@import "_foundation/_mixins";
-@import "_foundation/_type";
-@import "_foundation/_baseHtml";
-@import "_foundation/_userContent";
-//@import "_foundation/_fonts";
+// ----------------------------------------
+// Base
+// ----------------------------------------
+@import "base/_sassSettings";
+@import "base/_reset";
+//@import "base/_fonts";
+@import "base/_type";
+@import "base/_mixins";
+@import "base/_baseHtml";
 
 
-//////////////////////////////
-//GLOBAL OBJECTS
-//////////////////////////////
-@import "global/_header";
-@import "global/_wrappers";
-@import "global/_sections";
-@import "global/_footer";
-
-@import "global/_burger";
-
-//////////////////////////////
-// BASE BOILERPLATE OBJECTS
-//////////////////////////////
-@import "base/_pageTransition";
-@import "base/_grid";
-@import "base/_textGroup";
-@import "base/_heros";
-@import "base/_lTable";
-@import "base/_vList";
-@import "base/_hList";
-@import "base/_dList";
-@import "base/_links";
-@import "base/_media";
-@import "base/_mediaObject";
-@import "base/_tabs";
-@import "base/_forms";
-@import "base/_dropdown";
-@import "base/_modal";
-@import "base/_stickToTop";
-
-//////////////////////////////
-// CUSTOM PROJECT BASED OBJECTS
-//////////////////////////////
-@import "custom/_revolver";
+// ----------------------------------------
+// Layouts
+// ----------------------------------------
+@import "layout/_wrappers";
+@import "layout/_sections";
+@import "layout/_grid";
+@import "layout/_header";
+@import "layout/_footer";
+@import "layout/_textGroup";
 
 
-//////////////////////////////
-// UTILITY ELEMENTS
-//////////////////////////////
-@import "_foundation/_utils";
+// ----------------------------------------
+// Modules
+// ----------------------------------------
+@import "modules/_pageTransition";
+@import "modules/_animateIn";
+@import "modules/_burger";
+@import "modules/_heros";
+@import "modules/_vList";
+@import "modules/_hList";
+@import "modules/_dList";
+@import "modules/_links";
+@import "modules/_media";
+@import "modules/_mediaObject";
+@import "modules/_tabs";
+@import "modules/_dropdown";
+@import "modules/_modal";
+@import "modules/_stickToTop";
+@import "modules/_userContent";
+@import "modules/_revolver";
+@import "modules/_forms";
+@import "modules/_utils";
 
 
-
-@import "_foundation/_patternLibrary";
+// ----------------------------------------
+// Remove for production
+// ----------------------------------------
+@import "modules/_patternLibrary";

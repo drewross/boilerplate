@@ -1,21 +1,17 @@
-
 // ---------------------------------------------------------------------
 //  Global Header Styles
 // ---------------------------------------------------------------------
 
 .globalHeader {
-	position: absolute;
-	//background-color: $gray-light;
+	//position: absolute;
 	z-index: 10;
 	width: 100%;
+	background: $black;
 }
 
 .globalHeader .wrapper {
 	display: table;
-	// Either set the height or adjust the padding to determine height
-	// height: 80px;
-	padding: 4px 0;
-	//border-bottom: 1px solid $gray-light;
+	padding: 8px 0;
 }
 
 
@@ -33,12 +29,13 @@ $logo-height: 72px;
 
 .logo a {
 	display: block;
-	color: $gray-dark;
+	color: $gray-light;
 	width: $logo-width;
-	font-family: $sans-serif;
-	font-size: 48px;
+	font-family: $serif;
+	font-weight: 400;
+	font-size: 24px;
 	line-height: 1;
-	padding: 8px 0;
+	padding: 8px 0 12px;
 	transition: opacity $transition;
 
 	&:hover {
@@ -191,17 +188,14 @@ $logo-height: 72px;
 		min-width: 120px;
 	}
 
-	.globalNav-list > * > * {
+	.globalNav-list > * > *,
+	.globalNav-list > * > a {
 		display: block;
-		color: $gray-dark;
+		color: $gray-light;
 		padding: 12px 0;
 		font-size: 16px;
 		letter-spacing: 0.025em;
-		transition: all $transition;
-	}
-
-	.globalNav-list > * > *:hover {
-		color: $black;
+		@include opacityHover(0.6);
 	}
 
 	.utilityNav {

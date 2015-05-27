@@ -15,6 +15,7 @@ var PHDL = PHDL || {};
         APP.ClickGroup.init();
         APP.ScrollTo.init();
         APP.CatchOnTop.init();
+        APP.DetectViewPort.init();
         APP.DetectWindowHeight.init();
         APP.Revolver.init();
     });
@@ -316,7 +317,7 @@ When an element hits the top of the screen, stick to the top
 APP.CatchOnTop = {
 
     init: function() {
-        var $catchOnTop = $('.stickToTop-wrapper');
+        var $catchOnTop = $('*[data-is-sticky]');
         if( ! $catchOnTop.length ) {
             return;
         }
@@ -326,26 +327,88 @@ APP.CatchOnTop = {
 
     bind: function() {
 
-        $( document ).ready(function() {
+        function detectPos() {
+            $('*[data-is-sticky]').each(function() {
+                $elHeight = $(this).find('.stickToTop').innerHeight();
+                $(this).css( { 'height': $elHeight } );
+                $xPos = $(this).offset().left;
+                $currentPos = $(this).offset().top;
 
-            var $currentPos = $('.stickToTop-wrapper').offset().top;
-
-            $(window).scroll(function(){
-
-                $currentPos = $('.stickToTop-wrapper').offset().top;
-
-                if ($(this).scrollTop() > $currentPos) { 
-                    $('.stickToTop-wrapper').addClass('is-sticky'); 
+                if ( $(window).scrollTop() > $currentPos ) { 
+                    $(this).addClass('is-sticky');
+                    
+                    $(this).find('.stickToTop').css( { 'left': $xPos } );
                 }
                 else {
-                    $('.stickToTop-wrapper').removeClass('is-sticky');
+                    $(this).removeClass('is-sticky');
+                    $(this).find('.stickToTop').css( { 'left': 'auto' } );
                 }
-
             });
+        }
 
+        $(document).ready(function() {
+            detectPos();
         });
 
+        $(window).scroll(function() {
+            detectPos();
+        });
 
+        $(window).resize( function() {
+            detectPos();
+        });
+    }
+};
+
+/* --------------------------------------------------------------------
+Detect when an element is in the viewport
+-------------------------------------------------------------------- */
+
+APP.DetectViewPort = {
+
+    init: function() {
+        var $detectViewPort = $('*[data-animate-in]');
+        if (!$detectViewPort.length) {
+            return;
+        }
+        this.$detectViewPort = $detectViewPort;
+        this.bind();
+    },
+
+    bind: function() {
+        $.fn.isOnScreen = function(){
+            var win = $(window);
+            var viewport = {
+                top : win.scrollTop(),
+                left : win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+            return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+        };
+
+        function changeState() {
+            $('*[data-animate-in]').each(function() {
+                if ( $(this).isOnScreen() ) {
+                    $(this).addClass('in-view');
+                } else {
+                    $(this).removeClass('in-view');
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            setTimeout(function() {
+               changeState(); 
+            }, 500);
+        });
+
+        $(window).scroll(function(){
+            changeState();
+        });        
     }
 };
 
@@ -368,7 +431,7 @@ APP.DetectWindowHeight = {
 
     bind: function() {
 
-        $( document ).ready(function() {
+        $(document).ready(function() {
             var $windowHeight = $(window).height();
             $('.js-sectionFull').css({'height': $windowHeight });
         });
