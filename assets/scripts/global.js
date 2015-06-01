@@ -131,7 +131,7 @@ APP.BrowserDeviceDetection = {
 };
 
 
-/* -------------------------------------------------------------------- 
+/* --------------------------------------------------------------------
 Page Transitions
 Fade the page in and out
 -------------------------------------------------------------------- */
@@ -148,31 +148,12 @@ APP.PageTransitions = {
     },
 
     bind: function() {
-
         window.onunload = function(){};
-
         $(document).ready(function() {
-            setTimeout(function() {
-               $('.js-pageTransition').addClass('pageLoaded'); 
-            }, 100);
-
-            $("a[target!='_blank']").on('click touchstart:not(touchmove)', function(e) {
-                e.preventDefault();
-                if( $(this).hasClass('no-trans') ) return;
-
-                linkLocation = this.href;
-
-                $('.js-pageTransition').removeClass('pageLoaded');
-                window.setTimeout(redirectPage, 200);
-
+            $("a[target!='_blank']").not(".no-trans").on('click touchstart:not(touchmove)', function() {
+                $('.js-pageTransition').addClass('page-fade-out');
                 $('body').removeClass('mobileMenuIsOpen');
-
-                // $("html, body").delay(100).animate({ scrollTop: 0 }, 700);
-                // return false;
             });
-            function redirectPage() {
-                window.location = linkLocation;
-            }
         });
     }
 };
@@ -462,7 +443,7 @@ APP.Revolver = {
 
     bind: function() {
         $('#revolver1').playRecord(true, true, 4000);
-        $('#revolver2').playRecord(false, false, 8000);
+        $('#revolver2').playRecord(false, true, 8000);
     }
 };
 

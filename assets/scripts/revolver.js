@@ -5,8 +5,51 @@
 
 
         // Make the first slide active
-        instance.find('.revolver__slides > *').first().addClass('isActive active');
+        instance.find('.revolver__slides > *').first().addClass('isActive');
 
+        var $numSlides = instance.find('.revolver__slides > *').length;
+
+        function origPos() {
+            instance.find('.revolver__slides > *').each(function() {
+                var $slideNum = $(this).index();
+                $(this).css( "left", $slideNum + "00%" );
+            });
+        }
+        origPos();
+
+        function updatePos() {
+            instance.find('.revolver__slides > *').each(function() {
+                var $pos = $(this)[0].style.left;
+                var $newPos = ( parseInt($pos) - 100) + "%";
+                $(this).css( "left", $newPos );
+            });
+        }
+
+        function updatePosBack() {
+            instance.find('.revolver__slides > *').each(function() {
+                var $pos = $(this)[0].style.left;
+                var $newPos = ( parseInt($pos) + 100) + "%";
+                $(this).css( "left", $newPos );
+            });
+        }
+
+        function updatePosLast() {
+            instance.find('.revolver__slides > *').each(function() {
+                var $slidePos = $(this).index() + 1;
+                var $reversedIndex = ( ($numSlides) - $slidePos ) + "00";
+                var $newPos = - parseInt($reversedIndex) + "%";
+                $(this).css( "left", $newPos );
+            });
+        }
+
+        function customPos(number) {
+            var $dest = number;
+            instance.find('.revolver__slides > *').each(function() {
+                var $slidePos = $(this).index();
+                var $newPos = ( parseInt($slidePos) - $dest) + "00%";
+                $(this).css( "left", $newPos );
+            });
+        }
 
         // Create and append the pagination
         function paginate() {
@@ -23,26 +66,28 @@
         // Move Slides Forward
         function changeSlides() {
             if( instance.find('.revolver__slides .isActive').is(':last-child') ) {
+                origPos();
                 instance.find('.revolver__slides .isActive').removeClass('isActive').parent('.revolver__slides').find('>:first-child').addClass('isActive');
                 instance.find('.revolver-pagination .isActive').removeClass('isActive').parent('.revolver-pagination').find('>:first-child').addClass('isActive');
-                } else {
-                instance.find('.revolver__slides .isActive').removeClass('isActive').next('.revolver__slides > *').addClass('isActive');
+            } else {
+                updatePos();
+                instance.find('.revolver__slides .isActive').removeClass('isActive').next('.revolver__slides > *').addClass('isActive').next();
                 instance.find('.revolver-pagination .isActive').removeClass('isActive').next('.revolver-pagination > *').addClass('isActive');
             }
         }
 
-
         // Move Slides Backwards
         function changeSlidesBack() {
             if( instance.find('.revolver__slides .isActive').is(':first-child') ) {
+                updatePosLast();
                 instance.find('.revolver__slides .isActive').removeClass('isActive').parent('.revolver__slides').find('>:last-child').addClass('isActive');
                 instance.find('.revolver-pagination .isActive').removeClass('isActive').parent('.revolver-pagination').find('>:last-child').addClass('isActive');
-                } else {
+            } else {
+                updatePosBack();
                 instance.find('.revolver__slides .isActive').removeClass('isActive').prev('.revolver__slides > *').addClass('isActive');
                 instance.find('.revolver-pagination .isActive').removeClass('isActive').prev('.revolver-pagination > *').addClass('isActive');
             }
         }
-
 
         // Set the Interval
         function setRevolve() {
@@ -58,14 +103,14 @@
         function revolve() {
             clearInterval($revoleTime);
             changeSlides();
-            setRevolve();
+            //setRevolve();
         }
 
 
         // Move Slides Backwards and reset the timer
         function revolveBack() {
             clearInterval($revoleTime);
-            setRevolve();
+            //setRevolve();
             changeSlidesBack();
         }
 
@@ -103,6 +148,7 @@
                 var $number = $(this).index();
                 instance.find('.revolver__slides .isActive').removeClass('isActive');
                 instance.find(".revolver__slides > *:nth(" + $number + ")").addClass('isActive');
+                customPos($number);
             });
         }
 

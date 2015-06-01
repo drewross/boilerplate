@@ -3,15 +3,14 @@
 // ---------------------------------------------------------------------
 
 .globalHeader {
-	//position: absolute;
+	position: absolute;
 	z-index: 10;
 	width: 100%;
-	background: $black;
 }
 
 .globalHeader .wrapper {
 	display: table;
-	padding: 8px 0;
+	padding: 16px 0;
 }
 
 
@@ -36,11 +35,7 @@ $logo-height: 72px;
 	font-size: 24px;
 	line-height: 1;
 	padding: 8px 0 12px;
-	transition: opacity $transition;
-
-	&:hover {
-		opacity: 0.5;
-	}
+	@include opacityHover(0.8);
 }
 
 
@@ -112,11 +107,7 @@ $logo-height: 72px;
 		color: $white;
 		padding: 12px 0;
 		letter-spacing: 0.025em;
-		transition: all $transition;
-	}
-
-	.globalNav-list > * > *:hover {
-		color: $brand-alt;
+		@include opacityHover(0.5);
 	}
 
 
@@ -169,7 +160,6 @@ $logo-height: 72px;
 	}
 
 	.globalNav-list {
-		//width: 100%;
 		display: table;
 		float: right;
 		max-width: 536px;

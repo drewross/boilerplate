@@ -30,6 +30,15 @@
     transform: translateY(-50%);
 }
 
+@mixin vCenterTable {
+    display: table;
+
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
 @mixin centerImg {
     position: relative;
     width: auto;
