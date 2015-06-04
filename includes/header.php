@@ -13,20 +13,20 @@
 <link rel="apple-touch-icon" href="build/images/apple-touch-icon.png" />
 
 <!-- FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900,400italic,900italic%7CKarla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display|Karla:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
-<link rel="stylesheet" media="screen, projection" href="build/styles/production.css" />
+<link rel="stylesheet" media="screen, projection" href="build/css/production.css" />
 
 <!-- JQUERY -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 <!-- JAVASCRIPT -->
-<script type="text/javascript" src="build/scripts/production.min.js"></script>
+<script type="text/javascript" src="build/js/production.min.js"></script>
 
 <!--[if lte IE 9]>
-<script type="text/javascript" src="build/scripts/timetravel.js"></script>
+<script type="text/javascript" src="build/js/timetravel.js"></script>
 <![endif]-->
 
 </head>

@@ -12,7 +12,6 @@ $serif: 'Playfair Display', serif;
 
 // Font weights: 400 | 700
 $sans-serif: 'Karla', sans-serif;
-//$serif: 'Karla', sans-serif;
 
 
 // ----------------------------------------
@@ -26,13 +25,11 @@ $BASE_LINE_HEIGHT: 1.6;
 // Colors
 // ----------------------------------------
 
-// Blue-Green
-//$brand: #84cecb;
-
 // Black
 $brand: #282828;
 
-$brand-alt: #84cecb;
+// Blue-Green
+//$brand-alt: #84cecb;
 
 $white: #ffffff;
 $black: #282828;
@@ -44,6 +41,7 @@ $gray-dark: #3a3a3a;
 // ----------------------------------------
 // Breakpoints
 // ----------------------------------------
+
 $xlarge: 1450px;
 $large: 1025px;
 $medium: 800px;

@@ -8,23 +8,28 @@ module.exports = function(grunt) {
     concat: {   
         dist: {
             src: [
-                'assets/scripts/global.js',
-                'assets/scripts/touchswipe.js',
-                'assets/scripts/revolver.js'
+                'assets/js/global.js',
+                'assets/js/touchswipe.js',
+                'assets/js/revolver.js',
+                'assets/js/picturefill.min.js'
             ],
-            dest: 'build/scripts/production.js',
+            dest: 'build/js/production.js',
+        },
+        extras: {
+          src: ['assets/js/timetravel.js'],
+          dest: 'build/js/timetravel.js',
         }
     },
 
     uglify: {
         build: {
-            src: 'build/scripts/production.js',
-            dest: 'build/scripts/production.min.js'
+            src: 'build/js/production.js',
+            dest: 'build/js/production.min.js'
         }
     },
 
     jshint: {
-        all: ['Gruntfile.js', 'assets/scripts/global.js']
+        all: ['Gruntfile.js', 'assets/js/global.js']
     },
 
     sass: {
@@ -34,7 +39,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'build/styles/production.css': 'assets/scss/screen.scss'
+                'build/css/production.css': 'assets/scss/screen.scss'
             }
         } 
     },
@@ -42,7 +47,7 @@ module.exports = function(grunt) {
     autoprefixer: {
         dist: {
             files: {
-                'build/styles/production.css': 'build/styles/production.css'
+                'build/css/production.css': 'build/css/production.css'
             }
         }
     },
@@ -64,8 +69,8 @@ module.exports = function(grunt) {
             replace: false
         },
         dist: {
-            src: 'build/styles/production.css',
-            dest: 'build/styles/production.css'
+            src: 'build/css/production.css',
+            dest: 'build/css/production.css'
         }
     },
 
@@ -94,7 +99,7 @@ module.exports = function(grunt) {
     watch: {
 
         scripts: {
-            files: ['assets/scripts/*.js'],
+            files: ['assets/js/*.js'],
             tasks: ['concat', 'uglify', 'jshint'],
             options: {
                 spawn: false,
