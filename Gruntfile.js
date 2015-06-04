@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'build/css/production.css': 'assets/scss/screen.scss'
+                'build/css/production.css': 'assets/scss/compile.scss'
             }
         } 
     },

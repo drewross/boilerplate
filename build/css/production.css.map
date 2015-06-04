@@ -2,7 +2,7 @@
 	"version": 3,
 	"file": "production.css",
 	"sources": [
-		"../../screen.scss",
+		"../../compile.scss",
 		"../../base/_sassSettings.scss",
 		"../../base/_reset.scss",
 		"../../base/_type.scss",
