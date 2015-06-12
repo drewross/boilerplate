@@ -442,7 +442,7 @@ APP.Revolver = {
     },
 
     bind: function() {
-        $('#revolver1').playRecord(true, true, 4000);
+        $('#revolver1').playRecord(false, true, 4000);
         $('#revolver2').playRecord(false, true, 8000);
     }
 };

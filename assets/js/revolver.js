@@ -1,54 +1,51 @@
 (function($) {
     $.fn.playRecord =  function(autoPlay, pagination, trackLength) {
         var instance = $(this);
+        var slides = instance.find('.revolver__slides');
         $revolveSpeed = trackLength;
 
 
         // Make the first slide active
         instance.find('.revolver__slides > *').first().addClass('isActive');
-
         var $numSlides = instance.find('.revolver__slides > *').length;
 
-        function origPos() {
+
+        function setParams() {
+            var $viewport = instance.width();
+            slides.css({"width": $viewport * $numSlides + "px", "left": "0"});
             instance.find('.revolver__slides > *').each(function() {
-                var $slideNum = $(this).index();
-                $(this).css( "left", $slideNum + "00%" );
+                $(this).css( "width", $viewport + "px");
             });
         }
-        origPos();
+        setParams();
 
         function updatePos() {
-            instance.find('.revolver__slides > *').each(function() {
-                var $pos = $(this)[0].style.left;
-                var $newPos = ( parseInt($pos) - 100) + "%";
-                $(this).css( "left", $newPos );
-            });
+            $viewport = instance.width();
+            var $pos = slides[0].style.left;
+            var $newPos = ( parseInt($pos) - $viewport ) + "px";
+            slides.css( "left", $newPos );
         }
 
         function updatePosBack() {
-            instance.find('.revolver__slides > *').each(function() {
-                var $pos = $(this)[0].style.left;
-                var $newPos = ( parseInt($pos) + 100) + "%";
-                $(this).css( "left", $newPos );
-            });
+            $viewport = instance.width();
+            var $pos = slides[0].style.left;
+            var $newPos = ( parseInt($pos) + $viewport ) + "px";
+            slides.css( "left", $newPos );
+
         }
 
         function updatePosLast() {
-            instance.find('.revolver__slides > *').each(function() {
-                var $slidePos = $(this).index() + 1;
-                var $reversedIndex = ( ($numSlides) - $slidePos ) + "00";
-                var $newPos = - parseInt($reversedIndex) + "%";
-                $(this).css( "left", $newPos );
-            });
+            $viewport = instance.width();
+            var $newPos = $viewport * $numSlides - $viewport;
+            slides.css({ "left": - $newPos });
         }
+
 
         function customPos(number) {
             var $dest = number;
-            instance.find('.revolver__slides > *').each(function() {
-                var $slidePos = $(this).index();
-                var $newPos = ( parseInt($slidePos) - $dest) + "00%";
-                $(this).css( "left", $newPos );
-            });
+            $viewport = instance.width();
+            var $newPos = $viewport * $dest;
+            slides.css({ "left": - $newPos });
         }
 
         // Create and append the pagination
@@ -66,7 +63,7 @@
         // Move Slides Forward
         function changeSlides() {
             if( instance.find('.revolver__slides .isActive').is(':last-child') ) {
-                origPos();
+                setParams();
                 instance.find('.revolver__slides .isActive').removeClass('isActive').parent('.revolver__slides').find('>:first-child').addClass('isActive');
                 instance.find('.revolver-pagination .isActive').removeClass('isActive').parent('.revolver-pagination').find('>:first-child').addClass('isActive');
             } else {
