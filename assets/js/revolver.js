@@ -19,6 +19,21 @@
         }
         setParams();
 
+        $(window).resize( function() {
+            $newViewport = instance.width();
+            instance.find('.revolver__slides > *').each(function() {
+                $(this).css( "width", $newViewport + "px");
+            });
+            var $slideLength = instance.find('.revolver__slides > *').length;
+            var $currentLength = instance.find('.revolver__slides > .isActive').index();
+            slides.addClass('no-transition').css({"width": $newViewport * $numSlides + "px", "left": - $currentLength * $newViewport + "px" });
+
+            setInterval(function() {
+                slides.removeClass('no-transition');
+            }, 1000);
+        });
+
+
         function updatePos() {
             $viewport = instance.width();
             var $pos = slides[0].style.left;

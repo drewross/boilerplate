@@ -22,22 +22,22 @@
                 <ul class="revolver__slides">
                     <li>
                         <figure class="revolver__media">
-                            <img src="https://placeimg.com/1024/620/nature/grayscale" alt="FPO">
+                            <img src="http://placehold.it/1024x620" alt="FPO">
                         </figure>
                     </li>
                     <li>
                         <figure class="revolver__media">
-                            <img src="https://placeimg.com/1024/300/arch/grayscale" alt="FPO">
+                            <img src="http://placehold.it/1024x220/ff0000" alt="FPO">
                         </figure>
                     </li>
                     <li>
                         <figure class="revolver__media">
-                            <img src="https://placeimg.com/1024/620/animals/grayscale" alt="FPO">
+                            <img src="http://placehold.it/1024x420" alt="FPO">
                         </figure>
                     </li>
                     <li>
                         <figure class="revolver__media">
-                            <img src="https://placeimg.com/1024/100/arch/grayscale" alt="FPO">
+                            <img src="http://placehold.it/800x520" alt="FPO">
                         </figure>
                     </li>
                 </ul>
