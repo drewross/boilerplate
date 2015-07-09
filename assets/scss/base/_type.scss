@@ -151,7 +151,8 @@ p {
 // ----------------------------------------
 
 .text-italic { font-style: italic; }
-//.text-brand { color: $brand; }
+.text-brand { color: $brand; }
 .text-white { color: $white; }
+.text-bold { font-weight: bold; }
 .text-caps { text-transform: uppercase; }
 .text-noCaps { text-transform: none; }

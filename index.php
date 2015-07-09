@@ -16,44 +16,4 @@
             </div>
         </div>
 
-        <div class="wrapper section">
-
-            <div class="revolver js-revolver" id="revolver1">
-                <ul class="revolver__slides">
-                    <li>
-                        <figure class="revolver__media">
-                            <img src="http://placehold.it/1024x620" alt="FPO">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="revolver__media">
-                            <img src="http://placehold.it/1024x220/ff0000" alt="FPO">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="revolver__media">
-                            <img src="http://placehold.it/1024x420" alt="FPO">
-                        </figure>
-                    </li>
-                    <li>
-                        <figure class="revolver__media">
-                            <img src="http://placehold.it/800x520" alt="FPO">
-                        </figure>
-                    </li>
-                </ul>
-                <footer class="revolver-controls">
-                    <div class="revolver-controls__simple">
-                        <div class="js-revolve-prev">
-                            <span>Prev</span>
-                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-arrow-left"></use></svg>
-                        </div>
-                        <div class="js-revolve-next">
-                            <span>Next</span>
-                            <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shape-arrow-right"></use></svg>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-
 <?php include("includes/footer.php"); ?>
