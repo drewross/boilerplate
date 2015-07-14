@@ -1,6 +1,6 @@
 <?php include("includes/header.php"); ?>
 
-    <main id="content" class="main js-pageTransition" role="main">
+    <main id="content" class="main fadeIn">
 
         <div class="hero hero--fixed hero--pattern js-sectionFull">
             <div class="hero__content">

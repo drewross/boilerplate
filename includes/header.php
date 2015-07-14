@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- META DATA -->
@@ -30,7 +30,7 @@
 <body class="no-js" id="top">
 <?php include("build/images/svg-defs.svg"); ?>
 
-<header class="globalHeader" role="banner">
+<header class="globalHeader">
     <div class="wrapper">
         <h1 class="logo">
             <a href="index.php">
@@ -46,13 +46,13 @@
             </div>
         </div>
         <div class="globalHeader-panel" id="mainNav">
-            <nav class="globalNav" id="site-navigation" role="navigation">
+            <nav class="globalNav" id="site-navigation">
                 <ul class="globalNav-list">
                     <li data-click-target="ipsum-modal" data-click-bodyClass="modalIsActive"><span>I need Ipsum</span></li>
                     <li><a href="https://github.com/drewross/boilerplate" target="_blank">Github</a></li>
                 </ul>
             </nav>
-            <!-- <nav class="utilityNav" role="navigation">
+            <!-- <nav class="utilityNav">
                 <ul class="utilityNav-list">
                     <li><a href="">Utility Item 1</a></li>
                     <li><a href="">Utility Item</a></li>

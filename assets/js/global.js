@@ -10,7 +10,6 @@ var PHDL = PHDL || {};
 
     $(function() {
         APP.BrowserDeviceDetection.init();
-        APP.PageTransitions.init();
         APP.ClickFunciton.init();
         APP.ClickGroup.init();
         APP.ScrollTo.init();
@@ -46,6 +45,9 @@ APP.BrowserDeviceDetection = {
 
     detectJs: function() {
         $('body').removeClass('no-js');
+        $(document).ready(function() {
+            $('body').addClass('page-loaded');
+        });
     },
 
     noTouch: function() {
@@ -127,34 +129,6 @@ APP.BrowserDeviceDetection = {
             return;
         }
         APP.Features.isAndroid = false;
-    }
-};
-
-
-/* --------------------------------------------------------------------
-Page Transitions
-Fade the page in and out
--------------------------------------------------------------------- */
-
-APP.PageTransitions = {
-
-    init: function() {
-        var $pageTrans = $('.js-pageTransition');
-        if( ! $pageTrans.length ) {
-            return;
-        }
-        this.$pageTrans = $pageTrans;
-        this.bind();
-    },
-
-    bind: function() {
-        window.onunload = function(){};
-        $(document).ready(function() {
-            $("a[target!='_blank']").not(".no-trans").on('click touchstart:not(touchmove)', function() {
-                $('.js-pageTransition').addClass('page-fade-out');
-                $('body').removeClass('mobileMenuIsOpen');
-            });
-        });
     }
 };
 

@@ -5,31 +5,35 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        assetPath: 'assets',
+        buildPath: 'build',
+
+
     concat: {   
         dist: {
             src: [
-                'assets/js/global.js',
-                'assets/js/touchswipe.js',
-                'assets/js/revolver.js',
-                'assets/js/picturefill.min.js'
+                '<%= assetPath %>/js/global.js',
+                '<%= assetPath %>/js/touchswipe.js',
+                '<%= assetPath %>/js/revolver.js',
+                '<%= assetPath %>/js/picturefill.min.js'
             ],
-            dest: 'build/js/production.js',
+            dest: '<%= buildPath %>/js/production.js',
         },
         extras: {
-          src: ['assets/js/timetravel.js'],
-          dest: 'build/js/timetravel.js',
+          src: ['<%= assetPath %>/js/timetravel.js'],
+          dest: '<%= buildPath %>/js/timetravel.js',
         }
     },
 
     uglify: {
         build: {
-            src: 'build/js/production.js',
-            dest: 'build/js/production.min.js'
+            src: '<%= buildPath %>/js/production.js',
+            dest: '<%= buildPath %>/js/production.min.js'
         }
     },
 
     jshint: {
-        all: ['Gruntfile.js', 'assets/js/global.js']
+        all: ['Gruntfile.js', '<%= assetPath %>/js/global.js']
     },
 
     sass: {
@@ -39,7 +43,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'build/css/production.css': 'assets/scss/compile.scss'
+                '<%= buildPath %>/css/production.css': '<%= assetPath %>/scss/compile.scss'
             }
         } 
     },
@@ -47,7 +51,7 @@ module.exports = function(grunt) {
     autoprefixer: {
         dist: {
             files: {
-                'build/css/production.css': 'build/css/production.css'
+                '<%= buildPath %>/css/production.css': '<%= buildPath %>/css/production.css'
             }
         }
     },
@@ -56,9 +60,9 @@ module.exports = function(grunt) {
         dynamic: {
             files: [{
                 expand: true,
-                cwd: 'assets/images/',
+                cwd: '<%= assetPath %>/images/',
                 src: ['**/*.{png,jpg,gif,ico,svg}'],
-                dest: 'build/images/'
+                dest: '<%= buildPath %>/images/'
             }]
         }
     },
@@ -69,8 +73,8 @@ module.exports = function(grunt) {
             replace: false
         },
         dist: {
-            src: 'build/css/production.css',
-            dest: 'build/css/production.css'
+            src: '<%= buildPath %>/css/production.css',
+            dest: '<%= buildPath %>/css/production.css'
         }
     },
 
@@ -90,8 +94,8 @@ module.exports = function(grunt) {
         },
         dev: {
             files: {
-                'assets/images/svg-defs.svg':
-                ['assets/images/svgs/*.svg']
+                '<%= assetPath %>/images/svg-defs.svg':
+                ['<%= assetPath %>/images/svgs/*.svg']
             }
         }
     },
@@ -99,7 +103,7 @@ module.exports = function(grunt) {
     watch: {
 
         scripts: {
-            files: ['assets/js/*.js'],
+            files: ['<%= assetPath %>/js/*.js'],
             tasks: ['concat', 'uglify', 'jshint'],
             options: {
                 spawn: false,
@@ -108,7 +112,7 @@ module.exports = function(grunt) {
         },
 
         css: {
-            files: ['assets/images/svgs/*.svg','assets/scss/**/*.scss','production.css'],
+            files: ['<%= assetPath %>/images/svgs/*.svg','<%= assetPath %>/scss/**/*.scss','production.css'],
             tasks: ['svgstore','sass','autoprefixer','pixrem'],
             options: {
                 spawn: false,
