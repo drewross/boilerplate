@@ -9,7 +9,7 @@
 <title>Gramophone | Front end Boilerplate</title>
 
 <!-- ICONS -->
-<link rel="shortcut icon" type="image/ico" href="build/images/favicon.ico" />
+<link rel="shortcut icon" type="image/ico" href="build/images/favicon.png" />
 <link rel="apple-touch-icon" href="build/images/apple-touch-icon.png" />
 
 <!-- FONTS -->
