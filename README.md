@@ -17,7 +17,7 @@
 <h3>Modules included in the boilerplate</h3>
 <ul>
 	<li>
-    	<p>Base Layout</p>
+    	Base Layout
         <ul>
             <li>Grid</li>
             <li>Wrappers</li>
