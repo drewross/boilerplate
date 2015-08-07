@@ -30,7 +30,7 @@
      </li>
 
     <li>
-        <p>Controllers</p>
+        Controllers
         <ul>
             <li>Click Functions</li>
             <li>Animate In</li>
@@ -40,7 +40,7 @@
     </li>
 
     <li>
-        <p>Modules</p>
+        Modules
         <ul>
             <li>Heros</li>
             <li>Responsive Images</li>
