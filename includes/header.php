@@ -9,14 +9,14 @@
 <title>Gramophone | Front end Boilerplate</title>
 
 <!-- ICONS -->
-<link rel="shortcut icon" type="image/ico" href="build/images/favicon.png" />
-<link rel="apple-touch-icon" href="build/images/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/ico" href="build/images/favicons/favicon.png" />
+<link rel="apple-touch-icon" href="build/images/favicons/apple-touch-icon.png" />
 
 <!-- FONTS -->
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Karla:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
-<link rel="stylesheet" media="screen, projection" href="build/css/production.css" />
+<link rel="stylesheet" media="screen" href="build/css/production.css" />
 
 <!-- JAVASCRIPT -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -36,7 +36,7 @@
             <a href="index.php">
                 <span>gramophone</span>
             </a>
-            <span class="sr-only">Gramophone | A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
+            <span class="sr-only">A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
         </h1>
         <div class="burger" data-click-target="mainNav" data-click-bodyClass="mobileMenuIsOpen">
             <div class="burger-inner">

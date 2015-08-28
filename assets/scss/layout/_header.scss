@@ -28,7 +28,7 @@ $logo-height: 72px;
 
 .logo a {
 	display: block;
-	color: $gray-light;
+	color: $black;
 	width: $logo-width;
 	font-family: $serif;
 	font-weight: 400;
@@ -38,26 +38,30 @@ $logo-height: 72px;
 	@include opacityHover(0.8);
 }
 
+.site-description {
+	font-size: 13px;
+	color: $gray;
+}
 
 // ----------------------------------------
 // Utility Nav Styles
 // ----------------------------------------
 
 
-.utilityNav-list > * {
-	display: inline-block;
+// .utilityNav-list > * {
+// 	display: inline-block;
 
-	> * {
-		padding: 6px 12px;
-	}
-}
+// 	> * {
+// 		padding: 6px 12px;
+// 	}
+// }
 
 
 // ----------------------------------------
 // Mobile Menu Styles
 // ----------------------------------------
 
-@include STOP_AT($medium) {
+@include STOP_AT($header-breakpoint) {
 
 	$panel-width: 260px;
 
@@ -134,6 +138,7 @@ $logo-height: 72px;
 	.mobileMenuIsOpen .menu-mask {
 		display: block;
 		position: absolute;
+		z-index: 8;
 		top: 0;
 		bottom: 0;
 		right: 0;
@@ -147,11 +152,7 @@ $logo-height: 72px;
 // Desktop Menu Styles
 // ----------------------------------------
 
-@include START_AT($medium) {
-	.globalHeader {
-		//background-color: $white;
-		//position: fixed;
-	}
+@include START_AT($header-breakpoint) {
 
 	.globalHeader-panel {
 		display: table-cell;
@@ -172,7 +173,7 @@ $logo-height: 72px;
 	}
 
 	.globalNav-list > * {
-		display: table-cell;
+		display: inline-block;
 		vertical-align: middle;
 		text-align: center;
 		min-width: 120px;
@@ -181,7 +182,7 @@ $logo-height: 72px;
 	.globalNav-list > * > *,
 	.globalNav-list > * > a {
 		display: block;
-		color: $gray-light;
+		color: $black;
 		padding: 12px 0;
 		font-size: 16px;
 		letter-spacing: 0.025em;
@@ -208,8 +209,7 @@ $logo-height: 72px;
 // Tablet Nav Styles
 // ----------------------------------------
 
-@include START_AT($small) {
-@include STOP_AT($medium) {
+@media ( min-width: $small ) and ( max-width: $medium ) {
 
 	.globalHeader_adjustTab .burger {
 		display: none;
@@ -225,6 +225,10 @@ $logo-height: 72px;
 		display: block;
 		margin: 0 auto 24px;
 		text-align: center;
+
+		a {
+			display: inline-block;
+		}
 	}
 
 	.globalHeader_adjustTab .globalHeader-panel {
@@ -236,6 +240,8 @@ $logo-height: 72px;
 
 	.globalHeader_adjustTab .globalNav-list {
 		max-width: none;
+		float: none;
+		width: 100%;
+		text-align: center;
 	}
-}
 }

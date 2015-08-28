@@ -3,7 +3,7 @@
         <footer class="globalFooter">
         	<div class="wrapper">
         		<div class="section">
-        			<div class="hdg hdh--5 text-white">by: <a class="link text-white" href="http://roztocki.com" target="_blank">Andrew Ross</a></div>
+        			<a class="link" href="http://andrewrossmn.com" target="_blank">andrewrossmn.com</a>
 				</div>
 			</div>
         </footer>
