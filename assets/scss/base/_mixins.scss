@@ -49,8 +49,8 @@
     bottom: 0;
 }
 
-@mixin centerImg {
-    position: relative;
+@mixin centerImg($position) {
+    position: $position;
     width: auto;
     height: auto;
     min-height: 100%;

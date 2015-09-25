@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-    require('time-grunt')(grunt);
     require('jit-grunt')(grunt);
 
     grunt.initConfig({
@@ -7,121 +6,140 @@ module.exports = function(grunt) {
 
         assetPath: 'assets',
         buildPath: 'build',
+        projectURL: 'http://local.boilerplate',
 
-
-    concat: {   
-        dist: {
-            src: [
-                '<%= assetPath %>/js/global.js',
-                '<%= assetPath %>/js/touchswipe.js',
-                '<%= assetPath %>/js/revolver.js',
-                '<%= assetPath %>/js/picturefill.min.js'
-            ],
-            dest: '<%= buildPath %>/js/production.js',
-        },
-        extras: {
-          src: ['<%= assetPath %>/js/timetravel.js'],
-          dest: '<%= buildPath %>/js/timetravel.js',
-        }
-    },
-
-    uglify: {
-        build: {
-            src: '<%= buildPath %>/js/production.js',
-            dest: '<%= buildPath %>/js/production.min.js'
-        }
-    },
-
-    jshint: {
-        all: ['Gruntfile.js', '<%= assetPath %>/js/global.js']
-    },
-
-    sass: {
-        options: {
-            outputStyle: 'compressed',
-            sourceMap: true
-        },
-        dist: {
-            files: {
-                '<%= buildPath %>/css/production.css': '<%= assetPath %>/scss/compile.scss'
-            }
-        } 
-    },
-
-    autoprefixer: {
-        dist: {
-            files: {
-                '<%= buildPath %>/css/production.css': '<%= buildPath %>/css/production.css'
-            }
-        }
-    },
-
-    imagemin: {
-        dynamic: {
-            files: [{
-                expand: true,
-                cwd: '<%= assetPath %>/images/',
-                src: ['**/*.{png,jpg,gif,ico,svg}'],
-                dest: '<%= buildPath %>/images/'
-            }]
-        }
-    },
-
-    pixrem: {
-        options: {
-            rootvalue: '62.5%',
-            replace: false
-        },
-        dist: {
-            src: '<%= buildPath %>/css/production.css',
-            dest: '<%= buildPath %>/css/production.css'
-        }
-    },
-
-    svgstore: {
-        options: {
-            prefix : 'shape-',
-            cleanup: ['fill','stroke'],
-            svg: { 
-                style: "display: none;",
-                viewBox : '0 0 20 20',
-                xmlns: 'http://www.w3.org/2000/svg'
+        // CSS Tasks
+        sass: {
+            options: {
+               outputStyle: 'compressed'
             },
-            formatting : {
-              indent_size : 4
-            }
-
-        },
-        dev: {
-            files: {
-                '<%= assetPath %>/images/svg-defs.svg':
-                ['<%= assetPath %>/images/svgs/*.svg']
-            }
-        }
-    },
-
-    watch: {
-
-        scripts: {
-            files: ['<%= assetPath %>/js/*.js'],
-            tasks: ['concat', 'uglify', 'jshint'],
-            options: {
-                spawn: false,
-                livereload: true,
+            dist: {
+                files: {
+                    '<%= buildPath %>/css/production.css': '<%= assetPath %>/scss/compile.scss'
+                }
             }
         },
 
-        css: {
-            files: ['<%= assetPath %>/images/svgs/*.svg','<%= assetPath %>/scss/**/*.scss','production.css'],
-            tasks: ['svgstore','sass','autoprefixer','pixrem'],
+        postcss: {
             options: {
-                spawn: false,
-                livereload: false,
-            }
-        }
-    }
+                map: false,
 
+                processors: [
+                    require('pixrem')(),
+                    require('autoprefixer')({ browsers: ['last 2 versions', 'ie 8', 'ie 9'] }),
+                ]
+            },
+            dist: {
+                src: '<%= buildPath %>/css/production.css'
+            }
+        },
+
+        // JS Tasks
+        jshint: {
+            all: ['Gruntfile.js', '<%= assetPath %>/js/global.js']
+        },
+
+        concat: {   
+            dist: {
+                src: [
+                    '<%= assetPath %>/js/global.js',
+                    '<%= assetPath %>/js/touchswipe.js',
+                    '<%= assetPath %>/js/revolver.js',
+                    '<%= assetPath %>/js/picturefill.min.js'
+                ],
+                dest: '<%= buildPath %>/js/production.js',
+            },
+            extras: {
+              src: ['<%= assetPath %>/js/timetravel.js'],
+              dest: '<%= buildPath %>/js/timetravel.js',
+            }
+        },
+
+        uglify: {
+            build: {
+                src: '<%= buildPath %>/js/production.js',
+                dest: '<%= buildPath %>/js/production.min.js'
+            }
+        },
+
+
+        // Images
+        imagemin: {
+            dynamic: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= assetPath %>/images/',
+                    src: ['**/*.{png,jpg,gif,ico,svg}'],
+                    dest: '<%= buildPath %>/images/'
+                }]
+            }
+        },
+
+        svgstore: {
+            options: {
+                prefix : 'shape-',
+                cleanup: ['fill','stroke'],
+                svg: { 
+                    style: "display: none;",
+                    viewBox : '0 0 20 20',
+                    xmlns: 'http://www.w3.org/2000/svg'
+                },
+                formatting : {
+                  indent_size : 4
+                }
+
+            },
+            dev: {
+                files: {
+                    '<%= assetPath %>/images/svg-defs.svg':
+                    ['<%= assetPath %>/images/svgs/*.svg']
+                }
+            }
+        },
+        
+        // SYNC & WATCH
+        watch: {
+            scripts: {
+                files: ['<%= assetPath %>/js/*.js'],
+                tasks: ['jshint','concat','uglify'],
+                options: {
+                    spawn: false,
+                },
+            },
+            css: {
+                files: ['<%= assetPath %>/scss/**/*.scss'],
+                tasks: ['sass','postcss'],
+                options: {
+                    spawn: false,
+                },
+            },
+            images: {
+                files: ['<%= assetPath %>/images/*.{png,jpg,gif,ico,svg'],
+                tasks: ['imagemin'],
+                options: {
+                    spawn: false,
+                },
+            },
+        },
+  
+        browserSync: {
+            bsFiles: {
+                src: [
+                    "<%= buildPath %>/"
+                ]
+            },
+            options: {
+                watchTask: true,
+
+                proxy: {
+                    target: "<%= projectURL %>",
+                    ws: true
+                }
+            }
+        },
+        
     });
+
+    grunt.registerTask('default', ['sass','postcss','jshint', 'concat', 'uglify', 'imagemin', 'svgstore', 'browserSync', 'watch']);
     
-    grunt.registerTask('default', ['concat' , 'uglify' , 'sass' , 'jshint' , 'imagemin' , 'svgstore' , 'pixrem', 'autoprefixer']);
 };
