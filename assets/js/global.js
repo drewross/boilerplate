@@ -16,7 +16,8 @@ var PHDL = PHDL || {};
         APP.CatchOnTop.init();
         APP.DetectViewPort.init();
         APP.DetectWindowHeight.init();
-        APP.Revolver.init();
+        //APP.Revolver.init();
+        APP.OwlCarousel.init();
     });
 
 /* ---------------------------------------------------------------------
@@ -420,5 +421,35 @@ APP.Revolver = {
         $('#revolver2').playRecord(false, true, 8000);
     }
 };
+
+
+/* --------------------------------------------------------------------
+Owl Carousel
+-------------------------------------------------------------------- */
+
+APP.OwlCarousel = {
+
+    init: function() {
+        var $owlCarousel = $('.owl-carousel');
+        if( ! $owlCarousel.length ) {
+            return;
+        }
+        this.$owlCarousel = $owlCarousel;
+        this.bind();
+    },
+
+    bind: function() {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            items: 1,
+            animateOut: 'fadeOut',
+            //animateIn: 'fadeIn'
+        });
+    }
+};
+
+
 
 }(jQuery, PHDL));

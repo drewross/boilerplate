@@ -43,8 +43,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '<%= assetPath %>/js/global.js',
-                    '<%= assetPath %>/js/touchswipe.js',
-                    '<%= assetPath %>/js/revolver.js',
+                    '<%= assetPath %>/js/owl.carousel.js',
                     '<%= assetPath %>/js/picturefill.min.js'
                 ],
                 dest: '<%= buildPath %>/js/production.js',

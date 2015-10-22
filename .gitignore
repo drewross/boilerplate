@@ -21,11 +21,7 @@ changelog
 .DS_Store
 assets/.DS_Store
 
-build/images/
-build/scripts/
-build/styles/
-
 syntaxHighlighter
-modules
+modules/
 library.php
 includes/sidebar.php

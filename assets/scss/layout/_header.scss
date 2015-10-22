@@ -30,6 +30,7 @@ $logo-height: 72px;
 	display: block;
 	color: $black;
 	width: $logo-width;
+	height: $logo-height;
 	font-family: $serif;
 	font-weight: 400;
 	font-size: 24px;
@@ -76,17 +77,6 @@ $logo-height: 72px;
 		transition: margin-left 0.4s ease-in-out;
 	}
 
-	.globalHeader-panel:after {
-	    content: "";
-	    display: table;
-	    clear: both;
-	}
-
-	.globalNav {
-		overflow: visible;
-	}
-
-
 	// ----------------------------------------
 	// Main Nav Styles
 	// ----------------------------------------
@@ -130,6 +120,15 @@ $logo-height: 72px;
 		overflow: hidden;
 	}
 
+	.menu-mask {
+		opacity: 0;
+		transition: opacity $transition;
+
+		&:hover {
+			cursor: default;
+		}
+	}
+
 	.mobileMenuIsOpen .menu-mask {
 		display: block;
 		position: absolute;
@@ -138,6 +137,7 @@ $logo-height: 72px;
 		bottom: 0;
 		right: 0;
 		left: 0;
+		opacity: 1;
 		background: rgba(0,0,0,0.4);
 	}
 }
