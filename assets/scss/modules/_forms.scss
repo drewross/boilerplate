@@ -1,0 +1,318 @@
+// ---------------------------------------------------------------------
+//  Form Styles (Gravity Forms)
+// ---------------------------------------------------------------------
+
+.userContent .gravityForm ul {
+    list-style-type: none;
+    margin: 0;
+    @include clearfix;
+}
+
+.userContent .gravityForm li {
+    margin: 0;
+}
+
+.gravityForm {
+    width: 101%;
+    display: block;
+}
+
+// ----------------------------------------
+// Labels
+// ----------------------------------------
+.gfield_label,
+.gfield_radio label,
+.gfield_checkbox label,
+.loginForm label {
+    @include para;
+    margin-bottom: 4px;
+    color: $brand;
+}
+
+.gfield_required {
+    display: none;
+}
+
+.validation_message {
+    color: red;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    font-size: 1.4rem;
+}
+
+.validation_error {
+    display: none;
+}
+
+// ----------------------------------------
+// Layouts
+// ----------------------------------------
+.userContent .gravityForm .full,
+.userContent .gravityForm .half,
+.userContent .gravityForm .third,
+.gravityForm .full,
+.gravityForm .half,
+.gravityForm .third {
+    overflow: hidden;
+    display: inline-block;
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.userContent .gravityForm .full,
+.gravityForm .full {
+    width: 99%;
+}
+
+.userContent .gravityForm .half,
+.gravityForm .half {
+    width: 49%;
+    margin-right: 1%;
+    float: left;
+}
+
+.userContent .gravityForm .third,
+.gravityForm .third {
+    width: 32.3333333%;
+    margin-right: 1%;
+    float: left;
+}
+
+@include STOP_AT($small) {
+    .userContent .gravityForm .stackMobile,
+    .gravityForm .stackMobile {
+        width: 99%;
+        float: none;
+        clear: both;
+    }
+
+    .userContent .gravityForm .full,
+    .userContent .gravityForm .half,
+    .userContent .gravityForm .third,
+    .gravityForm .full,
+    .gravityForm .half,
+    .gravityForm .third {
+        padding-bottom: 16px;
+    }
+}
+
+
+// ----------------------------------------
+// Containers
+// ----------------------------------------/
+$INPUT-HEIGHT: 48px;
+
+.ginput_container {
+    display: block;
+    position: relative;
+    min-height: $INPUT-HEIGHT;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+// ----------------------------------------
+// Input Styles
+// ----------------------------------------
+.ginput_container input,
+.ginput_container textarea,
+.ginput_container select {
+    width: 100%;
+    height: $INPUT-HEIGHT;
+    min-height: $INPUT-HEIGHT;
+    margin: 0;
+    padding: 0 8px;
+    box-shadow: none !important;
+    border-radius: 0;
+    border: 1px solid $brand;
+    background: $white;
+    font-size: 1.4rem;
+    color: $brand;
+    transition: all $transition;
+}
+
+.ginput_container input:focus,
+.ginput_container select:focus,
+.ginput_container textarea:focus {
+    outline: none;
+    border-color: $gray-light;
+}
+
+.ginput_container textarea {
+    min-height: 192px;
+    max-height: 240px;
+}
+
+.gform_button {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 168px;
+    padding: 16px 36px;
+    margin-top: 24px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border-radius: 0;
+    border: 2px solid $brand;
+    // Font Styles
+    font-family: $serif;
+    color: $brand;
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition: all $transition;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $brand;
+        color: $white;
+        outline: none;
+        letter-spacing: 0.3em;
+    }
+}
+
+
+// ----------------------------------------
+// Custom Select Dropdown
+// ----------------------------------------
+.ginput_container select {
+    display: block;
+    -webkit-appearance: none;
+    border-radius: 0;
+    position: relative;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    cursor: pointer;
+}
+
+.select .ginput_container:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 44px;
+    height: calc(100% - 2px);
+    top: 1px;
+    right: 1px;
+    background: transparent url(../images/svgs/arrow-down.svg) no-repeat;
+    background-size: 14px 8px;
+    background-position: center;
+    pointer-events: none;
+}
+
+.isIE .select .ginput_container:after {
+    display: none;
+}
+
+.isIE .ginput_container select {
+    padding-right: 0;
+}
+
+
+// ----------------------------------------
+// Custom Checkbox
+// ----------------------------------------
+
+.gfield_radio,
+.gfield_checkbox {
+
+    display: table;
+    width: 100%;
+
+    input {
+        @include visuallyHidden;
+    }
+
+    label:before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+        border: 1px solid $black;
+        background-color: $white;
+        transition: background-color $transition;
+        cursor: pointer;
+    }
+
+    input:checked + label {
+
+        &:before {
+            background-color: $black;
+        }
+    }
+
+}
+
+@-moz-document url-prefix() {
+    .gfield_checkbox input,
+    .gfield_radio input {
+        margin-top: -8px;
+    }
+}
+
+.isIE {
+    .gfield_checkbox input,
+    .gfield_radio input {
+        margin-top: -9px;
+        margin: -9px 0 0;
+        padding: 0;
+    }
+
+    .gfield_checkbox label,
+    .gfield_radio label {
+        width: 90%;
+    }
+}
+
+
+// ----------------------------------------
+// File Uploader
+// ----------------------------------------
+.fileUpload input {
+    height: auto;
+    display: block;
+    border: 1px dashed $gray-light;
+    text-align: center;
+    padding: 38px 24px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover {
+        border-color: $brand;
+        color: $brand;
+    }
+}
+
+.fileUpload .ginput_container {
+    height: auto;
+}
+
+.gform_drop_instructions {
+    display: none;
+}
+
+.isTouch {
+    .ginput_container input,
+    .ginput_container input[type="text"],
+    .ginput_container input[type="email"],
+    .ginput_container input[type="tel"],
+    .ginput_container input[type="number"],
+    .ginput_container input[type="password"],
+    .ginput_container textarea,
+    .ginput_container select {
+        font-size: 1.6rem;
+    }
+
+    input {
+        font-size: 16px;
+    }
+}

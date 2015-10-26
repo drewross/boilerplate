@@ -1,0 +1,59 @@
+// ---------------------------------------------------------------------
+//  Lists Styles
+// ---------------------------------------------------------------------
+
+.ul > * {
+	list-style-type: disc;
+	margin-left: 36px;
+}
+
+
+// ----------------------------------------
+// Inline List Styles
+// ----------------------------------------
+
+.ul-inline {
+    overflow: hidden;
+}
+
+.ul-inline > * {
+    float: left;
+
+    + * {
+    	margin-left: 10px;
+    }
+}
+
+.ul-inline--piped > * + * {
+	margin-left: 8px;
+}
+
+.ul-inline--piped > * + *:before {
+	content: "|";
+	margin-right: 8px;
+	display: inline-block;
+	color: $black;
+}
+
+
+// ----------------------------------------
+// Definition Lists Styles
+// ----------------------------------------
+
+.dl {
+    overflow: hidden;
+}
+
+.dl > * {
+    display: block;
+}
+
+.dl dt {
+    margin-bottom: 4px;
+    font-weight: bold;    
+}
+
+.dl dd {
+    margin-bottom: 12px;
+    font-style: italic;
+}

@@ -1,0 +1,64 @@
+// ---------------------------------------------------------------------
+//  Pagination Styles
+// ---------------------------------------------------------------------
+
+
+.pagination {
+    width: 100%;
+    overflow: hidden;
+    display: table;
+
+    > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    a {
+        color: $black;
+        @include opacityHover(0.4);
+    }
+}
+
+.pagination__prev {
+    width: 25%;
+}
+
+.pagination__next {
+    width: 25%;
+    text-align: right;
+}
+
+.pagination__numbers {
+    width: 50%;
+    text-align: center;
+
+    > * {
+        max-width: 288px;
+        margin: 0 auto;
+    }
+
+    li > * {
+        display: block;
+        padding: 8px 14px;
+    }
+}
+
+.pagination svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 24px;
+    fill: $black;
+}
+
+.pagination__text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 8px;
+}
+
+@include STOP_AT($small) {
+    .pagination__text {
+        @include visuallyHidden;
+    }
+}

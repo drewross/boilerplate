@@ -1,0 +1,81 @@
+// ---------------------------------------------------------------------
+//  Utility Classes
+// ---------------------------------------------------------------------
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// ----------------------------------------
+// Layout Utilites
+// ----------------------------------------
+
+.is-hidden {
+    display: none;
+}
+
+@include STOP_AT($small) {
+    .is-hidden-xs {
+        display: none;
+    }
+}
+
+@include STOP_AT($medium) {
+    .is-hidden-sm {
+        display: none;
+    }
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+}
+
+.display-inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lTable {
+    display: table;
+    width: 100%;
+
+    > * {
+        display: inline-block;
+        vertical-align: middle;  
+    }
+}
+
+.text-center {
+    text-align: center;
+
+    p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@include START_AT($small) {
+    .text-center-after-sm {
+        text-align: center; 
+    }
+}
+
+@include START_AT($medium) {
+    .text-center-after-md {
+        text-align: center; 
+    }
+}

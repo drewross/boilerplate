@@ -1,0 +1,46 @@
+// ---------------------------------------------------------------------
+//  SVG Styles
+// ---------------------------------------------------------------------
+
+
+.shape {
+	display: block;
+}
+
+.shape svg {
+	fill: $brand;
+	height: 24px;
+	width: 24px;
+	display: block;
+}
+
+.shape--inline {
+    display: inline-block;
+
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 13px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    svg {
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        fill: $black;
+    }
+
+    > * + * {
+        margin-left: 5px;
+    }
+}
+
+.shape--inline + .shape--inline {
+    margin-left: 24px;
+}
+
+a.shape--inline {
+    @include opacityHover(0.4);
+}

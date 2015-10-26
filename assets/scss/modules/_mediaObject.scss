@@ -1,0 +1,57 @@
+// ---------------------------------------------------------------------
+//  Media Object
+// ---------------------------------------------------------------------
+
+.media-object { 
+    overflow: hidden;
+}
+
+.media-object__media {
+    margin-bottom: 24px;
+}
+
+.media-object__media img {
+    display: block;
+}
+
+.media-object__bd {
+    overflow: hidden;
+}
+
+@include START_AT($medium) {
+
+    .media-object__media {
+        float: left;
+        margin-right: 24px;
+        margin-bottom: 12px;
+    }
+
+    .media-object--flip > .media-object__media {
+        float: right;
+        margin-right: 0;
+        margin-left: 24px;
+
+        img {
+            float: right;
+        }
+    }
+
+    .media-object--equalWidth > * {
+        width: 48%;
+    }
+
+    .media-object--equalWidth .media-object__media {
+        margin-right: 4%;
+    }
+
+    .media-object--flip.media-object--equalWidth .media-object__media {
+        margin-right: 0;
+        margin-left: 4%;
+    }
+
+    .media-object--equalWidth img {
+        width: 100%;
+    }
+
+}
+

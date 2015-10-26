@@ -1,3 +1,8 @@
+May need to run
+<pre>
+    npm install grunt-postcss pixrem autoprefixer
+</pre>
+
 <h1>Front end boilerplate</h1>
 <p>This is a front end boilerplate that utilizes Grunt, Sass, jQuery, PHP, and more. Below you'll find examples &amp; HTML markup for the components in this boilerplate.</p>
 
