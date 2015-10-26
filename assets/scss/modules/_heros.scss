@@ -20,17 +20,9 @@
 	width: 100%;
 }
 
-.hero__title {
-	font-family: $serif;
-	font-size: 17.8em;
-	line-height: 1;
-	letter-spacing: 0.1em;
-	color: #eaeaea;
-	margin-bottom: 36px;
-}
-
+// Use this for more image control
 .hero--pattern {
-	background: url('../images/hero-bg.jpg') no-repeat;
+	background: url('../images/gramophone-logo-mark.jpg') no-repeat;
 	background-size: cover;
 	background-position: center;
 }
@@ -49,14 +41,9 @@
 	    display: table-cell;
 	    vertical-align: middle;
 	}
-}
 
-@include START_AT($small) {
-	.hero__title {
-		  font-size: 36.25em;
-	}
-
-	.hero--fixed {
+	@include START_AT($small) {
 		height: 432px;
 	}
 }
+

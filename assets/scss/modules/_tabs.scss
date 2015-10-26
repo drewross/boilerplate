@@ -33,7 +33,6 @@
     font-size: 1.2rem;
     padding: 5px;
     opacity: 0.4;
-    background-color: $gray;
     transition: all $transition;
 }
 
@@ -44,7 +43,7 @@
 
 .tabs .is-active .tab__tab {
     opacity: 1;
-    background-color: $gray;
+    background-color: $gray-light;
 }
 
 // ----------------------------------------
@@ -59,7 +58,7 @@
 }
 
 .tabs .is-active .tab__bd { 
-    font-size: $BASE_FONT_SIZE;
+    font-size: $base-font-size;
     padding: 16px 24px;
     width: 100%;
     height: inherit;

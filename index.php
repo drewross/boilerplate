@@ -13,28 +13,6 @@
             </div>
         </div>
 
-        <div class="owl-carousel">
-            <div class="item">
-                <div class="item__content">
-                    <div class="h2">Slide 1</div>
-                </div>
-                <img src="//placeimg.com/1400/500/tech" alt="FPO" />
-            </div>
-            <div class="item">
-                <div class="item__content">
-                    <div class="h2">Slide 2</div>
-                </div>
-                <img src="//placeimg.com/1400/500/nature" alt="FPO" />
-            </div>
-            <div class="item">
-                <div class="item__content">
-                    <div class="h2">Slide 3</div>
-                </div>
-                <img src="//placeimg.com/1400/500/arch" alt="FPO" />
-            </div>
-        </div>
-
-
         <div class="modal" id="ipsum-modal">
             <div class="modal__close" data-click-target="ipsum-modal" data-click-bodyClass="modalIsActive">
                 <div>

@@ -80,11 +80,12 @@ module.exports = function(grunt) {
                 cleanup: ['fill','stroke'],
                 svg: { 
                     style: "display: none;",
-                    viewBox : '0 0 20 20',
+                    //viewBox : '0 0 20 20',
                     xmlns: 'http://www.w3.org/2000/svg'
                 },
                 formatting : {
-                  indent_size : 4
+                    indent_size : 4,
+                    inheritviewbox: true,
                 }
 
             },

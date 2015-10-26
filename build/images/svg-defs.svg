@@ -1,32 +1,27 @@
-<svg style="display: none;" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-    <symbol viewBox="-62.3 66.5 22 12" id="shape-arrow-down">
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="-70 67 22 12" id="shape-arrow-down">
         <title>arrow-down</title>
         <g>
-            <polygon points="-51.3,77.5 -61.3,68.3 -60.7,67.5 -51.3,76.2 -42,67.5 -41.3,68.3 	" /> </g>
+            <polygon points="-69,68.7 -68.3,68 -59,76.6 -49.6,68 -49,68.7 -59,78 	" /> </g>
     </symbol>
-    <symbol viewBox="-57.3 61.5 12 22" id="shape-arrow-left">
+    <symbol viewBox="-65 62 12 22" id="shape-arrow-left">
         <title>arrow-left</title>
         <g>
-            <polygon points="-56.3,72.5 -47.1,82.5 -46.3,81.9 -55,72.5 -46.3,63.2 -47.1,62.5 	" /> </g>
+            <polygon points="-54.7,63 -54,63.7 -62.6,73 -54,82.4 -54.7,83 -64,73 	" /> </g>
     </symbol>
-    <symbol viewBox="-18 15 12 22" id="shape-arrow-right">
+    <symbol viewBox="-65 62 12 22" id="shape-arrow-right">
         <title>arrow-right</title>
         <g>
-            <polygon points="-7,26 -16.3,36 -17,35.4 -8.4,26 -17,16.7 -16.3,16 	" /> </g>
+            <polygon points="-54,73 -63.3,83 -64,82.4 -55.4,73 -64,63.7 -63.3,63 	" /> </g>
     </symbol>
-    <symbol viewBox="-62.3 66.5 22 12" id="shape-arrow-up">
+    <symbol viewBox="-70 67 22 12" id="shape-arrow-up">
         <title>arrow-up</title>
         <g>
-            <polygon points="-51.3,67.5 -61.3,76.8 -60.7,77.5 -51.3,68.9 -42,77.5 -41.3,76.8 	" /> </g>
+            <polygon points="-59,68 -49,77.3 -49.6,78 -59,69.4 -68.3,78 -69,77.3 	" /> </g>
     </symbol>
     <symbol viewBox="-10.4 -13.7 20.7 20.7" id="shape-close">
         <title>close</title>
         <path d="M5.5,6" />
         <polygon points="10.4,-13 9.6,-13.7 0,-4.1 -9.6,-13.7 -10.4,-13 -0.7,-3.4 -10.4,6.3 -9.6,7 0,-2.7 9.6,7 10.4,6.3 
 	0.7,-3.4 " /> </symbol>
-    <symbol viewBox="-10.4 -10.4 20.7 11.1" id="shape-select-box-arrow">
-        <title>select-box-arrow</title>
-        <g>
-            <polygon points="0,0.7 -10.4,-9.6 -9.6,-10.4 0,-0.7 9.6,-10.4 10.4,-9.6 	" /> </g>
-    </symbol>
 </svg>

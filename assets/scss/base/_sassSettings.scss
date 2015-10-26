@@ -17,8 +17,9 @@ $sans-serif: 'Karla', sans-serif;
 // ----------------------------------------
 // Font Size/ Line Height
 // ----------------------------------------
-$BASE_FONT_SIZE: 1.5rem;
-$BASE_LINE_HEIGHT: 1.6;
+$main-font: $sans-serif;
+$base-font-size: 1.5rem;
+$base-line-height: 1.6;
 
 
 // ----------------------------------------
@@ -60,7 +61,8 @@ $small: 600px;
 // Global Variables
 // ----------------------------------------
 
+$padding: 48px;
 $transition-speed: 0.4s;
-$transition: 0.4s ease-in-out;
+$transition: $transition-speed ease-in-out;
 $wrapper-width: 1128px;
 $header-breakpoint: $small;

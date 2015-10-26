@@ -204,39 +204,39 @@ $logo-height: 72px;
 // Tablet Nav Styles
 // ----------------------------------------
 
-@media ( min-width: $small ) and ( max-width: $medium ) {
+// @media ( min-width: $small ) and ( max-width: $medium ) {
 
-	.globalHeader_adjustTab .burger {
-		display: none;
-	}
+// 	.globalHeader_adjustTab .burger {
+// 		display: none;
+// 	}
 
-	.globalHeader_adjustTab .wrapper {
-		overflow: hidden;
-		display: block;
-		padding: 12px 0 24px;
-	}
+// 	.globalHeader_adjustTab .wrapper {
+// 		overflow: hidden;
+// 		display: block;
+// 		padding: 12px 0 24px;
+// 	}
 
-	.globalHeader_adjustTab .logo {
-		display: block;
-		margin: 0 auto 24px;
-		text-align: center;
+// 	.globalHeader_adjustTab .logo {
+// 		display: block;
+// 		margin: 0 auto 24px;
+// 		text-align: center;
 
-		a {
-			display: inline-block;
-		}
-	}
+// 		a {
+// 			display: inline-block;
+// 		}
+// 	}
 
-	.globalHeader_adjustTab .globalHeader-panel {
-		display: block;
-		margin: 0 auto;
-		width: 100%;
-		max-width: none;
-	}
+// 	.globalHeader_adjustTab .globalHeader-panel {
+// 		display: block;
+// 		margin: 0 auto;
+// 		width: 100%;
+// 		max-width: none;
+// 	}
 
-	.globalHeader_adjustTab .globalNav-list {
-		max-width: none;
-		float: none;
-		width: 100%;
-		text-align: center;
-	}
-}
+// 	.globalHeader_adjustTab .globalNav-list {
+// 		max-width: none;
+// 		float: none;
+// 		width: 100%;
+// 		text-align: center;
+// 	}
+// }

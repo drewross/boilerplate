@@ -16,7 +16,6 @@ var PHDL = PHDL || {};
         APP.CatchOnTop.init();
         APP.DetectViewPort.init();
         APP.DetectWindowHeight.init();
-        //APP.Revolver.init();
         APP.OwlCarousel.init();
     });
 
@@ -398,30 +397,6 @@ APP.DetectWindowHeight = {
         });
     }
 };
-
-
-/* --------------------------------------------------------------------
-Revolver
-A Simple Carousel
--------------------------------------------------------------------- */
-
-APP.Revolver = {
-
-    init: function() {
-        var $revolver = $('.js-revolver');
-        if( ! $revolver.length ) {
-            return;
-        }
-        this.$revolver = $revolver;
-        this.bind();
-    },
-
-    bind: function() {
-        $('#revolver1').playRecord(false, true, 4000);
-        $('#revolver2').playRecord(false, true, 8000);
-    }
-};
-
 
 /* --------------------------------------------------------------------
 Owl Carousel
