@@ -47,7 +47,6 @@
 .noTouch {
     .btn:hover,
     .btn:focus {
-        opacity: 0.8;
         cursor: pointer;
         color: $gray;
     }
@@ -62,10 +61,41 @@
 
     .btn--light:hover,
     .btn--light:focus {
-        opacity: 1;
         color: $gray;
         background-color: $white;
     }
 }
 
+// ----------------------------------------
+// Buttons Inline
+// ----------------------------------------
 
+.btn--inline {
+    display: block;
+    max-width: 182px;
+
+    + .btn--inline {
+        margin-top: ($padding / 3);
+    }
+}
+
+@include START_AT($small) {
+    .btn--inline {
+        display: inline-block;
+        max-width: auto;
+
+        + .btn--inline {
+            margin-top: 0;
+            margin-left: ($padding / 3);
+        }
+    }
+}
+
+// ----------------------------------------
+// 
+// ----------------------------------------
+
+.noTouch .tel,
+.noTouch .tel:hover {
+    cursor: text;
+}

@@ -16,6 +16,7 @@ var PHDL = PHDL || {};
         APP.CatchOnTop.init();
         APP.DetectViewPort.init();
         APP.DetectWindowHeight.init();
+        APP.ModalCenter.init();
         APP.OwlCarousel.init();
     });
 
@@ -397,6 +398,43 @@ APP.DetectWindowHeight = {
         });
     }
 };
+
+
+/* --------------------------------------------------------------------
+Modal
+-------------------------------------------------------------------- */
+
+APP.ModalCenter = {
+
+    init: function() {
+        var $modalCenter = $('.modal');
+        if( ! $modalCenter.length ) {
+            return;
+        }
+        this.$modalCenter = $modalCenter;
+        this.bind();
+    },
+
+    bind: function() {
+
+        function moveModal() {
+            $('.modal').each(function() {
+                var $modalHeight = $(this).outerHeight() /2;
+                var $modalWidth = $(this).innerWidth() /2;
+                $(this).css({'margin-left': -$modalWidth, 'margin-top': -$modalHeight });
+            });
+        }
+
+        $(document).ready(function() {
+            moveModal();
+        });
+
+        $(window).resize(function(){
+            moveModal();
+        });
+    }
+};
+
 
 /* --------------------------------------------------------------------
 Owl Carousel

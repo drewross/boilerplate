@@ -38,7 +38,7 @@
             </a>
             <span class="sr-only">A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
         </h1>
-        <div class="burger" data-click-target="mainNav" data-click-bodyClass="mobileMenuIsOpen">
+        <div class="burger" data-click-target="mainNav" data-click-bodyClass="mobile-menu-is-open">
             <div class="burger-inner">
                 <span class="burger-top"></span>
                 <span class="burger-middle"></span>
@@ -48,17 +48,13 @@
         <div class="globalHeader-panel" id="mainNav">
             <nav class="globalNav" id="site-navigation">
                 <ul class="globalNav-list">
-                    <li data-click-target="ipsum-modal" data-click-bodyClass="modalIsActive"><span>I need Ipsum</span></li>
+                    <li data-click-target="ipsum-modal" data-click-bodyClass="modal-is-active"><span>I need Ipsum</span></li>
                     <li><a href="https://github.com/drewross/boilerplate" target="_blank">Github</a></li>
                 </ul>
             </nav>
-            <!-- <nav class="utilityNav">
-                <ul class="utilityNav-list">
-                    <li><a href="">Utility Item 1</a></li>
-                    <li><a href="">Utility Item</a></li>
-                </ul>
-            </nav> -->
         </div>
     </div>
 </header>
 <div class="hdg-1 breakpointTester"></div>
+
+<main id="content" class="main fadeIn">

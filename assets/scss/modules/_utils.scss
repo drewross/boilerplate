@@ -79,3 +79,31 @@
         text-align: center; 
     }
 }
+
+
+// ----------------------------------------
+// Full Screen Mask
+// ----------------------------------------
+.menu-mask,
+.modal-mask {
+    opacity: 0;
+    transition: opacity $transition;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+
+.menu-is-active .menu-mask,
+.modal-is-active .modal-mask {
+    display: block;
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    background: rgba(0,0,0,0.4);
+}
