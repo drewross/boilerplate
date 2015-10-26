@@ -429,9 +429,14 @@ APP.ModalCenter = {
             moveModal();
         });
 
-        $(window).resize(function(){
-            moveModal();
+        var $resizeTimer;
+        $(window).on('resize', function(e) {
+            clearTimeout($resizeTimer);
+            $resizeTimer = setTimeout(function() {
+                moveModal();
+            }, 250);
         });
+        
     }
 };
 
