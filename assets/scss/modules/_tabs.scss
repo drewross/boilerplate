@@ -50,19 +50,21 @@
 // Tab Body
 // ----------------------------------------
 .tab__bd {
-    height: 0;
-    width: 0;
     display: block;
     float: left;
     overflow: hidden;
-}
-
-.tabs .is-active .tab__bd { 
     font-size: $base-font-size;
-    padding: 16px 24px;
+    padding: 12px 16px;
     width: 100%;
     height: inherit;
     background-color: $gray;
+    opacity: 0;
+    transition: opacity $transition;
+}
+
+.no-js .tabs .tab__bd,
+.tabs .is-active .tab__bd { 
+    opacity: 1;
 }
 
 

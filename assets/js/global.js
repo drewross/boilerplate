@@ -12,12 +12,13 @@ var PHDL = PHDL || {};
         APP.BrowserDeviceDetection.init();
         APP.ClickFunciton.init();
         APP.ClickGroup.init();
+        APP.Tabs.init();
         APP.ScrollTo.init();
         APP.CatchOnTop.init();
         APP.DetectViewPort.init();
         APP.DetectWindowHeight.init();
         APP.ModalCenter.init();
-        APP.OwlCarousel.init();
+        APP.Carousel.init();
     });
 
 /* ---------------------------------------------------------------------
@@ -216,8 +217,48 @@ APP.ClickGroup = {
             $(this).addClass('is-active');
             
         });
+    }
+};
 
+/* --------------------------------------------------------------------
+Tabs
+-------------------------------------------------------------------- */
 
+APP.Tabs = {
+
+    init: function() {
+        var $tabs = $('.tabs');
+        if( ! $tabs.length ) {
+            return;
+        }
+        this.$tabs = $tabs;
+        this.bind();
+    },
+
+    bind: function() {
+
+        var $tab = $('.tabs .tab__bd');
+        var $activeTab = $('.tabs .is-active .tab__bd');
+
+        function findActiveTab() {
+            $tab.each( function() {
+                var $tabParent = $(this).parent();
+
+                if( $tabParent.hasClass('is-active') ) {
+                    $(this).slideDown();
+                } else {
+                    $(this).slideUp();
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            findActiveTab();
+        });
+
+        $('*[data-click-group]').on('click touchstart:not(touchmove)', function() {
+            findActiveTab();
+        });
     }
 };
 
@@ -258,7 +299,6 @@ APP.ScrollTo = {
             $('html, body').animate({
                 scrollTop: $target.offset().top - $offset
             }, $scrollSpeed);
-            
         });
 
 
@@ -442,28 +482,25 @@ APP.ModalCenter = {
 
 
 /* --------------------------------------------------------------------
-Owl Carousel
+Slick Carousel
+http://kenwheeler.github.io/slick/
 -------------------------------------------------------------------- */
 
-APP.OwlCarousel = {
+APP.Carousel = {
 
     init: function() {
-        var $owlCarousel = $('.owl-carousel');
-        if( ! $owlCarousel.length ) {
+        var $carousel = $('.carousel');
+        if( ! $carousel.length ) {
             return;
         }
-        this.$owlCarousel = $owlCarousel;
+        this.$carousel = $carousel;
         this.bind();
     },
 
     bind: function() {
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            nav: true,
-            items: 1,
-            animateOut: 'fadeOut',
-            //animateIn: 'fadeIn'
+        $('.carousel').slick({
+            dots: true,
+            speed: 600,            
         });
     }
 };
