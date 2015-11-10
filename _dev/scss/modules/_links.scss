@@ -1,0 +1,115 @@
+// ---------------------------------------------------------------------
+//  Link & Button Styles
+// ---------------------------------------------------------------------
+
+$btn-bg-color: $brand;
+$btn-border-color: $brand;
+$btn-color: $white;
+$btn-border-width: 1px;
+$btn-border-type: solid;
+$btn-font: $sans-serif;
+$btn-font-size: 14px;
+$btn-letter-spacing: 0.15rem;
+$btn-padding: 10px 16px;
+$btn-max-width: 100%;
+$btn-min-width: 152px;
+
+$btn-bg-color-hover: transparent;
+$btn-border-color-hover: $brand;
+$btn-color-hover: $brand;
+$btn-opacity-hover: 1;
+
+$btn-alt-bg-color: transparent;
+$btn-alt-border-color: $brand;
+$btn-alt-color: $black;
+
+$btn-alt-bg-color-hover: $brand;
+$btn-alt-border-color-hover: $brand;
+$btn-alt-color-hover: $white;
+$btn-alt-opacity-hover: opacity;
+
+// ----------------------------------------
+// Buttons
+// ----------------------------------------
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: $btn-padding;
+    max-width: $btn-max-width;
+    min-width: $btn-min-width;
+    border: $btn-border-width $btn-border-type $btn-border-color;
+    background-color: $btn-bg-color;
+    font-family: $btn-font;
+    font-size: $btn-font-size;
+    color: $white;
+    letter-spacing: $btn-letter-spacing;
+    transition: all $transition;
+}
+
+.btn--alt {
+    background-color: $btn-alt-bg-color;
+    border-color: $btn-alt-border-color;
+    color: $btn-alt-color;
+}
+
+.noTouch {
+    .btn:hover {
+        cursor: pointer;
+        background-color: $btn-bg-color-hover;
+        border-color: $btn-border-color-hover;
+        color: $btn-color-hover;
+        opacity: $btn-opacity-hover;
+    }
+
+    .btn--alt:hover {
+        background-color: $btn-alt-bg-color-hover;
+        border-color: $btn-alt-border-color-hover;
+        color: $btn-alt-color-hover;
+        opacity: $btn-alt-opacity-hover;
+    }
+}
+
+// ----------------------------------------
+// Buttons Inline
+// ----------------------------------------
+
+.btn--inline {
+    display: block;
+    max-width: 182px;
+
+    + .btn--inline {
+        margin-top: ($padding / 3);
+    }
+}
+
+@include START_AT($small) {
+    .btn--inline {
+        display: inline-block;
+        max-width: auto;
+
+        + .btn--inline {
+            margin-top: 0;
+            margin-left: ($padding / 3);
+        }
+    }
+}
+
+
+// ----------------------------------------
+// Links
+// ----------------------------------------
+
+.link {
+    text-decoration: underline;
+}
+
+
+// ----------------------------------------
+// 
+// ----------------------------------------
+
+.noTouch .tel,
+.noTouch .tel:hover {
+    cursor: text;
+}

@@ -4,9 +4,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        assetPath: 'assets',
+        assetPath: '_dev',
         buildPath: 'build',
-        projectURL: 'http://local.boilerplate',
+        projectURL: 'http://local.boilerplate/library.php',
 
         // CSS Tasks
         sass: {

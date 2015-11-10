@@ -3,44 +3,32 @@
 // ---------------------------------------------------------------------
 
 
-.breakpointTester {
+body:after {
     position: fixed;
     z-index: 1000;
     bottom: 0;
     right: 0;
-    font-size: 1.4rem;
+    display: inline-block;
+    color: white;
+    font-size: 12px;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
-}
-
-.breakpointTester:after {
-    color: white;
-    display: inline-block;
     content: 'Mobile';
-    width: 100%;
-}
 
-@include START_AT($small) {
-    .breakpointTester:after {
+    @include START_AT($small) {
         content: 'Small';
     }
-}
 
-@include START_AT($medium) {
-    .breakpointTester:after {
+    @include START_AT($medium) {
         content: 'Medium';
     }
-}
 
-@include START_AT($large) {
-    .breakpointTester:after {
+    @include START_AT($large) {
         content: 'Large';
     }
-}
 
-@include START_AT($xlarge) {
-    .breakpointTester:after {
-        content: 'xLarge';
+    @include START_AT($xlarge) {
+        content: 'x-large';
     }
 }
 
@@ -51,6 +39,13 @@
     bottom: 0 !important;
     border-radius: 0 !important;
 }
+
+.btn.is-active,
+.btn--alt {
+    background-color: transparent;
+    color: $black;
+}
+
 
 
 /* ----------------------------------------

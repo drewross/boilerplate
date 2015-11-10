@@ -3,6 +3,17 @@
 // ---------------------------------------------------------------------
 
 $dropdown-height: 44px;
+$dropdown-bg: #f7f7f7;
+$dropdown-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+$dropdown-text-color: $black;
+$dropdown-icon-color: $black;
+
+$dropdown-opacity: 0.4;
+$dropdown-hover-opacity: 1;
+
+$dropdown-hover-bg: transparent;
+$dropdown-hover-text-color: $black;
+
 
 .dropdown {
     position: relative;
@@ -27,7 +38,7 @@ $dropdown-height: 44px;
 
     svg {
         display: block;
-        fill: $brand;
+        fill: $dropdown-icon-color;
         width: 16px;
         height: 8px;
         margin: 0 auto;
@@ -46,9 +57,9 @@ $dropdown-height: 44px;
     z-index: 3;
     width: 100%;
     max-height: $dropdown-height;
-    background: #f7f7f7;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    color: $gray-dark;
+    background: $dropdown-bg;
+    box-shadow: $dropdown-shadow;
+    color: $dropdown-text-color;
     transition: max-height $transition;
 }
 
@@ -62,13 +73,32 @@ $dropdown-height: 44px;
 // Active Item in the dropdown list
 .dropdown__list .is-active {
    max-height: $dropdown-height;
+   opacity: 1;
+   transition: all $transition;
+
+   &:hover {
+        color: $dropdown-hover-text-color;
+        background: $dropdown-hover-bg;
+        opacity: $dropdown-hover-opacity;
+    }
+
+     > * {
+        opacity: 1;
+     }
 }
 
 .dropdown__list > * > * {
     display: block;
     line-height: 1;
     padding: 16px 18px;
-    @include opacityHover(0.4);
+    opacity: $dropdown-opacity;
+    transition: all $transition;
+
+    &:hover {
+        // color: $dropdown-hover-text-color;
+        // background: $dropdown-hover-bg;
+        // opacity: $dropdown-hover-opacity;
+    }
 }
 
 
@@ -83,6 +113,15 @@ $dropdown-height: 44px;
 
         > * {
             max-height: $dropdown-height;
+        }
+    }
+
+    .dropdown__list > * > * {
+
+        &:hover {
+            color: $dropdown-hover-text-color;
+            background: $dropdown-hover-bg;
+            opacity: $dropdown-hover-opacity;
         }
     }
 }

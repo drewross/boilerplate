@@ -2,6 +2,12 @@
 //  Burger Styles
 // ---------------------------------------------------------------------
 
+$burger-width: 28px;
+$burger-height: 18px;
+$burger-color: $black;
+$burger-bg-color: $white;
+
+
 .burger {
 	overflow: hidden;
 	display: table-cell;
@@ -18,7 +24,7 @@
 //Black Background
 .burger:before {
 	content: "";
-	background-color: $white;
+	background-color: $burger-bg-color;
 	position: absolute;
 	height: 46px;
 	top: 50%;
@@ -28,8 +34,8 @@
 }
 
 .burger-inner {
-	height: 18px;
-	width: 28px;
+	width: $burger-width;
+	height: $burger-height;
 	position: relative;
 	margin: 0 auto;
 	left: 0;
@@ -42,7 +48,7 @@
 	display: block;
 	height: 2px;
 	width: 100%;
-	background-color: $black;
+	background-color: $burger-color;
 	margin: 0 auto;
 	transition: all 0.6s ease-in-out;
 	-webkit-backface-visibility: hidden;
@@ -57,7 +63,7 @@
 // Active Styles
 // ----------------------------------------
 
-.mobileMenuIsOpen {
+.mobile-menu-is-open {
 	.burger-top {
 		top: 50%;
 		margin-top: -2px;

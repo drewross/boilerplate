@@ -55,6 +55,5 @@
         </div>
     </div>
 </header>
-<div class="hdg-1 breakpointTester"></div>
 
 <main id="content" class="main fadeIn">
