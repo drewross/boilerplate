@@ -11,6 +11,7 @@
 <!-- ICONS -->
 <link rel="shortcut icon" type="image/ico" href="build/images/favicons/favicon.png" />
 <link rel="apple-touch-icon" href="build/images/favicons/apple-touch-icon.png" />
+<link rel="icon" href="build/images/favicons/android-favicon.png">
 
 <!-- FONTS -->
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Karla:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -25,6 +26,17 @@
 <!--[if lte IE 9]>
 <script type="text/javascript" src="build/js/timetravel.js"></script>
 <![endif]-->
+
+
+<!-- Live Reload -->
+<script src="//localhost:35729/livereload.js"></script>
+<?php
+    $currentSite = apache_request_headers();
+    if( $currentSite === 'http://local.boilerplate' ): ?>
+        <script src="//localhost:35729/livereload.js"></script>
+    <?php endif;
+?>
+<!-- End Live Reload -->
 
 </head>
 <body class="no-js" id="top">

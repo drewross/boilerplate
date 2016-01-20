@@ -25,7 +25,7 @@ module.exports = function(grunt) {
                 map: false,
 
                 processors: [
-                    require('pixrem')(),
+                    require('pixrem')({ rootValue: '62.5%' }),
                     require('autoprefixer')({ browsers: ['last 2 versions', 'ie 8', 'ie 9'] }),
                 ]
             },
@@ -80,7 +80,6 @@ module.exports = function(grunt) {
                 cleanup: ['fill','stroke'],
                 svg: { 
                     style: "display: none;",
-                    //viewBox : '0 0 20 20',
                     xmlns: 'http://www.w3.org/2000/svg'
                 },
                 formatting : {
@@ -104,6 +103,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint','concat','uglify'],
                 options: {
                     spawn: false,
+                    livereload: true
                 },
             },
             css: {
@@ -111,6 +111,7 @@ module.exports = function(grunt) {
                 tasks: ['sass','postcss'],
                 options: {
                     spawn: false,
+                    livereload: true
                 },
             },
             images: {
@@ -118,28 +119,13 @@ module.exports = function(grunt) {
                 tasks: ['imagemin'],
                 options: {
                     spawn: false,
+                    livereload: true
                 },
             },
-        },
-  
-        browserSync: {
-            bsFiles: {
-                src: [
-                    "<%= buildPath %>/"
-                ]
-            },
-            options: {
-                watchTask: true,
-
-                proxy: {
-                    target: "<%= projectURL %>",
-                    ws: true
-                }
-            }
-        },
+        }
         
     });
 
-    grunt.registerTask('default', ['sass','postcss','jshint', 'concat', 'uglify', 'imagemin', 'svgstore', 'browserSync', 'watch']);
+    grunt.registerTask('default', ['sass','postcss','jshint', 'concat', 'uglify', 'imagemin', 'svgstore', 'watch']);
     
 };
