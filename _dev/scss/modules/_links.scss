@@ -83,7 +83,7 @@ $btn-alt-opacity-hover: opacity;
     }
 }
 
-@include START_AT($small) {
+@include start-at($small) {
     .btn--inline {
         display: inline-block;
         max-width: auto;

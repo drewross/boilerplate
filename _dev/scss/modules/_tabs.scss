@@ -93,14 +93,14 @@ $tabs-body-padding: 12px 8px;
 // ----------------------------------------
 // Stack
 // ----------------------------------------
-@include START_AT($small) {
+@include start-at($small) {
     .tabs--hThenV > * {
         display: inline;
         font-size: 0;
     }
 }
 
-@include STOP_AT($small) {
+@include stop-at($small) {
     .tabs--hThenV > * > .tab__tab {
         width: 100%;
     }

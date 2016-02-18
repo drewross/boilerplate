@@ -30,7 +30,7 @@
     overflow: hidden;
 }
 
-@include START_AT($medium) {
+@include start-at($medium) {
 
     .media-object__media {
         float: left;

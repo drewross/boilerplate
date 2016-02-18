@@ -57,7 +57,7 @@
     padding: 0 8px;
 }
 
-@include STOP_AT($small) {
+@include stop-at($small) {
     .pagination__text {
         @include visuallyHidden;
     }

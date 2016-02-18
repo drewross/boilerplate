@@ -4,9 +4,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        assetPath: '_dev',
+        devPath: '_dev',
         buildPath: 'build',
-        projectURL: 'http://local.boilerplate/library.php',
 
         // CSS Tasks
         sass: {
@@ -15,7 +14,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '<%= buildPath %>/css/production.css': '<%= assetPath %>/scss/compile.scss'
+                    '<%= buildPath %>/css/production.css': '<%= devPath %>/scss/compile.scss'
                 }
             }
         },
@@ -36,20 +35,20 @@ module.exports = function(grunt) {
 
         // JS Tasks
         jshint: {
-            all: ['Gruntfile.js', '<%= assetPath %>/js/global.js']
+            all: ['Gruntfile.js', '<%= devPath %>/js/global.js']
         },
 
         concat: {   
             dist: {
                 src: [
-                    '<%= assetPath %>/js/global.js',
-                    '<%= assetPath %>/js/slick.js',
-                    '<%= assetPath %>/js/picturefill.min.js'
+                    '<%= devPath %>/js/global.js',
+                    '<%= devPath %>/js/slick.js',
+                    '<%= devPath %>/js/picturefill.min.js'
                 ],
                 dest: '<%= buildPath %>/js/production.js',
             },
             extras: {
-              src: ['<%= assetPath %>/js/timetravel.js'],
+              src: ['<%= devPath %>/js/timetravel.js'],
               dest: '<%= buildPath %>/js/timetravel.js',
             }
         },
@@ -67,7 +66,7 @@ module.exports = function(grunt) {
             dynamic: {
                 files: [{
                     expand: true,
-                    cwd: '<%= assetPath %>/images/',
+                    cwd: '<%= devPath %>/images/',
                     src: ['**/*.{png,jpg,gif,ico,svg}'],
                     dest: '<%= buildPath %>/images/'
                 }]
@@ -90,8 +89,8 @@ module.exports = function(grunt) {
             },
             dev: {
                 files: {
-                    '<%= assetPath %>/images/svg-defs.svg':
-                    ['<%= assetPath %>/images/svgs/*.svg']
+                    '<%= devPath %>/images/svg-defs.svg':
+                    ['<%= devPath %>/images/svgs/*.svg']
                 }
             }
         },
@@ -99,7 +98,7 @@ module.exports = function(grunt) {
         // SYNC & WATCH
         watch: {
             scripts: {
-                files: ['<%= assetPath %>/js/*.js'],
+                files: ['<%= devPath %>/js/*.js'],
                 tasks: ['jshint','concat','uglify'],
                 options: {
                     spawn: false,
@@ -107,21 +106,13 @@ module.exports = function(grunt) {
                 },
             },
             css: {
-                files: ['<%= assetPath %>/scss/**/*.scss'],
+                files: ['<%= devPath %>/scss/**/*.scss'],
                 tasks: ['sass','postcss'],
                 options: {
                     spawn: false,
                     livereload: true
                 },
-            },
-            images: {
-                files: ['<%= assetPath %>/images/*.{png,jpg,gif,ico,svg'],
-                tasks: ['imagemin'],
-                options: {
-                    spawn: false,
-                    livereload: true
-                },
-            },
+            }
         }
         
     });

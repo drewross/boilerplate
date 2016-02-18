@@ -14,6 +14,7 @@
 <link rel="icon" href="build/images/favicons/android-favicon.png">
 
 <!-- FONTS -->
+<link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Karla:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
@@ -28,14 +29,16 @@
 <![endif]-->
 
 
+
 <!-- Live Reload -->
-<script src="//localhost:35729/livereload.js"></script>
 <?php
     $currentSite = apache_request_headers();
     if( $currentSite === 'http://local.boilerplate' ): ?>
         <script src="//localhost:35729/livereload.js"></script>
     <?php endif;
 ?>
+
+<script src="//localhost:35729/livereload.js"></script>
 <!-- End Live Reload -->
 
 </head>

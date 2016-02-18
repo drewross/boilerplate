@@ -2,13 +2,13 @@
 //  Stick to top
 // ---------------------------------------------------------------------
 
-@include STOP_AT($medium) {
+@include stop-at($medium) {
 	.is-sticky .stickToTop--after--sm {
 		position: static;
 	}
 }
 
-@include STOP_AT($large) {
+@include stop-at($large) {
 	.is-sticky .stickToTop--after--md {
 		position: static;
 	}

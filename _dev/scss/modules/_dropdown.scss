@@ -126,7 +126,7 @@ $dropdown-hover-text-color: $black;
     }
 }
 
-@include START_AT($medium) {
+@include start-at($medium) {
     .dropdown--before--md {
         max-width: 100%;
         background: transparent;

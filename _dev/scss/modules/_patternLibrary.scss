@@ -15,31 +15,22 @@ body:after {
     padding: 5px;
     content: 'Mobile';
 
-    @include START_AT($small) {
+    @include start-at($small) {
         content: 'Small';
     }
 
-    @include START_AT($medium) {
+    @include start-at($medium) {
         content: 'Medium';
     }
 
-    @include START_AT($large) {
+    @include start-at($large) {
         content: 'Large';
     }
 
-    @include START_AT($xlarge) {
+    @include start-at($xlarge) {
         content: 'x-large';
     }
 }
-
-#__bs_notify__ {
-    opacity: 0.4 !important;
-    z-index: -2 !important;
-    top: auto !important;
-    bottom: 0 !important;
-    border-radius: 0 !important;
-}
-
 
 
 /* ----------------------------------------
@@ -112,7 +103,7 @@ body:after {
     font-size: 3.6rem;
     line-height: 1.2;
 
-    @include START_AT($medium) {
+    @include start-at($medium) {
         font-size: 5.0rem;
         line-height: 1.2;   
     }

@@ -8,6 +8,17 @@
   clear: both;
 }
 
+.no-select {
+    cursor: default;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 // ----------------------------------------
 // Layout Utilites
 // ----------------------------------------
@@ -16,13 +27,13 @@
     display: none;
 }
 
-@include STOP_AT($small) {
+@include stop-at($small) {
     .is-hidden-xs {
         display: none;
     }
 }
 
-@include STOP_AT($medium) {
+@include stop-at($medium) {
     .is-hidden-sm {
         display: none;
     }
@@ -39,17 +50,7 @@
     width: 1px;
 }
 
-.display-table {
-    display: table;
-    width: 100%;
-}
-
-.display-inline {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.lTable {
+.l-table {
     display: table;
     width: 100%;
 
@@ -68,13 +69,13 @@
     }
 }
 
-@include START_AT($small) {
+@include start-at($small) {
     .text-center-after-sm {
         text-align: center; 
     }
 }
 
-@include START_AT($medium) {
+@include start-at($medium) {
     .text-center-after-md {
         text-align: center; 
     }

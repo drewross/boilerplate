@@ -4,8 +4,8 @@
 // ---------------------------------------------------------------------
 
 .hero {
-	width: 100%;
 	overflow: hidden;
+	width: 100%;
 	position: relative;
 	padding: 136px 0;
 
@@ -42,7 +42,7 @@
 	    vertical-align: middle;
 	}
 
-	@include START_AT($small) {
+	@include start-at($small) {
 		height: 432px;
 	}
 }

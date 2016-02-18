@@ -41,7 +41,7 @@ $logo-height: 72px;
 // Mobile Menu Styles
 // ----------------------------------------
 
-@include STOP_AT($header-breakpoint) {
+@include stop-at($header-breakpoint) {
 
 	$panel-width: 260px;
 
@@ -128,7 +128,7 @@ $logo-height: 72px;
 // Desktop Menu Styles
 // ----------------------------------------
 
-@include START_AT($header-breakpoint) {
+@include start-at($header-breakpoint) {
 
 	.globalHeader-panel {
 		display: table-cell;

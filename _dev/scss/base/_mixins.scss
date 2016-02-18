@@ -53,29 +53,12 @@
     position: $position;
     width: auto;
     height: auto;
-    max-height: 110%;
     min-height: 100%;
-    //min-width: 100%;
+    min-width: 100%;
     max-width: none;
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
-
-    @include STOP_AT($small) {
-        height: 100%;
-        min-width: 100%;
-    }
-}
-
-@mixin noSelect {
-    cursor: default;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 @mixin visuallyHidden {
