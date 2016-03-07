@@ -23,27 +23,18 @@
 <!-- JAVASCRIPT -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="build/js/slick.js"></script>
 <script type="text/javascript" src="build/js/production.min.js"></script>
 <!--[if lte IE 9]>
 <script type="text/javascript" src="build/js/timetravel.js"></script>
 <![endif]-->
 
-
-
-<!-- Live Reload -->
-<?php
-    $currentSite = apache_request_headers();
-    if( $currentSite === 'http://local.boilerplate' ): ?>
-        <script src="//localhost:35729/livereload.js"></script>
-    <?php endif;
-?>
-
-<script src="//localhost:35729/livereload.js"></script>
-<!-- End Live Reload -->
-
 </head>
 <body class="no-js" id="top">
-<?php include("build/images/svg-defs.svg"); ?>
+<div class="is-hiddenS">
+    <?php include("build/images/svgs/svgs.svg"); ?>
+</div>
+
 
 <header class="globalHeader">
     <div class="wrapper">

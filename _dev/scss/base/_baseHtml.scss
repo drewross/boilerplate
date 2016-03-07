@@ -11,7 +11,7 @@ body {
 *, *:before, *:after {
     box-sizing: border-box;
 }
- 
+
 body,
 input,
 button,
@@ -31,9 +31,21 @@ a,
     color: $brand;
     text-decoration: none;
     transition: all $transition;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-a:hover {
+a[href^="tel:"] {
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+[data-scroll-to],
+[data-click-target] {
     cursor: pointer;
 }
 
@@ -52,12 +64,16 @@ sup {
     font-size: smaller;
 }
 
-picture > * { width: 100%; height: auto; }
+picture > * {
+    width: 100%;
+    height: auto;
+}
 
-::selection { color: $white; background: $black; }
-::-moz-selection { color: $white; background: $black; }
-
-[data-scroll-to],
-[data-click-target] {
-    cursor: pointer;
+::selection {
+    color: $white;
+    background: $black;
+}
+::-moz-selection {
+    color: $white;
+    background: $black;
 }
