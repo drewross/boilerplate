@@ -1,5 +1,5 @@
 // Project Specific Variables
-const projectPath 		= '';
+const projectPath 		= './';
 const devPath 			= projectPath + '_dev';
 const buildPath 		= projectPath + 'build';
 const projectURL 		= 'http://local.boilerplate';
@@ -37,7 +37,7 @@ gulp.task('styles', function() {
 	gulp.src([devPath + '/scss/compile.scss'])
 		.pipe(rename({ basename: "production" }))
 		.pipe(sass().on('error', sass.logError))
-		.pipe(pixrem())
+		.pipe(pixrem({ rootValue: '62.5%' }))
 		.pipe(autoprefixer({ browsers: ['last 2 versions', 'ie 8', 'ie 9'] }))
 		.pipe(gulp.dest(buildPath + '/css/'))
 		.pipe(minifyCSS())

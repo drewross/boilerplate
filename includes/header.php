@@ -31,12 +31,12 @@
 
 </head>
 <body class="no-js" id="top">
-<div class="is-hiddenS">
+<div class="is-hidden">
     <?php include("build/images/svgs/svgs.svg"); ?>
 </div>
 
 
-<header class="globalHeader">
+<header class="site-header">
     <div class="wrapper">
         <h1 class="logo">
             <a href="index.php">
@@ -51,9 +51,9 @@
                 <span class="burger-bottom"></span>
             </div>
         </div>
-        <div class="globalHeader-panel" id="mainNav">
-            <nav class="globalNav" id="site-navigation">
-                <ul class="globalNav-list">
+        <div class="site-header-panel" id="mainNav">
+            <nav class="site-navigation" id="site-navigation">
+                <ul class="site-navigation-list">
                     <li data-click-target="ipsum-modal" data-click-bodyClass="modal-is-active"><span>I need Ipsum</span></li>
                     <li><a href="https://github.com/drewross/boilerplate" target="_blank">Github</a></li>
                 </ul>

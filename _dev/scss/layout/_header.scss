@@ -2,13 +2,13 @@
 //  Global Header Styles
 // ---------------------------------------------------------------------
 
-.globalHeader {
+.site-header {
 	position: absolute;
 	z-index: 10;
 	width: 100%;
 }
 
-.globalHeader .wrapper {
+.site-header .wrapper {
 	display: table;
 	padding: 16px 0;
 }
@@ -45,7 +45,7 @@ $logo-height: 72px;
 
 	$panel-width: 260px;
 
-	.globalHeader-panel {
+	.site-header-panel {
 		position: fixed;
 		height: 100%;
 		width: $panel-width;
@@ -64,18 +64,18 @@ $logo-height: 72px;
 	// ----------------------------------------
 	// Main Nav Styles
 	// ----------------------------------------
-	.globalNav {
+	.site-navigation {
 		overflow: hidden;
 		width: 100%;
 		margin: 24px auto 48px;
 		display: block;
 	}
 
-	.globalNav-list > * {
+	.site-navigation-list > * {
 		display: block;
 	}
 
-	.globalNav-list > * > * {
+	.site-navigation-list > * > * {
 		display: block;
 		color: $white;
 		padding: 12px 0;
@@ -104,7 +104,7 @@ $logo-height: 72px;
 	.mobile-menu-is-open {
 		overflow: hidden;
 
-		.globalHeader-panel {
+		.site-header-panel {
 			margin-left: 0;
 		}
 
@@ -120,7 +120,7 @@ $logo-height: 72px;
 			background: rgba(0,0,0,0.4);
 		}
 
-	} 
+	}
 }
 
 
@@ -130,33 +130,33 @@ $logo-height: 72px;
 
 @include start-at($header-breakpoint) {
 
-	.globalHeader-panel {
+	.site-header-panel {
 		display: table-cell;
 		vertical-align: middle;
 		position: relative;
 	}
 
-	.globalNav-list {
+	.site-navigation-list {
 		display: table;
 		float: right;
 		max-width: 536px;
 	}
 
-	.globalNav-list:after {
+	.site-navigation-list:after {
 		content: "";
 		display: table;
 		clear: both;
 	}
 
-	.globalNav-list > * {
+	.site-navigation-list > * {
 		display: inline-block;
 		vertical-align: middle;
 		text-align: center;
 		min-width: 120px;
 	}
 
-	.globalNav-list > * > *,
-	.globalNav-list > * > a {
+	.site-navigation-list > * > *,
+	.site-navigation-list > * > a {
 		display: block;
 		color: $black;
 		padding: 12px 0;
@@ -165,7 +165,7 @@ $logo-height: 72px;
 		@include opacityHover(0.6);
 	}
 
-	.globalHeader.isSticky {
+	.site-header.isSticky {
 		position: fixed;
 		z-index: 10;
 		width: 100%;
@@ -181,17 +181,17 @@ $logo-height: 72px;
 
 // @media ( min-width: $small ) and ( max-width: $medium ) {
 
-// 	.globalHeader_adjustTab .burger {
+// 	.site-header_adjustTab .burger {
 // 		display: none;
 // 	}
 
-// 	.globalHeader_adjustTab .wrapper {
+// 	.site-header_adjustTab .wrapper {
 // 		overflow: hidden;
 // 		display: block;
 // 		padding: 12px 0 24px;
 // 	}
 
-// 	.globalHeader_adjustTab .logo {
+// 	.site-header_adjustTab .logo {
 // 		display: block;
 // 		margin: 0 auto 24px;
 // 		text-align: center;
@@ -201,14 +201,14 @@ $logo-height: 72px;
 // 		}
 // 	}
 
-// 	.globalHeader_adjustTab .globalHeader-panel {
+// 	.site-header_adjustTab .site-header-panel {
 // 		display: block;
 // 		margin: 0 auto;
 // 		width: 100%;
 // 		max-width: none;
 // 	}
 
-// 	.globalHeader_adjustTab .globalNav-list {
+// 	.site-header_adjustTab .site-navigation-list {
 // 		max-width: none;
 // 		float: none;
 // 		width: 100%;

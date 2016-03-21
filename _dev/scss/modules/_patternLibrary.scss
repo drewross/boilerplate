@@ -2,6 +2,12 @@
 //  REMOVE FOR PRODUCTION
 // ---------------------------------------------------------------------
 
+#__bs_notify__ {
+    opacity: 0.1;
+    bottom: 0 !important;
+    top: auto !important;
+    height: 50px;
+}
 
 body:after {
     position: fixed;
@@ -105,7 +111,7 @@ body:after {
 
     @include start-at($medium) {
         font-size: 5.0rem;
-        line-height: 1.2;   
+        line-height: 1.2;
     }
     color: $gray-dark;
 }
