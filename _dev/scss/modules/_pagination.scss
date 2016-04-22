@@ -15,7 +15,7 @@
 
     a {
         color: $black;
-        @include opacityHover(0.4);
+        @include opacity-hover(0.4);
     }
 }
 
@@ -59,6 +59,6 @@
 
 @include stop-at($small) {
     .pagination__text {
-        @include visuallyHidden;
+        @include visually-hidden;
     }
 }

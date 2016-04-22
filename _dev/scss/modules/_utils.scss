@@ -40,23 +40,18 @@
 }
 
 .sr-only {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+    @include visually-hidden;
 }
 
-.l-table {
-    display: table;
-    width: 100%;
+.v-center {
+    @include v-center;
+}
+
+.display-inline {
+    display: flex;
 
     > * {
-        display: inline-block;
-        vertical-align: middle;  
+        flex-grow: 1;
     }
 }
 
@@ -71,13 +66,13 @@
 
 @include start-at($small) {
     .text-center-after-sm {
-        text-align: center; 
+        text-align: center;
     }
 }
 
 @include start-at($medium) {
     .text-center-after-md {
-        text-align: center; 
+        text-align: center;
     }
 }
 

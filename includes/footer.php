@@ -21,8 +21,8 @@
                 </div>
             </div>
         </div>
-        
-        <footer class="globalFooter">
+
+        <footer class="site-footer">
         	<div class="wrapper">
         		<div class="section">
         			<a class="link" href="http://andrewrossmn.com" target="_blank">andrewrossmn.com</a>
@@ -32,4 +32,3 @@
         <span class="menu-mask" data-click-target="mainNav" data-click-bodyClass="mobile-menu-is-open"></span>
     </body>
 </html>
-

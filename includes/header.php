@@ -18,7 +18,7 @@
 <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Karla:400,700,400italic' rel='stylesheet' type='text/css'>
 
 <!-- CSS -->
-<link rel="stylesheet" media="screen" href="build/css/production.css" />
+<link rel="stylesheet" media="screen" href="build/css/production.min.css" />
 
 <!-- JAVASCRIPT -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -40,7 +40,7 @@
     <div class="wrapper">
         <h1 class="logo">
             <a href="index.php">
-                <span>gramophone</span>
+                <span class="h3">gramophone</span>
             </a>
             <span class="sr-only">A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
         </h1>

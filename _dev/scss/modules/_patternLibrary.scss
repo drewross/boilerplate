@@ -96,7 +96,7 @@ body:after {
 
 .module-navigation [data-scroll-to] {
     font-size: 14px;
-    @include opacityHover(0.5);
+    @include opacity-hover(0.5);
 }
 
 .module-navigation .section__hd {

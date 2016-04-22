@@ -181,7 +181,7 @@ APP.ClickFunciton = {
                 if( $('body').hasClass($bodyCls) ) {
                     $('body').removeClass($bodyCls);
                 } else {
-                   $('body').addClass($bodyCls); 
+                   $('body').addClass($bodyCls);
                 }
             }
         });
@@ -214,9 +214,9 @@ APP.ClickGroup = {
             $('*[data-click-group=' + $group + ']').each(function() {
                 $(this).removeClass('is-active');
             });
-            
+
             $(this).addClass('is-active');
-            
+
         });
     }
 };
@@ -334,9 +334,9 @@ APP.CatchOnTop = {
                 $xPos = $(this).offset().left;
                 $currentPos = $(this).offset().top;
 
-                if ( $(window).scrollTop() > $currentPos ) { 
+                if ( $(window).scrollTop() > $currentPos ) {
                     $(this).addClass('is-sticky');
-                    
+
                     $(this).find('.stickToTop').css( { 'left': $xPos } );
                 }
                 else {
@@ -403,13 +403,13 @@ APP.DetectViewPort = {
 
         $(document).ready(function() {
             setTimeout(function() {
-               changeState(); 
+               changeState();
             }, 500);
         });
 
         $(window).scroll(function(){
             changeState();
-        });        
+        });
     }
 };
 
@@ -481,7 +481,7 @@ APP.ModalCenter = {
                 moveModal();
             }, 250);
         });
-        
+
     }
 };
 
@@ -505,7 +505,7 @@ APP.Carousel = {
     bind: function() {
         $('.carousel').slick({
             dots: true,
-            speed: 600,            
+            speed: 600,
         });
     }
 };

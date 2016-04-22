@@ -2,6 +2,9 @@
 //  SVG Styles
 // ---------------------------------------------------------------------
 
+svg {
+	display: block;
+}
 
 .shape {
 	display: block;
@@ -9,10 +12,9 @@
 
 .shape svg {
 	fill: $brand;
-	display: block;
 }
 
-.shape--inline {
+.shape-inline {
     display: inline-block;
 
     > * {
@@ -33,10 +35,10 @@
     }
 }
 
-.shape--inline + .shape--inline {
+.shape-inline + .shape-inline {
     margin-left: 24px;
 }
 
 a.shape--inline {
-    @include opacityHover(0.4);
+    @include opacity-hover(0.4);
 }

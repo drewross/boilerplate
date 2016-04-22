@@ -28,7 +28,7 @@
     margin-bottom: 2px;
 
     @include start-at($small) {
-        margin-bottom: 5px; 
+        margin-bottom: 5px;
     }
 }
 
@@ -112,6 +112,7 @@ $INPUT-HEIGHT: 44px;
     input:not([type="submit"]),
     textarea,
     select {
+        -webkit-appearance: none;
         width: 100%;
         height: $INPUT-HEIGHT;
         margin: 0;
@@ -149,7 +150,7 @@ $INPUT-HEIGHT: 44px;
     border-radius: 0;
     border: 1px solid $brand;
     transition: all $transition;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -164,6 +165,7 @@ $INPUT-HEIGHT: 44px;
 // ----------------------------------------
 // Custom Select Dropdown
 // ----------------------------------------
+
 .ginput_container select {
     display: block;
     -webkit-appearance: none;
@@ -173,6 +175,10 @@ $INPUT-HEIGHT: 44px;
     text-indent: 0.01px;
     text-overflow: '';
     cursor: pointer;
+}
+
+.isIE .select select::-ms-expand {
+    display: none;
 }
 
 .select {
@@ -187,7 +193,7 @@ $INPUT-HEIGHT: 44px;
             -moz-appearance: none;
             text-indent: 0.01px;
             text-overflow: '';
-            cursor: pointer; 
+            cursor: pointer;
         }
 
         &:after {
@@ -204,7 +210,7 @@ $INPUT-HEIGHT: 44px;
             pointer-events: none;
         }
     }
-        
+
 }
 
 .isIE .select .ginput_container{
@@ -213,7 +219,7 @@ $INPUT-HEIGHT: 44px;
     }
 
     &:after {
-        display: none;
+        //display: none;
     }
 }
 
@@ -227,7 +233,7 @@ $INPUT-HEIGHT: 44px;
     width: 100%;
 
     input {
-        @include visuallyHidden;
+        @include visually-hidden;
     }
 
     label:before {

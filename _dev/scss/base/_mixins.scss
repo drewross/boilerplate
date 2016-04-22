@@ -11,13 +11,13 @@
 }
 
 @mixin wrapper {
-    width: 90%;
+    width: $wrapper-percentage;
     margin: 0 auto;
     max-width: $wrapper-width;
     transition: max-width $transition;
 }
 
-@mixin opacityHover($opacity) {
+@mixin opacity-hover($opacity) {
     transition: opacity $transition;
     &:hover {
         opacity: $opacity;
@@ -30,16 +30,15 @@
     transform: translate3d(0, -50%, 0);
 }
 
-@mixin vCenterTable {
-    display: table;
+@mixin v-center {
+    display: flex;
 
     > * {
-        display: table-cell;
-        vertical-align: middle;
+        align-self: center;
     }
 }
 
-@mixin coverParent {
+@mixin cover-parent {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -59,9 +58,16 @@
     left: 50%;
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
+
+    .isIE8 &,
+    .isIE9 & {
+        top: 0;
+        left: 0;
+        transform: none;
+    }
 }
 
-@mixin visuallyHidden {
+@mixin visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;

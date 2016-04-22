@@ -20,13 +20,6 @@
 	width: 100%;
 }
 
-// Use this for more image control
-.hero--pattern {
-	background: url('../images/gramophone-logo-mark.jpg') no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
 
 // ----------------------------------------
 // Hero Fixed
@@ -35,15 +28,13 @@
 .hero--fixed {
 	padding: 0;
 	height: 288px;
-	display: table;
+	display: flex;
 
-	.hero__content {	 	
-	    display: table-cell;
-	    vertical-align: middle;
+	.hero__content {
+	    align-self: center;
 	}
 
 	@include start-at($small) {
 		height: 432px;
 	}
 }
-

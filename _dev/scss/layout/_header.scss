@@ -6,11 +6,17 @@
 	position: absolute;
 	z-index: 10;
 	width: 100%;
+	background: rgba($white, 0.2);
 }
 
 .site-header .wrapper {
-	display: table;
-	padding: 16px 0;
+	display: flex;
+	height: 72px;
+	justify-content: space-between;
+
+	> * {
+		align-self: center;
+	}
 }
 
 
@@ -22,18 +28,12 @@ $logo-width: 220px;
 $logo-height: 72px;
 
 .logo {
-	display: table-cell;
-	vertical-align: middle;
+	flex-grow: 1;
 }
 
 .logo a {
 	display: block;
-	color: $black;
-	width: $logo-width;
-	font-family: $serif;
-	font-weight: 400;
-	font-size: 2.4rem;
-	@include opacityHover(0.8);
+	@include opacity-hover(0.8);
 }
 
 
@@ -43,7 +43,7 @@ $logo-height: 72px;
 
 @include stop-at($header-breakpoint) {
 
-	$panel-width: 260px;
+	$panel-width: 100%;
 
 	.site-header-panel {
 		position: fixed;
@@ -80,7 +80,7 @@ $logo-height: 72px;
 		color: $white;
 		padding: 12px 0;
 		letter-spacing: 0.025em;
-		@include opacityHover(0.5);
+		@include opacity-hover(0.5);
 	}
 
 
@@ -131,28 +131,21 @@ $logo-height: 72px;
 @include start-at($header-breakpoint) {
 
 	.site-header-panel {
-		display: table-cell;
-		vertical-align: middle;
 		position: relative;
+		text-align: right;
+		flex-grow: 1;
 	}
 
 	.site-navigation-list {
-		display: table;
-		float: right;
-		max-width: 536px;
-	}
-
-	.site-navigation-list:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-
-	.site-navigation-list > * {
 		display: inline-block;
-		vertical-align: middle;
-		text-align: center;
-		min-width: 120px;
+		padding-left: 40px;
+
+		> * {
+		   display: inline-block;
+		   vertical-align: middle;
+		   text-align: center;
+		   min-width: 120px;
+	   }
 	}
 
 	.site-navigation-list > * > *,
@@ -162,56 +155,6 @@ $logo-height: 72px;
 		padding: 12px 0;
 		font-size: 16px;
 		letter-spacing: 0.025em;
-		@include opacityHover(0.6);
+		@include opacity-hover(0.6);
 	}
-
-	.site-header.isSticky {
-		position: fixed;
-		z-index: 10;
-		width: 100%;
-		background: $white;
-	}
-
 }
-
-
-// ----------------------------------------
-// Tablet Nav Styles
-// ----------------------------------------
-
-// @media ( min-width: $small ) and ( max-width: $medium ) {
-
-// 	.site-header_adjustTab .burger {
-// 		display: none;
-// 	}
-
-// 	.site-header_adjustTab .wrapper {
-// 		overflow: hidden;
-// 		display: block;
-// 		padding: 12px 0 24px;
-// 	}
-
-// 	.site-header_adjustTab .logo {
-// 		display: block;
-// 		margin: 0 auto 24px;
-// 		text-align: center;
-
-// 		a {
-// 			display: inline-block;
-// 		}
-// 	}
-
-// 	.site-header_adjustTab .site-header-panel {
-// 		display: block;
-// 		margin: 0 auto;
-// 		width: 100%;
-// 		max-width: none;
-// 	}
-
-// 	.site-header_adjustTab .site-navigation-list {
-// 		max-width: none;
-// 		float: none;
-// 		width: 100%;
-// 		text-align: center;
-// 	}
-// }

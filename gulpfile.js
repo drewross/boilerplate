@@ -39,7 +39,7 @@ gulp.task('styles', function() {
 		.pipe(sass().on('error', sass.logError))
 		.pipe(pixrem({ rootValue: '62.5%' }))
 		.pipe(autoprefixer({ browsers: ['last 2 versions', 'ie 8', 'ie 9'] }))
-		.pipe(gulp.dest(buildPath + '/css/'))
+		//.pipe(gulp.dest(buildPath + '/css/'))
 		.pipe(minifyCSS())
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(gulp.dest(buildPath + '/css/'))
@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
 	];
 	gulp.src(scriptsToConcat)
 		.pipe(concat('production.js'))
-		.pipe(gulp.dest(buildPath + '/js/'))
+		//.pipe(gulp.dest(buildPath + '/js/'))
 		.pipe(uglify())
 		.pipe(rename({
 			suffix: ".min"

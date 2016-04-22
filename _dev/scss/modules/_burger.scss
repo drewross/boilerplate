@@ -2,38 +2,41 @@
 //  Burger Styles
 // ---------------------------------------------------------------------
 
-$burger-width: 28px;
-$burger-height: 18px;
+$burger-width: 22px;
+$burger-height: 12px;
 $burger-color: $black;
 $burger-bg-color: $white;
 
 
 .burger {
 	overflow: hidden;
-	display: table-cell;
-	vertical-align: middle;
-	position: relative;
-	z-index: 2;
+	position: absolute;
+	z-index: 11;
 	right: 0;
-	width: 48px;
-	padding: 12px 0;
+	width: 44px;
+	height: 44px;
 	-webkit-backface-visibility: hidden;
 	transition: all $transition;
+	align-self: center;
+	// 50% - height / 2
+	display: flex;
+	top: calc(50% - 22px);
+	right: $wrapper-padding;
 }
 
-//Black Background
+// Use for background smaller than hit zone (mobile friendly)
 .burger:before {
 	content: "";
+	width: 40px;
+	height: 36px;
 	background-color: $burger-bg-color;
 	position: absolute;
-	height: 46px;
-	top: 50%;
- 	transform: translateY(-50%);
-	left: 0;
-	width: 100%;
+	top: calc(50% - 18px);
+	left: calc(50% - 20px);
 }
 
 .burger-inner {
+	align-self: center;
 	width: $burger-width;
 	height: $burger-height;
 	position: relative;

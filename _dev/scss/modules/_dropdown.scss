@@ -11,8 +11,8 @@ $dropdown-icon-color: $black;
 $dropdown-opacity: 0.4;
 $dropdown-hover-opacity: 1;
 
-$dropdown-hover-bg: transparent;
-$dropdown-hover-text-color: $black;
+$dropdown-hover-bg: $brand;
+$dropdown-hover-text-color: $white;
 
 
 .dropdown {
@@ -42,7 +42,7 @@ $dropdown-hover-text-color: $black;
         width: 16px;
         height: 8px;
         margin: 0 auto;
-        @include vCenter(relative);
+        @include vCenter(absolute);
     }
 }
 

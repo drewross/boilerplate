@@ -48,13 +48,13 @@ $small: 600px;
 
 @mixin start-at($device-width) {
   @media (min-width: $device-width) {
-    @content
+    @content;
   }
 }
 
 @mixin stop-at($device-width) {
   @media (max-width: $device-width - 1) {
-    @content 
+    @content;
   }
 }
 
@@ -63,8 +63,12 @@ $small: 600px;
 // Global Variables
 // ----------------------------------------
 
+$header-breakpoint: $small;
+
 $padding: 48px;
 $transition-speed: 0.4s;
 $transition: $transition-speed ease;
+
+$wrapper-percentage: 92%;
 $wrapper-width: 1128px;
-$header-breakpoint: $small;
+$wrapper-padding: (100% - $wrapper-percentage) / 2;
