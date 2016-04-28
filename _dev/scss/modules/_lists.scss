@@ -50,10 +50,46 @@
 
 .dl dt {
     margin-bottom: 4px;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 .dl dd {
     margin-bottom: 12px;
     font-style: italic;
+}
+
+// ----------------------------------------
+// Social List Styles
+// ----------------------------------------
+
+.social-list {
+    display: inline-block;
+    vertical-align: top;
+
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+
+        + * {
+            margin-left: 14px;
+        }
+    }
+
+	a {
+		display: block;
+		padding: 4px;
+
+		&:hover {
+	        opacity: 1;
+
+	        svg {
+	            fill: $black;
+	        }
+	    }
+	}
+
+    svg {
+        fill: $gray-light;
+		transition: all $transition;
+    }
 }

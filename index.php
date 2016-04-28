@@ -1,6 +1,6 @@
 <?php include("includes/header.php"); ?>
 
-    <div class="hero hero--fixed js-sectionFull">
+    <div class="hero hero--fixed js-section-full">
         <img src="http://gramophone.roztocki.com/gramophone-logo-mark.jpg" alt="Gramophone, a front end boilerplate" />
         <div class="hero__content">
             <div class="wrapper text-center">

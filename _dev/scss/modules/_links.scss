@@ -2,71 +2,34 @@
 //  Link & Button Styles
 // ---------------------------------------------------------------------
 
-$btn-bg-color: $brand;
-$btn-border-color: $brand;
-$btn-color: $white;
-$btn-border-width: 1px;
-$btn-border-type: solid;
-$btn-font: $sans-serif;
-$btn-font-size: 14px;
-$btn-letter-spacing: 0.15rem;
-$btn-padding: 10px 16px;
-$btn-max-width: 100%;
-$btn-min-width: 152px;
-
-$btn-bg-color-hover: transparent;
-$btn-border-color-hover: $brand;
-$btn-color-hover: $brand;
-$btn-opacity-hover: 1;
-
-$btn-alt-bg-color: transparent;
-$btn-alt-border-color: $brand;
-$btn-alt-color: $black;
-
-$btn-alt-bg-color-hover: $brand;
-$btn-alt-border-color-hover: $brand;
-$btn-alt-color-hover: $white;
-$btn-alt-opacity-hover: opacity;
-
-// ----------------------------------------
-// Buttons
-// ----------------------------------------
-
 .btn {
     display: inline-block;
     text-align: center;
-    padding: $btn-padding;
-    max-width: $btn-max-width;
-    min-width: $btn-min-width;
-    border: $btn-border-width $btn-border-type $btn-border-color;
-    background-color: $btn-bg-color;
-    font-family: $btn-font;
-    font-size: $btn-font-size;
-    color: $btn-color;
-    letter-spacing: $btn-letter-spacing;
-    transition: all $transition;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background: $brand;
+    border: 1px solid $brand;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: background $transition, color $transition;
+
+    &:hover {
+        cursor: pointer;
+        background: transparent;
+        color: $brand;
+    }
 }
 
 .btn--alt {
-    background-color: $btn-alt-bg-color;
-    border-color: $btn-alt-border-color;
-    color: $btn-alt-color;
-}
+    background: transparent;
+    color: $brand;
 
-.noTouch {
-    .btn:hover {
+    &:hover {
         cursor: pointer;
-        background-color: $btn-bg-color-hover;
-        border-color: $btn-border-color-hover;
-        color: $btn-color-hover;
-        opacity: $btn-opacity-hover;
-    }
-
-    .btn--alt:hover {
-        background-color: $btn-alt-bg-color-hover;
-        border-color: $btn-alt-border-color-hover;
-        color: $btn-alt-color-hover;
-        opacity: $btn-alt-opacity-hover;
+        background: $brand;
+        color: $white;
     }
 }
 
@@ -76,10 +39,10 @@ $btn-alt-opacity-hover: opacity;
 
 .btn--inline {
     display: block;
-    max-width: 182px;
+    margin-right: 15px;
 
     + .btn--inline {
-        margin-top: ($padding / 3);
+        margin-top: 15px;
     }
 }
 
@@ -90,7 +53,6 @@ $btn-alt-opacity-hover: opacity;
 
         + .btn--inline {
             margin-top: 0;
-            margin-left: ($padding / 3);
         }
     }
 }
@@ -106,7 +68,7 @@ $btn-alt-opacity-hover: opacity;
 
 
 // ----------------------------------------
-// 
+//
 // ----------------------------------------
 
 .noTouch .tel,

@@ -422,7 +422,7 @@ APP.DetectViewPort = {
 APP.DetectWindowHeight = {
 
     init: function() {
-        var $detectWindowHeight = $('.js-sectionFull');
+        var $detectWindowHeight = $('.js-section-full');
         if( ! $detectWindowHeight.length ) {
             return;
         }
@@ -434,12 +434,12 @@ APP.DetectWindowHeight = {
 
         $(document).ready(function() {
             var $windowHeight = $(window).height();
-            $('.js-sectionFull').css({'height': $windowHeight });
+            $('.js-section-full').css({'height': $windowHeight });
         });
 
         $(window).resize(function(){
             var $newWindowHeight = $(window).height();
-            $('.js-sectionFull').css({'height': $newWindowHeight });
+            $('.js-section-full').css({'height': $newWindowHeight });
         });
     }
 };
