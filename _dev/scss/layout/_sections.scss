@@ -2,20 +2,32 @@
 //  Section Styles (Vertical Spacing)
 // ---------------------------------------------------------------------
 
-$padding: 48px;
+//$padding: 48px;
 
 .section {
     display: block;
-    padding: $padding 0;
+    padding: 36px 0;
     @include clearfix;
+
+    @include start-at($medium) {
+        padding: 48px 0;
+    }
 }
 
 .section--short {
-    padding: ($padding / 2) 0;
+    padding: 18px 0;
+
+    @include start-at($medium) {
+        padding: 24px 0;
+    }
 }
 
 .section--tall {
-    padding: ($padding * 1.5) 0;
+    padding: 60px 0;
+
+    @include start-at($medium) {
+        padding: 72px 0;
+    }
 }
 
 .section--flush-bottom {
@@ -32,14 +44,14 @@ $padding: 48px;
 // ----------------------------------------
 
 .section__hd {
-    margin-bottom: ($padding / 2);
+    margin-bottom: 24px;
 }
 
 .section__hd--border {
-    padding-bottom: ($padding / 4);
+    padding-bottom: (12px);
     border-bottom: 1px solid $gray-light;
 }
 
 .section__hd--short {
-	margin-bottom: ($padding / 3);
+	margin-bottom: 16px;
 }
