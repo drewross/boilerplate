@@ -1,10 +1,5 @@
-May need to run
-<pre>
-    npm install grunt-postcss pixrem autoprefixer
-</pre>
-
 <h1>Front end boilerplate</h1>
-<p>This is a front end boilerplate that utilizes Grunt, Sass, jQuery, PHP, and more. Below you'll find examples &amp; HTML markup for the components in this boilerplate.</p>
+<p>This is a front end boilerplate that utilizes Gulp, Sass, jQuery, PHP, and more. Below you'll find examples &amp; HTML markup for the components in this boilerplate.</p>
 
 <p>See the documentation <a href="http://www.gramophone.roztocki.com/" target="_blank">here</a>.
 
@@ -14,9 +9,9 @@ May need to run
 <h3>Getting started</h3>
 <ol>
 	<li>Clone the repo using <pre>git clone https://github.com/drewross/boilerplate.git [project directory]</pre></li>
-	<li>Install Grunt in the project directory with <pre>npm install</pre></li>
-	<li>Initiate Grunt with <pre>grunt</pre></li>
-	<li>Start watching files with <pre>grunt watch</pre></li>
+	<li>Install gulp in the project directory with <pre>npm install</pre></li>
+    <li>Open the gulp file and set your paths</li>
+	<li>Initiate gulp with <pre>gulp</pre></li>
 </ol>
 
 <h3>Modules included in the boilerplate</h3>

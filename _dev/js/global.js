@@ -36,7 +36,7 @@ APP.BrowserDeviceDetection = {
         this.detectJs();
         this.noTouch();
         this.isTouch();
-        this.isIE11();
+        this.isNewIE();
         this.isIE10();
         this.isIE9();
         this.isIE8();
@@ -70,13 +70,17 @@ APP.BrowserDeviceDetection = {
         APP.Features.isTouch = false;
     },
 
-    isIE11: function() {
-        if( !!navigator.userAgent.match(/Trident.*rv[ :]*11\./) ) {
-            this.$html.addClass('isIE isIE11');
-            APP.Features.isIE11 = true;
+    isNewIE: function() {
+        if(navigator.appName == "Netscape") {
+            if(navigator.appVersion.indexOf('Trident') === -1) {
+                this.$html.addClass('isIE isEDGE');
+            } else {
+                this.$html.addClass('isIE isIE11');
+            }
             return;
         }
-        APP.Features.isIE11 = false;
+
+        APP.Features.isNewIE = false;
     },
 
     isIE10: function() {

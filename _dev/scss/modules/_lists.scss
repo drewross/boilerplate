@@ -69,10 +69,11 @@
     > * {
         display: inline-block;
         vertical-align: middle;
+		margin-right: 14px;
 
-        + * {
-            margin-left: 14px;
-        }
+        &:last-child {
+			margin-right: 0;
+		}
     }
 
 	a {
