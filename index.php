@@ -7,7 +7,7 @@
         <div class="hero__content">
             <div class="wrapper text-center">
                 <div class="text-group  fadeIn">
-                    <a class="btn btn--light" href="http://gramophone.roztocki.com/" target="_blank">get started</a>
+                    <a class="btn btn--alt" href="http://gramophone.roztocki.com/" target="_blank">get started</a>
                 </div>
             </div>
         </div>

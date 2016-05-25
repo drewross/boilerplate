@@ -6,7 +6,7 @@
 	position: absolute;
 	z-index: 10;
 	width: 100%;
-	background: rgba($white, 0.2);
+	//background: rgba($white, 0.2);
 }
 
 .site-header .wrapper {
@@ -38,8 +38,20 @@ $logo-height: 72px;
 
 
 // ----------------------------------------
-// Mobile Menu Styles
+// Site Navigation
 // ----------------------------------------
+
+.site-navigation {
+
+	a,
+	li > * {
+		display: block;
+		padding: 12px;
+		letter-spacing: 1px;
+		font-size: 16px;
+		@include opacity-hover(0.5);
+	}
+}
 
 @include stop-at($header-breakpoint) {
 
@@ -59,6 +71,10 @@ $logo-height: 72px;
 		overflow-x: hidden;
 		overflow-y: auto;
 		transition: margin-left 0.4s ease-in-out;
+
+		.mobile-menu-is-open & {
+			margin-left: 0;
+		}
 	}
 
 	// ----------------------------------------
@@ -71,16 +87,15 @@ $logo-height: 72px;
 		display: block;
 	}
 
-	.site-navigation-list > * {
-		display: block;
-	}
+	.site-navigation ul {
 
-	.site-navigation-list > * > * {
-		display: block;
-		color: $white;
-		padding: 12px 0;
-		letter-spacing: 0.025em;
-		@include opacity-hover(0.5);
+		> * {
+			display: block;
+		}
+
+		> * > * {
+		   color: $white;
+	    }
 	}
 
 
@@ -103,10 +118,6 @@ $logo-height: 72px;
 	// ----------------------------------------
 	.mobile-menu-is-open {
 		overflow: hidden;
-
-		.site-header-panel {
-			margin-left: 0;
-		}
 
 		.menu-mask {
 			display: block;
@@ -136,25 +147,20 @@ $logo-height: 72px;
 		flex-grow: 1;
 	}
 
-	.site-navigation-list {
+	.site-navigation ul {
 		display: inline-block;
 		padding-left: 40px;
 
 		> * {
-		   display: inline-block;
-		   vertical-align: middle;
-		   text-align: center;
-		   min-width: 120px;
-	   }
-	}
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			min-width: 120px;
+	    }
 
-	.site-navigation-list > * > *,
-	.site-navigation-list > * > a {
-		display: block;
-		color: $black;
-		padding: 12px 0;
-		font-size: 16px;
-		letter-spacing: 0.025em;
-		@include opacity-hover(0.6);
+		> * > *,
+		a {
+			color: $black;
+		}
 	}
 }

@@ -3,7 +3,7 @@
 <head>
 <!-- META DATA -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
 <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
 
 <title>Gramophone | Front end Boilerplate</title>
@@ -36,11 +36,19 @@
 </div>
 
 
+<?php
+    // Detect Homepage
+    $exactUrl = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $domain = $_SERVER['SERVER_NAME'] . '/';
+    $homepage = "/index.php";
+    $currentpage = $_SERVER['REQUEST_URI'];
+?>
+
 <header class="site-header">
     <div class="wrapper">
-        <h1 class="logo">
-            <a href="index.php">
-                <span class="h3">gramophone</span>
+        <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
+            <a href="index.php" itemprop="url">
+                <span class="h3" itemprop="name">gramophone</span>
             </a>
             <span class="sr-only">A responsive front end boilerplate using grunt, sass, jquery, svgs &amp; more</span>
         </h1>
@@ -51,8 +59,8 @@
                 <span class="burger-bottom"></span>
             </div>
         </div>
-        <div class="site-header-panel" id="mainNav">
-            <nav class="site-navigation" id="site-navigation">
+        <div class="site-header-panel">
+            <nav class="site-navigation">
                 <ul class="site-navigation-list">
                     <li data-click-target="ipsum-modal" data-click-bodyClass="modal-is-active"><span>I need Ipsum</span></li>
                     <li><a href="https://github.com/drewross/boilerplate" target="_blank">Github</a></li>

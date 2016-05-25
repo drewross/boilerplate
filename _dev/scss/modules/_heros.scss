@@ -12,6 +12,8 @@
 	.hero__img img {
 		@include centerImg(absolute);
 	}
+
+	background: $black;
 }
 
 .hero__content {

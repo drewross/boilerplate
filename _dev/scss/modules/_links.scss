@@ -27,9 +27,20 @@
     color: $brand;
 
     &:hover {
-        cursor: pointer;
         background: $brand;
         color: $white;
+    }
+}
+
+.btn--light {
+    background: transparent;
+    color: $white;
+    border-color: $white;
+
+    &:hover {
+        cursor: pointer;
+        background: $white;
+        color: $brand;
     }
 }
 
