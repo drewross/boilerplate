@@ -8,18 +8,16 @@
 	width: 100%;
 	position: relative;
 	padding: 136px 0;
-
-	.hero__img img {
-		@include centerImg(absolute);
-	}
-
-	background: $black;
 }
 
 .hero__content {
 	position: relative;
 	z-index: 1;
 	width: 100%;
+}
+
+.hero__img img {
+	@include centerImg(absolute);
 }
 
 // ----------------------------------------

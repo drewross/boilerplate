@@ -71,7 +71,7 @@ APP.BrowserDeviceDetection = {
     },
 
     isNewIE: function() {
-        if(navigator.appName == "Netscape") {
+        if (document.documentMode || /Edge/.test(navigator.userAgent)) {
             if(navigator.appVersion.indexOf('Trident') === -1) {
                 this.$html.addClass('isIE isEDGE');
             } else {
